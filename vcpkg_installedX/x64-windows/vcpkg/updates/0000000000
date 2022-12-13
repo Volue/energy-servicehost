@@ -1,8 +1,0 @@
-Package: expat
-Version: 2.4.1
-Architecture: x64-windows
-Multi-Arch: same
-Abi: 7a5457473db1bb9685d2c6f86eb7299f694984d26247bdd153cb12d705aa74b9
-Description: XML parser library written in C
-Type: Port
-Status: install ok half-installed
