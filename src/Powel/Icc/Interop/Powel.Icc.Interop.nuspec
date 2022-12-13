@@ -1,0 +1,20 @@
+<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>Powel.Icc.Interop</id>
+    <version>1.0.0</version>
+    <title>Powel.Icc.Interop</title>
+    <authors>teh and others</authors>
+    <owners>teh</owners>
+    <projectUrl><![CDATA[http://vm-auto2.powelasa.powel.com:8080/viewType.html?buildTypeId=SmG_PowelIccInterop]]></projectUrl>
+    <iconUrl>http://icons.iconarchive.com/icons/iynque/flurry-extras-8/32/Jigsaw-icon.png</iconUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>A Powel Share package that provides access to some of the Smart Generation C++ code from .NET.</description>
+    <releaseNotes>Initial release.</releaseNotes>
+    <copyright>Copyright 2014</copyright>
+    <tags>.Net c# c++ managed native cli interop</tags>
+  </metadata>
+  <files>
+  	<file src="Powel.Icc.Interop.*" target="lib" />
+  </files>
+</package>

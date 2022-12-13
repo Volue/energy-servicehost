@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{CE2F327C-516C-4F79-B461-D63494EDC850}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <AssemblyName>Powel.Icc.Interop.UnitTests</AssemblyName>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Powel.Icc.Interop.UnitTests</RootNamespace>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>..\..\..\..\iccruntime\bin\Win32\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\..\..\iccruntime\bin\Win32\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="nunit.framework, Version=3.8.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\Packages\NUnit.3.8.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <ProjectReference Include="..\..\..\Powel.csproj">
+      <Name>Powel</Name>
+      <Project>{55F4A851-9FC3-4E84-A50D-989214BA8028}</Project>
+      <Package>{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</Package>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Common\Powel.Icc.Common.csproj">
+      <Project>{A85166F5-C8E5-43A7-80D5-245F2EE86F04}</Project>
+      <Name>Powel.Icc.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Data\Powel.Icc.Data.csproj">
+      <Project>{EA3D99AF-DFF0-4725-BC23-51FC85DC4040}</Project>
+      <Name>Powel.Icc.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Powel.Icc.csproj">
+      <Project>{C5CEBEB7-C2D3-446D-A2B7-E99B01FED6A0}</Project>
+      <Name>Powel.Icc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Services\Powel.Icc.Services\Powel.Icc.Services.csproj">
+      <Project>{5AC88059-69D4-4EF5-A412-8AC26DB9C37C}</Project>
+      <Name>Powel.Icc.Services</Name>
+    </ProjectReference>
+    <Reference Include="Powel.Icc.Interop, Version=99.0.0.0, Culture=neutral, PublicKeyToken=1daac38178bee09f, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\iccruntime\bin\Win32\$(Configuration)\Powel.Icc.Interop.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestConfiguration.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestLogging.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="TestMonitoring.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

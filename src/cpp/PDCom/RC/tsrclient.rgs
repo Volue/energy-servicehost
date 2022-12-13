@@ -1,0 +1,24 @@
+HKCR
+{
+	tsrclient.tsrclient.1 = s 'tsrclient Class'
+	{
+		CLSID = s '{43C48184-F2F3-11d1-9107-0000F80355F3}'
+	}
+	tsrclient.tsrclient = s 'tsrclient Class'
+	{
+		CLSID = s '{43C48184-F2F3-11d1-9107-0000F80355F3}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43C48184-F2F3-11d1-9107-0000F80355F3} = s 'tsrclient Class'
+		{
+			val AppID = s '{43C48284-F2F3-11d1-9107-0000F80355F3}'
+			ProgID = s 'tsrclient.tsrclient.1'
+			VersionIndependentProgID = s 'tsrclient.tsrclient'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

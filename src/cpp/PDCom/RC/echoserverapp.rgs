@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{CCE84210-DB31-11CF-9D75-00A0C90391D3} = s 'EchoServer'
+		'EchoServer.EXE'
+		{
+			val AppID = s {CCE84210-DB31-11CF-9D75-00A0C90391D3}
+		}
+	}
+}

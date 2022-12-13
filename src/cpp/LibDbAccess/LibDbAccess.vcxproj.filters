@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="SO_CLASSES">
+      <UniqueIdentifier>{1ba99611-b717-4da6-b864-3a77f9a159c4}</UniqueIdentifier>
+      <Extensions>cpp;cc;c;pc;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{3335de2e-bc43-4f5b-9bf7-2f3365db7548}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{71eae54b-7a0b-4c6f-9265-e5513487cd32}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\Batch.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\ByteStream.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\Oracle\ByteStreamOracle.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\Oracle\chDbPass.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\DBHostVariable.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\Oracle\DBHostVariableOracle.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\DBI_error.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\DBI_fixquotes.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\DBI_func.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\DBI_grupkey.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\DBI_login.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\DBI_user.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\DBIICC_error_file.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\DBILineFile.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\DBInterface.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\DBMSCommon.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\Oracle\DBMSCommonOracle.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\Oracle\DBMSOracle.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\DBOption.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\Oracle\DBOracle.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\Oracle\DBOracleBasic.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\Oracle\DBOracleCursor.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\ErrMessage.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\ExTable.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\GetErrnoText.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\Join.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\Oracle\MiscDBOracle.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\Oracle\OracleEsqlio.cpp">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\OSDataType.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\OSDataTypeList.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\OSDateTime.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\Oracle\OSDateTimeOracle.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\OSDouble.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\Oracle\OSDoubleOracle.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\OSInt.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\OSLong.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\Oracle\OSLongOracle.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\OSNumeric.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\OSSInt.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\Oracle\OSSIntOracle.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\OSString.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\Oracle\OSStringOracle.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\RelTable.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\SqlCache.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\SqlFunc.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\Table.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\so_classes\Oracle\TimesSeriesAidOracle.C">
+      <Filter>SO_CLASSES</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\AutoCommit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\Batch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\ByteStream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBHostVariable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_enums.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBICommon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBInterf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBInterfaceBasic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBInterfaceErr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\dbmsapi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\src\so_classes\Oracle\DBMSOracle.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBOption.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\src\so_classes\Oracle\DBOracleCursor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBTransaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\HostArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\IntArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\Join.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\MiscDB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\src\so_classes\Oracle\OracleEsqlio.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSDataType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSDataTypeList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSDateTime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSDouble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSInt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSLong.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSNumeric.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSSInt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSString.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\PDDBEnv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SqlCache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SqlFunc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="LibDbAccess.rc">
+      <Filter>Resource Files</Filter>
+    </ResourceCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="..\..\..\icc\api\dbi\src\so_classes\Oracle\OracleEsqlio.pc">
+      <Filter>SO_CLASSES</Filter>
+    </CustomBuild>
+  </ItemGroup>
+</Project>

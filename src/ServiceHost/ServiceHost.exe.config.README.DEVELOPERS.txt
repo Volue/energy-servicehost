@@ -1,0 +1,10 @@
+The file ServiceHost.exe.config (generated from App.config) does not
+get deployed during installation. If it did, we would overwrite the
+customer's configuration.
+
+Instead we deploy ServiceHost.exe.config.sample. It is important that
+this file is kept up-to-date with any new modules added to
+ServiceHost.
+
+We also deploy ServiceHost.exe.config.README.txt in order to describe
+this mechanism to consultants/admins.

@@ -1,0 +1,24 @@
+HKCR
+{
+	kisdataload.kisdataload.1 = s 'kisdataload Class'
+	{
+		CLSID = s '{43C48197-F2F3-11d1-9107-0000F80355F3}'
+	}
+	kisdataload.kisdataload = s 'kisdataload Class'
+	{
+		CLSID = s '{43C48197-F2F3-11d1-9107-0000F80355F3}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43C48197-F2F3-11d1-9107-0000F80355F3} = s 'kisdataload Class'
+		{
+			val AppID = s '{43C48297-F2F3-11d1-9107-0000F80355F3}'
+			ProgID = s 'kisdataload.kisdataload.1'
+			VersionIndependentProgID = s 'kisdataload.kisdataload'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

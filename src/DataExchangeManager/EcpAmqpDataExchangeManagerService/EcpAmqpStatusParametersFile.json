@@ -1,0 +1,15 @@
+{
+  // EDX does not report any such status on this queue so enabling this, disables the module.
+  "UseEdx": "false",
+  "EcpAmqpUrl": "amqp://ecp:[$SECRET:EcpAmqpUrlPassword:$]@172.21.54.40:5672",
+  "Enable": "true",
+  "EcpAmqpStatusQueue": "ecp.endpoint.send.event",
+  "EcpAmqpPollTimeoutMs": "100",
+  "EcpAmqpPollIntervalMs": "100",
+  // States:
+  // ACCEPTED: Accepted by local ECP
+  // TRANSPORTED:
+  // DELIVERED: Delivered to remote ECP
+  // RECEIVED: Received by remote business application.
+  "EcpAmqpStatusConversionList": "ACCEPTED,22;TRANSPORTED,19;DELIVERED,25;RECEIVED,25;FAILED,24"
+}

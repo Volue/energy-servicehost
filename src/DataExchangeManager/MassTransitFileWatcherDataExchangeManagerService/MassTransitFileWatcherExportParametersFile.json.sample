@@ -1,0 +1,5 @@
+﻿{
+  "MessageFileParametersArray": [
+  { "MessageType": "TestMessage", "Directory": "D:/tmp/MassTransitFileWatcher/Export/TestMessage", "FileNameTemplate": "Prefix{%mt}_{%t}.json", "Encoding": "utf-8" }
+  ]
+}

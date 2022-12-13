@@ -1,0 +1,21 @@
+{
+  //"pipServiceBusBaseAddress": "",
+  //"pipServiceBusNamespace": "",
+  "pipBlobStorageUrlAndSas": "",
+  //"pipOutputTopicKeyName": "smgexmespull",
+  //"pipOutputTopicPrimaryKey": "",
+  //"pipOutputTopicSecondaryKey": "",
+  //"pipOutputTopicName": "pip-int-powel-smgexmespull-out",
+  //"pipOutputTopicPrimaryConnectionString": "",
+  //"pipOutputTopicSecondaryConnectionString": "",
+  //"pipInputQueueKeyName": "smgexmespull",
+  //"pipInputQueuePrimaryKey": "",
+  //"pipInputQueueSecondaryKey": "",
+  "pipInputQueueName": "pip-int-powel-smgexmespull-in",
+  "pipInputQueuePrimaryConnectionString": "[$SECRET:pipInputQueuePrimaryConnectionString:$]",
+  //"pipInputQueueSecondaryConnectionString": "",
+  "AzurePollTimeoutMs": "1000",
+  "DebugPolling": "false",
+  "HeartbeatIntervalWhenPumpingInMinutes": "5",
+  "PollLogInterval": "600"
+}

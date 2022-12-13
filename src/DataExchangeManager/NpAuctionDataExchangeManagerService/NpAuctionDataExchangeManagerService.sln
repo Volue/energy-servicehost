@@ -1,0 +1,51 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NpAuctionDataExchangeManagerService", "NpAuctionDataExchangeManagerService.csproj", "{2720DBBA-B843-4961-B6A4-DB92A478BAAC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NP.Auction.Client", "..\NP.Auction.Client\NP.Auction.Client.csproj", "{2D64528E-0352-4AC0-83BC-EA95CB6785CF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NpAuctionService", "..\..\..\Services\NpAuctionService\NpAuctionService.csproj", "{EF1781CC-0BED-4A1F-B9B4-D0288EF3FD03}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{2720DBBA-B843-4961-B6A4-DB92A478BAAC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2720DBBA-B843-4961-B6A4-DB92A478BAAC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2720DBBA-B843-4961-B6A4-DB92A478BAAC}.Debug|x86.ActiveCfg = Debug|x86
+		{2720DBBA-B843-4961-B6A4-DB92A478BAAC}.Debug|x86.Build.0 = Debug|x86
+		{2720DBBA-B843-4961-B6A4-DB92A478BAAC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2720DBBA-B843-4961-B6A4-DB92A478BAAC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2720DBBA-B843-4961-B6A4-DB92A478BAAC}.Release|x86.ActiveCfg = Release|x86
+		{2720DBBA-B843-4961-B6A4-DB92A478BAAC}.Release|x86.Build.0 = Release|x86
+		{2D64528E-0352-4AC0-83BC-EA95CB6785CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D64528E-0352-4AC0-83BC-EA95CB6785CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D64528E-0352-4AC0-83BC-EA95CB6785CF}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{2D64528E-0352-4AC0-83BC-EA95CB6785CF}.Debug|x86.Build.0 = Debug|Any CPU
+		{2D64528E-0352-4AC0-83BC-EA95CB6785CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D64528E-0352-4AC0-83BC-EA95CB6785CF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D64528E-0352-4AC0-83BC-EA95CB6785CF}.Release|x86.ActiveCfg = Release|Any CPU
+		{2D64528E-0352-4AC0-83BC-EA95CB6785CF}.Release|x86.Build.0 = Release|Any CPU
+		{EF1781CC-0BED-4A1F-B9B4-D0288EF3FD03}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF1781CC-0BED-4A1F-B9B4-D0288EF3FD03}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF1781CC-0BED-4A1F-B9B4-D0288EF3FD03}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{EF1781CC-0BED-4A1F-B9B4-D0288EF3FD03}.Debug|x86.Build.0 = Debug|Any CPU
+		{EF1781CC-0BED-4A1F-B9B4-D0288EF3FD03}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF1781CC-0BED-4A1F-B9B4-D0288EF3FD03}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EF1781CC-0BED-4A1F-B9B4-D0288EF3FD03}.Release|x86.ActiveCfg = Release|Any CPU
+		{EF1781CC-0BED-4A1F-B9B4-D0288EF3FD03}.Release|x86.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6CD518CD-3B76-4C21-9D53-E90FC6775B16}
+	EndGlobalSection
+EndGlobal

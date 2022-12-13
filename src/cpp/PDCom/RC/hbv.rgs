@@ -1,0 +1,24 @@
+HKCR
+{
+	hbv.pdcom.1 = s 'hbv Class'
+	{
+		CLSID = s '{43C48202-F2F3-11d1-9107-0000F80355F3}'
+	}
+	hbv.pdcom = s 'hbv Class'
+	{
+		CLSID = s '{43C48202-F2F3-11d1-9107-0000F80355F3}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43C48202-F2F3-11d1-9107-0000F80355F3} = s 'hbv Class'
+		{
+			val AppID = s '{43C48302-F2F3-11d1-9107-0000F80355F3}'
+			ProgID = s 'hbv.pdcom.1'
+			VersionIndependentProgID = s 'hbv.pdcom'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

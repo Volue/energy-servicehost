@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.powel.no/icc/ws/tsws/messages/1.0/" xmlns:data="http://www.powel.no/icc/ws/tsws/data/1.0/" xmlns:enums="http://www.powel.no/icc/ws/tsws/enums/1.0/" targetNamespace="http://www.powel.no/icc/ws/tsws/messages/1.0/" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" id="TimeSeriesMessages">
+	<xs:import namespace="http://www.powel.no/icc/ws/tsws/data/1.0/" schemaLocation="Powel_TimeSeriesData_v.1.0.xsd" id="TimeSeriesData"/>
+	<xs:element name="submitTimeSeries">
+		<xs:annotation>
+			<xs:documentation>Message for submitting time series to ICC</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Transaction" type="data:TransactionType" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>Not used in version 1.0</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="MessageID" type="data:MessageIDType" minOccurs="1">
+					<xs:annotation>
+						<xs:documentation>Message ID</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="SetOfTimeSeries" type="data:SetOfTimeSeriesType">
+					<xs:annotation>
+						<xs:documentation>Contains one or more time series</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+		<xs:unique name="uniqueTsID">
+			<xs:selector xpath="TimeSeries"/>
+			<xs:field xpath="@TsID"/>
+		</xs:unique>
+	</xs:element>
+	<xs:element name="submitTimeSeriesResponse">
+		<xs:annotation>
+			<xs:documentation>Response message with status of time series import to ICC</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="MessageID" type="data:MessageIDType" minOccurs="1">
+					<xs:annotation>
+						<xs:documentation>Message ID</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ReferringMessageID" type="data:MessageIDType" minOccurs="1">
+					<xs:annotation>
+						<xs:documentation>Message ID of request message</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="Status" type="enums:StatusType">
+					<xs:annotation>
+						<xs:documentation>Import status for a time series message, message level.</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="StatusMessage" type="data:StatusMessageType" minOccurs="0" maxOccurs="unbounded">
+					<xs:annotation>
+						<xs:documentation>Detailed description of status of import</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="SetOfTimeSeriesResponse" type="data:SetOfTimeSeriesResponseType">
+					<xs:annotation>
+						<xs:documentation>Detailed import status of time series and time series values of a time series message</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

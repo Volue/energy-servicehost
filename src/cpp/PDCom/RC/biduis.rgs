@@ -1,0 +1,24 @@
+HKCR
+{
+	biduis.pdcom.1 = s 'biduis Class'
+	{
+		CLSID = s '{43C48203-F2F3-11d1-9107-0000F80355F3}'
+	}
+	biduis.pdcom = s 'biduis Class'
+	{
+		CLSID = s '{43C48203-F2F3-11d1-9107-0000F80355F3}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43C48203-F2F3-11d1-9107-0000F80355F3} = s 'biduis Class'
+		{
+			val AppID = s '{43C48301-F2F3-11d1-9107-0000F80355F3}'
+			ProgID = s 'biduis.pdcom.1'
+			VersionIndependentProgID = s 'biduis.pdcom'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

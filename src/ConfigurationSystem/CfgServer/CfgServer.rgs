@@ -1,0 +1,62 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		'%APPID%' = s 'Powel Configuration Server'
+		'PowelCfgServer.EXE'
+		{
+			val AppID = s '%APPID%'
+		}
+	}
+	
+	Powel.CfgManager.1 = s 'Powel CfgManager Class'
+	{
+		CLSID = s '{DDFD9EC1-4577-4104-8686-D5C79ABD08EF}'
+	}
+	Powel.CfgManager = s 'Powel CfgManager Class'
+	{
+		CLSID = s '{DDFD9EC1-4577-4104-8686-D5C79ABD08EF}'
+		CurVer = s 'Powel.CfgManager.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {DDFD9EC1-4577-4104-8686-D5C79ABD08EF} = s 'Powel CfgManager Class'
+		{
+			val AppID = s '%APPID%'
+			ProgID = s 'Powel.CfgManager.1'
+			VersionIndependentProgID = s 'Powel.CfgManager'
+			ForceRemove 'Programmable'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{00B20303-30A7-466D-9F41-7829F150DE8A}'
+		}
+	}
+
+	Powel.CfgReader.1 = s 'Powel CfgReader Class'
+	{
+		CLSID = s '{A71028BF-9C86-4E7A-A87B-7264668FF725}'
+	}
+	Powel.CfgReader = s 'Powel CfgReader Class'
+	{
+		CLSID = s '{A71028BF-9C86-4E7A-A87B-7264668FF725}'
+		CurVer = s 'Powel.CfgReader.1'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {A71028BF-9C86-4E7A-A87B-7264668FF725} = s 'Powel CfgReader Class'
+		{
+			val AppID = s '%APPID%'
+			ProgID = s 'Powel.CfgReader.1'
+			VersionIndependentProgID = s 'Powel.CfgReader'
+			ForceRemove 'Programmable'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'Free'
+			}
+			'TypeLib' = s '{00B20303-30A7-466D-9F41-7829F150DE8A}'
+		}
+	}
+
+}

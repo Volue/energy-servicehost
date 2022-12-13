@@ -1,0 +1,714 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{252CEC69-9327-4DD8-A9D8-DD63DE492DEC}</ProjectGuid>
+    <RootNamespace>LibUtil</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="..\..\..\build\toolset.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <CLRSupport>false</CLRSupport>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <PreBuildEvent>
+      <Command>IF NOT EXIST ..\..\..\iccruntime\bin\$(Platform)\$(Configuration) MKDIR ..\..\..\iccruntime\bin\$(Platform)\$(Configuration)
+XCOPY ..\..\..\Log4Powel\apache-log4cxx\x86\log4cxx.dll ..\..\..\iccruntime\bin\$(Platform)\$(Configuration) /Q /D /Y
+XCOPY ..\..\..\utility\ZeroMQ\bin\$(PlatformTarget)\$(Configuration)\libzmq.dll ..\..\..\iccruntime\bin\$(Platform)\$(Configuration) /Q /D /Y</Command>
+      <Message>Updating dependencies in iccruntime\bin\$(Platform)\$(Configuration) if needed</Message>
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)%(Filename).tlb</TypeLibraryName>
+      <OutputDirectory>%(RootDir)%(Directory)</OutputDirectory>
+      <HeaderFileName>%(Filename)_i.h</HeaderFileName>
+      <DllDataFileName>%(Filename)_d.c</DllDataFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/wd4430 -D_CRT_SECURE_NO_DEPRECATE %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>\Program Files\MSXML 6.0\inc;../../../rogue;../../../Log4powel/apache-log4cxx/src/main/include;../../../icc/api/include;../../../icc/api/dbi/include;../../../icc/api/gen/src;../../../icc/api/log/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PDDEBUG;_CRT_SECURE_NO_DEPRECATE;WIN32;_NDEBUG;_LIB;PD_IOSTD;ID_TIPP;IL_DLL;IL_STD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>Version.lib;../../../Log4Powel/apache-log4cxx/x86/log4cxx.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <PreBuildEvent>
+      <Command>IF NOT EXIST ..\..\..\iccruntime\bin\$(Platform)\$(Configuration) MKDIR ..\..\..\iccruntime\bin\$(Platform)\$(Configuration)
+XCOPY ..\..\..\Log4Powel\apache-log4cxx\x86\log4cxx.dll ..\..\..\iccruntime\bin\$(Platform)\$(Configuration) /Q /D /Y
+XCOPY ..\..\..\utility\ZeroMQ\bin\$(PlatformTarget)\$(Configuration)\libzmq.dll ..\..\..\iccruntime\bin\$(Platform)\$(Configuration) /Q /D /Y</Command>
+      <Message>Updating dependencies in iccruntime\bin\$(Platform)\$(Configuration) if needed</Message>
+    </PreBuildEvent>
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)%(Filename).tlb</TypeLibraryName>
+      <OutputDirectory>%(RootDir)%(Directory)</OutputDirectory>
+      <HeaderFileName>%(Filename)_i.h</HeaderFileName>
+      <DllDataFileName>%(Filename)_d.c</DllDataFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalOptions>/wd4430 %(AdditionalOptions)</AdditionalOptions>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>\Program Files\MSXML 6.0\inc;../../../rogue;../../../Log4powel/apache-log4cxx/src/main/include;../../../icc/api/include;../../../icc/api/dbi/include;../../../icc/api/gen/src;../../../icc/api/log/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;WIN32;NDEBUG;_LIB;PD_IOSTD;ID_TIPP;IL_DLL;IL_STD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>Version.lib;../../../Log4Powel/apache-log4cxx/x86/log4cxx.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\icc\api\gen\src\CurrencyHandler.cpp" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\StringFunctions.cpp" />
+    <ClCompile Include="..\..\..\icc\api\log\src\ColorConverter.cpp" />
+    <ClCompile Include="..\..\..\icc\api\log\src\Profiler.cpp" />
+    <ClCompile Include="..\..\..\icc\api\random\RandomNumberGenerator.cpp" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpHeading.cpp" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_cdel.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_cent.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_d_cx.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_d_ix.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\Str_del_w_st.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_drpc.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_ins.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_insi.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_insr.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_intl_red.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_ljus.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_low.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_ltrm.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_mcat.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_mmov.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_mrpc.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_nlef.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_nmid.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_nrig.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_ocat.c" />
+    <ClCompile Include="..\..\..\icc\api\Str\src\str_pathCheckF.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\Str_raw_spl.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_repe.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_rjus.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_rrpc.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_rstr.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_rtrm.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\Str_spl_list.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_splitname.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_sprdup.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_sprlen.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_tok.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_trm.c" />
+    <ClCompile Include="..\..\..\icc\api\Str\src\str_tscodeForSearch.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_upp.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_vcat.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\stra_adm.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\stra_create.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\stra_delete.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\stra_destroy.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\stra_insert.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\stra_query.c" />
+    <ClCompile Include="..\..\..\icc\api\STR\src\stra_replace.c" />
+    <ClCompile Include="..\..\..\icc\api\TIME\SharedSource\PDTimeUtilities.cpp" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\c2i.c" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\c2w.c" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\clock_i.c" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\date_i.c" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\date_w.c" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\expand_year.c" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\hourdiff_c.c" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\hourdiff_i.c" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\i2c.c" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\i2w.c" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\now_c.c" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\now_i.c" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\PDDate.cc" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\PDTime.cc" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\PDTimePeriod.cc" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\PDTimePeriodIterator.cc" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\PDTimeSpan.cc" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\PDTimeZone.cc" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\PDTimeZoneApp.cc" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\TIME_datecmp.c" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\TIME_daylight.c" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\time_holiday.c" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\TIME_jul.c" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\timelib.c" />
+    <ClCompile Include="..\..\..\icc\api\Time\src\timemacro.cpp">
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+      <ObjectFileName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(IntDir)%(Filename)1.obj</ObjectFileName>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\w2c.c" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\wdate_c.c" />
+    <ClCompile Include="..\..\..\icc\api\TIME\src\weekadd_w.c" />
+    <ClCompile Include="..\..\..\icc\api\lang\src\lang_close.c" />
+    <ClCompile Include="..\..\..\icc\api\lang\src\lang_ftrans.c" />
+    <ClCompile Include="..\..\..\icc\api\lang\src\lang_get_tag.c" />
+    <ClCompile Include="..\..\..\icc\api\lang\src\lang_gtag.c" />
+    <ClCompile Include="..\..\..\icc\api\lang\src\lang_highest_tag.c" />
+    <ClCompile Include="..\..\..\icc\api\lang\src\lang_open.c" />
+    <ClCompile Include="..\..\..\icc\api\lang\src\lang_rtrans.c" />
+    <ClCompile Include="..\..\..\icc\api\lang\src\lang_trans.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\basename.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\bytes2hex.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\debug.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\findfile.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\float.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\fpopen.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\getfuser.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\gethost.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\getopt3.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\getsauser.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\getuser.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\ICC_InitExit.cpp" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\is_ean_num.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\is_val_in_env.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\lock.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\pd_utils.cpp" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\pdgetcwd.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\PDMail.cc" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\PDpopen.cc" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\pdsleep.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\PDSystem.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\pdtmpnam.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\rounding.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\sim_basic_dataset.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\swapbyteorder.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\UserInfo.cpp" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\utilityheader.c" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\xy.cpp" />
+    <ClCompile Include="..\..\..\icc\api\CD\src\cd_add.c" />
+    <ClCompile Include="..\..\..\icc\api\CD\src\cd_lib.c" />
+    <ClCompile Include="..\..\..\icc\api\CD\src\cd_read.c" />
+    <ClCompile Include="..\..\..\icc\api\CD\src\cd_write.c" />
+    <ClCompile Include="..\..\..\icc\api\environment\regenv\environment.c" />
+    <ClCompile Include="..\..\..\icc\api\environment\regenv\PDInitEnvironment.cpp" />
+    <ClCompile Include="..\..\..\icc\api\environment\regenv\registry.c" />
+    <ClCompile Include="..\..\..\icc\api\environment\regenv\translate.c" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\auditbuf.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\bench.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\bintree.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\bintrio.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\bintrit.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\bitvec.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\bitvecio.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\bstream.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\btrdict.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\btree.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\bufpage.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\cacheman.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\coreerr.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\cstring.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\cstrio2.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\cstrngio.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\ct.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctass.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctassio.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctclass.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctclassi.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctdate.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctdatio.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctint.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctintio.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctio.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctoken.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctqueued.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctstackd.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctstacki.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctstr.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctstrio.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\cttime.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\cttimeio.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\diskpage.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\disktree.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\dlist.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\dlistcol.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\dlistit.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\dllfact.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\estream.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\factory.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\filemgr.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\gimp.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\hashdict.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\hashdit.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\hashspec.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\hashtab.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\hashtbit.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\idendict.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\idenset.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\idlist.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\idlistit.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\instmgr.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\islist.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\islistit.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\iterator.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\locale.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\lodfault.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\lostream.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\match.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\mempool.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\message.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\model.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\ordcltit.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\ordcltn.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\pstream.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\pvector.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\readmgr.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\rec.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\ref.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\regexp.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwalloc.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwbag.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwbagit.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwdate.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwdateio.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwerr.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwfile.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwintio.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwset.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwstore.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwtime.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwtimeio.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\seqcltn.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\slist.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\slistcol.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\slistit.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\sortvec.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\storemgr.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\strngcv.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\timer.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\toolerr.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\toolmisc.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\utility.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\vref.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\vstream.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\wcsutil.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\winstrea.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\wstring.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\wstrngio.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\wtoken.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\xdrstrea.cpp" />
+    <ClCompile Include="..\..\..\rogue\toolsrc\zone.cpp" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\CallbackColl.cc" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\CallbackName.cc" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\DBState.cc" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\DBTypeColl.cc" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\DBTypeVal.cc" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\IccError.cc" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\MareaTp.cc" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\ObjectNameGenerator.cpp" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PdCopyTo.cpp" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDCTokenizer.cpp" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDExcept.cc" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PdExchangeMeth.cpp" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDLanguage.cc" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDLocaleSnapshot.cc" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PdOperationalUnit.cpp" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PdOperatorTp.cpp" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDPathName.cc" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDProperties.cpp" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDSingleton.cpp" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDSuffixedTempName.cc" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDTempFileAdm.cc" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PdToCustomer.cpp" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PdTransferDef.cpp" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\ProtoTp.cc" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\TrareTp.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\CsvDevice.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\excel8.cpp" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\ExcelAPI.cpp" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\ExcelDevice.cpp" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\HTMLDevice.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpAcronym.cpp" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpAttributeColl.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpAttributeValue.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpBody.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpBreak.cpp" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpDevice.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpElement.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpElementColl.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpElementSub.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpHead.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpImage.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpLists.cpp" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpParagraph.cpp" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpReport.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTable.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTableBody.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTableBodyColl.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTableCaption.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTableData.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTableFoot.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTableHead.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTableHeader.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTableRow.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTableRowColl.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTableRowGroup.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTitle.cc" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\SdvDevice.cc" />
+    <ClCompile Include="..\..\..\icc\api\TXY\src\TXY_calcval.c" />
+    <ClCompile Include="..\..\..\icc\api\TXY\src\TXY_funcs.c" />
+    <ClCompile Include="..\..\..\icc\api\TXY\src\TXY_label.c" />
+    <ClCompile Include="..\..\..\icc\api\TXY\src\TXY_update.c" />
+    <ClCompile Include="..\..\..\icc\api\log\src\icc-message.c">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../../icc/api/log/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../../icc/api/log/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\log\src\log_locals.c">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../../icc/api/log/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../../icc/api/log/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\log\src\PDLog4Cxx.cpp" />
+    <ClCompile Include="..\..\..\icc\api\log\src\STRRexpRrpc.cc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../../icc/api/log/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../../icc/api/log/src;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\XMLUtilities.cpp" />
+    <ClCompile Include="..\..\..\icc\api\gen\src\EasyLicense.cpp" />
+    <ClCompile Include="..\..\..\utility\XMLTransformer\XMLTransformer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\icc\api\gen\src\CurrencyHandler.h" />
+    <ClInclude Include="..\..\..\icc\api\include\CsvDevice.h" />
+    <ClInclude Include="..\..\..\icc\api\include\excel8.h" />
+    <ClInclude Include="..\..\..\icc\api\include\ExcelAPI.h" />
+    <ClInclude Include="..\..\..\icc\api\include\ExcelDevice.h" />
+    <ClInclude Include="..\..\..\icc\api\include\HTMLDevice.h" />
+    <ClInclude Include="..\..\..\icc\api\include\JSONUtilities.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PDDate.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpAcronym.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpAttributeColl.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpAttributeValue.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpBody.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpBreak.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpDevice.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpElement.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpElementColl.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpElementSub.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpHead.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpHeading.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpImage.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpLists.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpParagraph.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpReport.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpTable.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpTableBody.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpTableBodyColl.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpTableCaption.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpTableData.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpTableFoot.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpTableHead.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpTableHeader.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpTableRow.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpTableRowColl.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpTableRowGroup.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RpTitle.h" />
+    <ClInclude Include="..\..\..\icc\api\include\SdvDevice.h" />
+    <ClInclude Include="..\..\..\icc\api\include\StringFunctions.h" />
+    <ClInclude Include="..\..\..\icc\api\random\RandomNumberGenerator.h" />
+    <ClInclude Include="..\..\..\icc\mvs\src\etllib\Etllib.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PDTime.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PDTimePeriod.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PDTimePeriodIterator.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PDTimeSpan.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PDTimeZone.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PDTimeZoneApp.h" />
+    <ClInclude Include="..\..\..\icc\api\TIME\src\time_defs.h" />
+    <ClInclude Include="..\..\..\icc\api\lang\src\lang_internal.h" />
+    <ClInclude Include="..\..\..\icc\api\include\ICC_InitExit.h" />
+    <ClInclude Include="..\..\..\icc\api\gen\src\UserInfo.h" />
+    <ClInclude Include="..\..\..\icc\api\gen\src\xy.h" />
+    <ClInclude Include="..\..\..\icc\api\environment\regenv\icc_env.h" />
+    <ClInclude Include="..\..\..\rogue\rw\auditbuf.h" />
+    <ClInclude Include="..\..\..\rogue\rw\backward.h" />
+    <ClInclude Include="..\..\..\rogue\rw\bench.h" />
+    <ClInclude Include="..\..\..\rogue\rw\bintree.h" />
+    <ClInclude Include="..\..\..\rogue\rw\bitref.h" />
+    <ClInclude Include="..\..\..\rogue\rw\bitvec.h" />
+    <ClInclude Include="..\..\..\rogue\rw\bstream.h" />
+    <ClInclude Include="..\..\..\rogue\rw\btrdict.h" />
+    <ClInclude Include="..\..\..\rogue\rw\btree.h" />
+    <ClInclude Include="..\..\..\rogue\rw\bufpage.h" />
+    <ClInclude Include="..\..\..\rogue\rw\cacheman.h" />
+    <ClInclude Include="..\..\..\rogue\rw\colclass.h" />
+    <ClInclude Include="..\..\..\rogue\rw\collass.h" />
+    <ClInclude Include="..\..\..\rogue\rw\colldate.h" />
+    <ClInclude Include="..\..\..\rogue\rw\collect.h" />
+    <ClInclude Include="..\..\..\rogue\rw\collint.h" />
+    <ClInclude Include="..\..\..\rogue\rw\collstr.h" />
+    <ClInclude Include="..\..\..\rogue\rw\colltime.h" />
+    <ClInclude Include="..\..\..\rogue\rw\compiler.h" />
+    <ClInclude Include="..\..\..\rogue\rw\coreerr.h" />
+    <ClInclude Include="..\..\..\rogue\rw\cstring.h" />
+    <ClInclude Include="..\..\..\rogue\rw\ctoken.h" />
+    <ClInclude Include="..\..\..\rogue\toolsrc\defcol.h" />
+    <ClInclude Include="..\..\..\rogue\toolsrc\defmisc.h" />
+    <ClInclude Include="..\..\..\rogue\rw\defs.h" />
+    <ClInclude Include="..\..\..\rogue\rw\diskpage.h" />
+    <ClInclude Include="..\..\..\rogue\rw\disktree.h" />
+    <ClInclude Include="..\..\..\rogue\rw\dlist.h" />
+    <ClInclude Include="..\..\..\rogue\rw\dlistcol.h" />
+    <ClInclude Include="..\..\..\rogue\toolsrc\dllfact.h" />
+    <ClInclude Include="..\..\..\rogue\rw\edefs.h" />
+    <ClInclude Include="..\..\..\rogue\rw\ep_cntnr.h" />
+    <ClInclude Include="..\..\..\rogue\rw\ep_hash.h" />
+    <ClInclude Include="..\..\..\rogue\rw\ep_inmap.h" />
+    <ClInclude Include="..\..\..\rogue\rw\ep_inset.h" />
+    <ClInclude Include="..\..\..\rogue\rw\ep_mcntn.h" />
+    <ClInclude Include="..\..\..\rogue\rw\ep_scntn.h" />
+    <ClInclude Include="..\..\..\rogue\rw\ep_seq.h" />
+    <ClInclude Include="..\..\..\rogue\rw\ep_srtsq.h" />
+    <ClInclude Include="..\..\..\rogue\rw\epaux.h" />
+    <ClInclude Include="..\..\..\rogue\rw\epersist.h" />
+    <ClInclude Include="..\..\..\rogue\rw\epfunc.h" />
+    <ClInclude Include="..\..\..\rogue\rw\estream.h" />
+    <ClInclude Include="..\..\..\rogue\rw\ev_cntnr.h" />
+    <ClInclude Include="..\..\..\rogue\rw\ev_hash.h" />
+    <ClInclude Include="..\..\..\rogue\rw\ev_inmap.h" />
+    <ClInclude Include="..\..\..\rogue\rw\ev_inset.h" />
+    <ClInclude Include="..\..\..\rogue\rw\ev_mcntn.h" />
+    <ClInclude Include="..\..\..\rogue\rw\ev_scntn.h" />
+    <ClInclude Include="..\..\..\rogue\rw\ev_seq.h" />
+    <ClInclude Include="..\..\..\rogue\rw\ev_srtsq.h" />
+    <ClInclude Include="..\..\..\rogue\rw\factory.h" />
+    <ClInclude Include="..\..\..\rogue\rw\filemgr.h" />
+    <ClInclude Include="..\..\..\rogue\rw\gbitvec.h" />
+    <ClInclude Include="..\..\..\rogue\rw\gdlist.h" />
+    <ClInclude Include="..\..\..\rogue\rw\generic.h" />
+    <ClInclude Include="..\..\..\rogue\rw\gordvec.h" />
+    <ClInclude Include="..\..\..\rogue\rw\gqueue.h" />
+    <ClInclude Include="..\..\..\rogue\rw\gslist.h" />
+    <ClInclude Include="..\..\..\rogue\rw\gsortvec.h" />
+    <ClInclude Include="..\..\..\rogue\rw\gstack.h" />
+    <ClInclude Include="..\..\..\rogue\rw\gvector.h" />
+    <ClInclude Include="..\..\..\rogue\rw\hashdict.h" />
+    <ClInclude Include="..\..\..\rogue\rw\hashtab.h" />
+    <ClInclude Include="..\..\..\rogue\rw\idendict.h" />
+    <ClInclude Include="..\..\..\rogue\rw\idenset.h" />
+    <ClInclude Include="..\..\..\rogue\rw\idlist.h" />
+    <ClInclude Include="..\..\..\rogue\rw\instmgr.h" />
+    <ClInclude Include="..\..\..\rogue\rw\islist.h" />
+    <ClInclude Include="..\..\..\rogue\rw\iterator.h" />
+    <ClInclude Include="..\..\..\rogue\rw\locale.h" />
+    <ClInclude Include="..\..\..\rogue\rw\mempool.h" />
+    <ClInclude Include="..\..\..\rogue\rw\message.h" />
+    <ClInclude Include="..\..\..\rogue\rw\model.h" />
+    <ClInclude Include="..\..\..\rogue\rw\mutex.h" />
+    <ClInclude Include="..\..\..\rogue\rw\new.h" />
+    <ClInclude Include="..\..\..\rogue\rw\ordcltn.h" />
+    <ClInclude Include="..\..\..\rogue\rw\pstream.h" />
+    <ClInclude Include="..\..\..\rogue\rw\pvector.h" />
+    <ClInclude Include="..\..\..\rogue\rw\queuecol.h" />
+    <ClInclude Include="..\..\..\rogue\rw\re.h" />
+    <ClInclude Include="..\..\..\rogue\toolsrc\readmgr.h" />
+    <ClInclude Include="..\..\..\rogue\rw\rebase.h" />
+    <ClInclude Include="..\..\..\rogue\rw\ref.h" />
+    <ClInclude Include="..\..\..\rogue\rw\regexp.h" />
+    <ClInclude Include="..\..\..\rogue\rw\rei.h" />
+    <ClInclude Include="..\..\..\rogue\rw\retrait.h" />
+    <ClInclude Include="..\..\..\rogue\rw\rstream.h" />
+    <ClInclude Include="..\..\..\rogue\rw\rwalloc.h" />
+    <ClInclude Include="..\..\..\rogue\rw\rwassert.h" />
+    <ClInclude Include="..\..\..\rogue\rw\rwbag.h" />
+    <ClInclude Include="..\..\..\rogue\rw\rwdate.h" />
+    <ClInclude Include="..\..\..\rogue\rw\rwerr.h" />
+    <ClInclude Include="..\..\..\rogue\rw\rwfile.h" />
+    <ClInclude Include="..\..\..\rogue\rw\rwint.h" />
+    <ClInclude Include="..\..\..\rogue\rw\rwset.h" />
+    <ClInclude Include="..\..\..\rogue\rw\rwstore.h" />
+    <ClInclude Include="..\..\..\rogue\rw\rwstring.h" />
+    <ClInclude Include="..\..\..\rogue\rw\rwtime.h" />
+    <ClInclude Include="..\..\..\rogue\rw\rwtsd.h" />
+    <ClInclude Include="..\..\..\rogue\rw\rwwchar.h" />
+    <ClInclude Include="..\..\..\rogue\rw\rwwind.h" />
+    <ClInclude Include="..\..\..\rogue\rw\seqcltn.h" />
+    <ClInclude Include="..\..\..\rogue\rw\slist.h" />
+    <ClInclude Include="..\..\..\rogue\rw\slistcol.h" />
+    <ClInclude Include="..\..\..\rogue\rw\sortvec.h" />
+    <ClInclude Include="..\..\..\rogue\rw\stackcol.h" />
+    <ClInclude Include="..\..\..\rogue\toolsrc\storemgr.h" />
+    <ClInclude Include="..\..\..\rogue\rw\stringid.h" />
+    <ClInclude Include="..\..\..\rogue\rw\strmshft.h" />
+    <ClInclude Include="..\..\..\rogue\rw\strstrea.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tasslnk.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tbitvec.h" />
+    <ClInclude Include="..\..\..\rogue\rw\thashfun.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tidlist.h" />
+    <ClInclude Include="..\..\..\rogue\rw\timer.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tislist.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tooldefs.h" />
+    <ClInclude Include="..\..\..\rogue\rw\toolerr.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tpdeque.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tpdlist.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tphasht.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tphdict.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tphmap.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tphmmap.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tphmset.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tphset.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tpmap.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tpmmap.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tpmset.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tpordvec.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tpset.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tpsldict.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tpslist.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tpsrtdli.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tpsrtvec.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tpvector.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tqueue.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tstack.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tvdeque.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tvdlist.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tvhasht.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tvhdict.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tvhmap.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tvhmmap.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tvhmset.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tvhset.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tvmap.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tvmmap.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tvmset.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tvordvec.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tvref.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tvrtarry.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tvset.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tvsldict.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tvslist.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tvsrtdli.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tvsrtvec.h" />
+    <ClInclude Include="..\..\..\rogue\rw\tvvector.h" />
+    <ClInclude Include="..\..\..\rogue\rw\vpage.h" />
+    <ClInclude Include="..\..\..\rogue\rw\vref.h" />
+    <ClInclude Include="..\..\..\rogue\rw\vstream.h" />
+    <ClInclude Include="..\..\..\rogue\rw\winstrea.h" />
+    <ClInclude Include="..\..\..\rogue\rw\wstring.h" />
+    <ClInclude Include="..\..\..\rogue\rw\wtoken.h" />
+    <ClInclude Include="..\..\..\rogue\rw\xdrstrea.h" />
+    <ClInclude Include="..\..\..\rogue\rw\xpdlist.h" />
+    <ClInclude Include="..\..\..\rogue\rw\xphasht.h" />
+    <ClInclude Include="..\..\..\rogue\rw\xphdict.h" />
+    <ClInclude Include="..\..\..\rogue\rw\xphset.h" />
+    <ClInclude Include="..\..\..\rogue\rw\xpordvec.h" />
+    <ClInclude Include="..\..\..\rogue\rw\xpslist.h" />
+    <ClInclude Include="..\..\..\rogue\rw\xpsrtvec.h" />
+    <ClInclude Include="..\..\..\rogue\rw\xvdlist.h" />
+    <ClInclude Include="..\..\..\rogue\rw\xvhasht.h" />
+    <ClInclude Include="..\..\..\rogue\rw\xvhdict.h" />
+    <ClInclude Include="..\..\..\rogue\rw\xvhset.h" />
+    <ClInclude Include="..\..\..\rogue\rw\xvordvec.h" />
+    <ClInclude Include="..\..\..\rogue\rw\xvslist.h" />
+    <ClInclude Include="..\..\..\rogue\rw\xvsrtvec.h" />
+    <ClInclude Include="..\..\..\rogue\rw\zone.h" />
+    <ClInclude Include="..\..\..\icc\api\include\CallbackColl.h" />
+    <ClInclude Include="..\..\..\icc\api\include\CallbackName.h" />
+    <ClInclude Include="..\..\..\icc\api\include\DBState.h" />
+    <ClInclude Include="..\..\..\icc\api\include\DBTypeColl.h" />
+    <ClInclude Include="..\..\..\icc\api\include\DBTypeVal.h" />
+    <ClInclude Include="..\..\..\icc\api\include\IccError.h" />
+    <ClInclude Include="..\..\..\icc\api\include\MareaTp.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PdCopyTo.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PDCTokenizer.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PDExcept.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PdExchangeMeth.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PDLanguage.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PDLocaleSnapshot.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PdOperationalUnit.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PdOperatorTp.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PDPathName.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PDSingleton.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PDSuffixedTempName.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PDTempFileAdm.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PdToCustomer.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PdTransferDef.h" />
+    <ClInclude Include="..\..\..\icc\api\include\ProtoTp.h" />
+    <ClInclude Include="..\..\..\icc\api\include\RefCounted.h" />
+    <ClInclude Include="..\..\..\icc\api\include\SafeNotifyChangeCallback.h" />
+    <ClInclude Include="..\..\..\icc\api\include\TrareTp.h" />
+    <ClInclude Include="..\..\..\icc\api\rp\src\stdafx.h" />
+    <ClInclude Include="..\..\..\icc\api\log\src\icc_log.h" />
+    <ClInclude Include="..\..\..\icc\api\log\src\log_locals.h" />
+    <ClInclude Include="..\..\..\icc\api\log\src\PDLog4Cxx.h" />
+    <ClInclude Include="..\..\..\icc\api\include\XMLUtilities.h" />
+    <ClInclude Include="..\..\..\icc\api\include\EasyLicense.h" />
+    <ClInclude Include="..\..\..\utility\XMLTransformer\XMLTransformer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="..\..\..\icc\ConfigurationSystem\CfgServer\CfgServer.idl">
+      <GenerateTypeLibrary Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</GenerateTypeLibrary>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(ProjectDir)$(IntDir)%(Filename).tlb</TypeLibraryName>
+      <GenerateTypeLibrary Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</GenerateTypeLibrary>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectDir)$(IntDir)%(Filename).tlb</TypeLibraryName>
+    </Midl>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties DevPartner_IsInstrumented="1" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

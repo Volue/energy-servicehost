@@ -1,0 +1,24 @@
+HKCR
+{
+	tsrviewhtmlfile.tsrviewhtmlfile.1 = s 'tsrviewhtmlfile Class'
+	{
+		CLSID = s '{43C48190-F2F3-11d1-9107-0000F80355F3}'
+	}
+	tsrviewhtmlfile.tsrviewhtmlfile = s 'tsrviewhtmlfile Class'
+	{
+		CLSID = s '{43C48190-F2F3-11d1-9107-0000F80355F3}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43C48190-F2F3-11d1-9107-0000F80355F3} = s 'tsrviewhtmlfile Class'
+		{
+			val AppID = s '{43C48290-F2F3-11d1-9107-0000F80355F3}'
+			ProgID = s 'tsrviewhtmlfile.tsrviewhtmlfile.1'
+			VersionIndependentProgID = s 'tsrviewhtmlfile.tsrviewhtmlfile'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

@@ -1,0 +1,1739 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="STR">
+      <UniqueIdentifier>{65211d59-4393-4981-9ba8-1503fcc77af6}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="TIME">
+      <UniqueIdentifier>{1addab2b-3dd2-4bbb-aeb5-f3a90730cef3}</UniqueIdentifier>
+      <Extensions>c;cpp;cxx;cc;h</Extensions>
+    </Filter>
+    <Filter Include="LANG">
+      <UniqueIdentifier>{26123886-debb-46fe-94be-daec6d5184ae}</UniqueIdentifier>
+      <Extensions>c;cc;cpp;cxx;h</Extensions>
+    </Filter>
+    <Filter Include="GEN">
+      <UniqueIdentifier>{6d483e07-eaab-481e-a8c6-9a7423f673df}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx</Extensions>
+    </Filter>
+    <Filter Include="CD">
+      <UniqueIdentifier>{138fa3d9-b4dc-4b53-8285-f6fc236b774a}</UniqueIdentifier>
+      <Extensions>c;cpp;cc;h</Extensions>
+    </Filter>
+    <Filter Include="ENV">
+      <UniqueIdentifier>{9f4a63ee-d3b4-4e82-8625-e1f8a7271922}</UniqueIdentifier>
+      <Extensions>cpp;cc;c;h</Extensions>
+    </Filter>
+    <Filter Include="RogueWave">
+      <UniqueIdentifier>{0831e939-f781-4207-a694-23e378767448}</UniqueIdentifier>
+      <Extensions>cpp;cc;c;h</Extensions>
+    </Filter>
+    <Filter Include="ICCBASE">
+      <UniqueIdentifier>{8480fc4f-513c-472d-acc7-ecd6e568e734}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="rp">
+      <UniqueIdentifier>{f0135921-1391-4fda-90b1-873409762cd1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="TXY">
+      <UniqueIdentifier>{5de10de1-fd67-4904-8d32-d14f52966d50}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="LOG">
+      <UniqueIdentifier>{64417532-e0a1-4314-90a8-cb2102afb3cc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XMLUtil">
+      <UniqueIdentifier>{5631792b-9673-404b-8260-6dd262f04762}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="License">
+      <UniqueIdentifier>{21e3dc67-f675-439a-8894-5a2f05272ede}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="XMLTransformer">
+      <UniqueIdentifier>{91a8d9d0-fb64-4ba8-a7e3-11490ea3a61f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Random">
+      <UniqueIdentifier>{376adfe0-09b6-48e6-9669-05351809c423}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="JSON">
+      <UniqueIdentifier>{35f534af-119e-407f-acfd-0fac66c170b3}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_cdel.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_cent.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_d_cx.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_d_ix.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\Str_del_w_st.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_drpc.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_ins.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_insi.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_insr.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_intl_red.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_ljus.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_low.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_ltrm.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_mcat.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_mmov.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_mrpc.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_nlef.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_nmid.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_nrig.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_ocat.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\Str\src\str_pathCheckF.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\Str_raw_spl.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_repe.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_rjus.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_rrpc.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_rstr.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_rtrm.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\Str_spl_list.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_splitname.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_sprdup.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_sprlen.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_tok.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_trm.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\Str\src\str_tscodeForSearch.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_upp.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\str_vcat.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\stra_adm.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\stra_create.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\stra_delete.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\stra_destroy.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\stra_insert.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\stra_query.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\STR\src\stra_replace.c">
+      <Filter>STR</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\c2i.c">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\c2w.c">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\clock_i.c">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\date_i.c">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\date_w.c">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\expand_year.c">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\hourdiff_c.c">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\hourdiff_i.c">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\i2c.c">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\i2w.c">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\now_c.c">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\now_i.c">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\PDDate.cc">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\PDTime.cc">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\PDTimePeriod.cc">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\PDTimePeriodIterator.cc">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\PDTimeSpan.cc">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\PDTimeZone.cc">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\PDTimeZoneApp.cc">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\TIME_datecmp.c">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\TIME_daylight.c">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\time_holiday.c">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\TIME_jul.c">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\timelib.c">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\Time\src\timemacro.cpp">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\w2c.c">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\wdate_c.c">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TIME\src\weekadd_w.c">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\lang\src\lang_close.c">
+      <Filter>LANG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\lang\src\lang_ftrans.c">
+      <Filter>LANG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\lang\src\lang_get_tag.c">
+      <Filter>LANG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\lang\src\lang_gtag.c">
+      <Filter>LANG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\lang\src\lang_highest_tag.c">
+      <Filter>LANG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\lang\src\lang_open.c">
+      <Filter>LANG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\lang\src\lang_rtrans.c">
+      <Filter>LANG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\lang\src\lang_trans.c">
+      <Filter>LANG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\basename.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\bytes2hex.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\debug.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\findfile.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\float.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\fpopen.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\getfuser.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\gethost.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\getopt3.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\getsauser.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\getuser.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\ICC_InitExit.cpp">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\is_ean_num.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\is_val_in_env.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\lock.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\pd_utils.cpp">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\pdgetcwd.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\PDMail.cc">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\PDpopen.cc">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\pdsleep.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\PDSystem.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\pdtmpnam.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\rounding.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\sim_basic_dataset.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\swapbyteorder.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\UserInfo.cpp">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\utilityheader.c">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\xy.cpp">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\CD\src\cd_add.c">
+      <Filter>CD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\CD\src\cd_lib.c">
+      <Filter>CD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\CD\src\cd_read.c">
+      <Filter>CD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\CD\src\cd_write.c">
+      <Filter>CD</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\environment\regenv\environment.c">
+      <Filter>ENV</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\environment\regenv\PDInitEnvironment.cpp">
+      <Filter>ENV</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\environment\regenv\registry.c">
+      <Filter>ENV</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\environment\regenv\translate.c">
+      <Filter>ENV</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\auditbuf.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\bench.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\bintree.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\bintrio.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\bintrit.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\bitvec.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\bitvecio.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\bstream.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\btrdict.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\btree.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\bufpage.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\cacheman.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\coreerr.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\cstring.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\cstrio2.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\cstrngio.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\ct.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctass.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctassio.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctclass.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctclassi.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctdate.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctdatio.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctint.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctintio.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctio.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctoken.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctqueued.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctstackd.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctstacki.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctstr.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\ctstrio.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\cttime.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\cttimeio.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\diskpage.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\disktree.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\dlist.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\dlistcol.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\dlistit.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\dllfact.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\estream.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\factory.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\filemgr.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\gimp.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\hashdict.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\hashdit.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\hashspec.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\hashtab.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\hashtbit.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\idendict.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\idenset.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\idlist.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\idlistit.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\instmgr.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\islist.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\islistit.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\iterator.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\locale.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\lodfault.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\lostream.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\match.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\mempool.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\message.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\model.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\ordcltit.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\ordcltn.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\pstream.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\pvector.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\readmgr.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\rec.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\ref.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\regexp.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwalloc.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwbag.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwbagit.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwdate.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwdateio.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwerr.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwfile.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwintio.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwset.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwstore.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwtime.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\rwtimeio.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\seqcltn.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\slist.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\slistcol.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\slistit.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\sortvec.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\storemgr.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\strngcv.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\timer.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\toolerr.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\toolmisc.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\utility.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\vref.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\vstream.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\wcsutil.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\winstrea.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\wstring.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\wstrngio.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\wtoken.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\xdrstrea.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\rogue\toolsrc\zone.cpp">
+      <Filter>RogueWave</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\CallbackColl.cc">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\CallbackName.cc">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\DBState.cc">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\DBTypeColl.cc">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\DBTypeVal.cc">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\IccError.cc">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\MareaTp.cc">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\ObjectNameGenerator.cpp">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PdCopyTo.cpp">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDCTokenizer.cpp">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDExcept.cc">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PdExchangeMeth.cpp">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDLanguage.cc">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDLocaleSnapshot.cc">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PdOperationalUnit.cpp">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PdOperatorTp.cpp">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDPathName.cc">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDProperties.cpp">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDSingleton.cpp">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDSuffixedTempName.cc">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDTempFileAdm.cc">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PdToCustomer.cpp">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PdTransferDef.cpp">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\ProtoTp.cc">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\TrareTp.cc">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\CsvDevice.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\excel8.cpp">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\ExcelAPI.cpp">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\ExcelDevice.cpp">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\HTMLDevice.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpAcronym.cpp">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpAttributeColl.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpAttributeValue.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpBody.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpBreak.cpp">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpDevice.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpElement.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpElementColl.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpElementSub.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpHead.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpImage.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpLists.cpp">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpParagraph.cpp">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpReport.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTable.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTableBody.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTableBodyColl.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTableCaption.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTableData.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTableFoot.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTableHead.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTableHeader.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTableRow.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTableRowColl.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTableRowGroup.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpTitle.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\rp\src\SdvDevice.cc">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TXY\src\TXY_calcval.c">
+      <Filter>TXY</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TXY\src\TXY_funcs.c">
+      <Filter>TXY</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TXY\src\TXY_label.c">
+      <Filter>TXY</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\TXY\src\TXY_update.c">
+      <Filter>TXY</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\log\src\icc-message.c">
+      <Filter>LOG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\log\src\log_locals.c">
+      <Filter>LOG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\log\src\PDLog4Cxx.cpp">
+      <Filter>LOG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\log\src\STRRexpRrpc.cc">
+      <Filter>LOG</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\XMLUtilities.cpp">
+      <Filter>XMLUtil</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\EasyLicense.cpp">
+      <Filter>License</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\utility\XMLTransformer\XMLTransformer.cpp">
+      <Filter>XMLTransformer</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\log\src\Profiler.cpp" />
+    <ClCompile Include="..\..\..\icc\api\rp\src\RpHeading.cpp">
+      <Filter>rp</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\gen\src\CurrencyHandler.cpp">
+      <Filter>GEN</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\random\RandomNumberGenerator.cpp">
+      <Filter>Random</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\log\src\ColorConverter.cpp" />
+    <ClCompile Include="..\..\..\icc\api\TIME\SharedSource\PDTimeUtilities.cpp">
+      <Filter>TIME</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\StringFunctions.cpp">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\icc\mvs\src\etllib\Etllib.h">
+      <Filter>TIME</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PDTime.h">
+      <Filter>TIME</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PDTimePeriod.h">
+      <Filter>TIME</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PDTimePeriodIterator.h">
+      <Filter>TIME</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PDTimeSpan.h">
+      <Filter>TIME</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PDTimeZone.h">
+      <Filter>TIME</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PDTimeZoneApp.h">
+      <Filter>TIME</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\TIME\src\time_defs.h">
+      <Filter>TIME</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\lang\src\lang_internal.h">
+      <Filter>LANG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\ICC_InitExit.h">
+      <Filter>GEN</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\gen\src\UserInfo.h">
+      <Filter>GEN</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\gen\src\xy.h">
+      <Filter>GEN</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\environment\regenv\icc_env.h">
+      <Filter>ENV</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\auditbuf.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\backward.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\bench.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\bintree.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\bitref.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\bitvec.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\bstream.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\btrdict.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\btree.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\bufpage.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\cacheman.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\colclass.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\collass.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\colldate.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\collect.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\collint.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\collstr.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\colltime.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\compiler.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\coreerr.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\cstring.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\ctoken.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\toolsrc\defcol.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\toolsrc\defmisc.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\defs.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\diskpage.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\disktree.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\dlist.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\dlistcol.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\toolsrc\dllfact.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\edefs.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\ep_cntnr.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\ep_hash.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\ep_inmap.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\ep_inset.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\ep_mcntn.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\ep_scntn.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\ep_seq.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\ep_srtsq.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\epaux.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\epersist.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\epfunc.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\estream.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\ev_cntnr.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\ev_hash.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\ev_inmap.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\ev_inset.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\ev_mcntn.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\ev_scntn.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\ev_seq.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\ev_srtsq.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\factory.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\filemgr.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\gbitvec.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\gdlist.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\generic.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\gordvec.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\gqueue.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\gslist.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\gsortvec.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\gstack.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\gvector.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\hashdict.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\hashtab.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\idendict.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\idenset.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\idlist.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\instmgr.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\islist.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\iterator.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\locale.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\mempool.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\message.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\model.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\mutex.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\new.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\ordcltn.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\pstream.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\pvector.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\queuecol.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\re.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\toolsrc\readmgr.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\rebase.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\ref.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\regexp.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\rei.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\retrait.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\rstream.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\rwalloc.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\rwassert.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\rwbag.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\rwdate.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\rwerr.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\rwfile.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\rwint.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\rwset.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\rwstore.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\rwstring.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\rwtime.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\rwtsd.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\rwwchar.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\rwwind.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\seqcltn.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\slist.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\slistcol.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\sortvec.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\stackcol.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\toolsrc\storemgr.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\stringid.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\strmshft.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\strstrea.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tasslnk.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tbitvec.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\thashfun.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tidlist.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\timer.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tislist.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tooldefs.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\toolerr.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tpdeque.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tpdlist.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tphasht.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tphdict.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tphmap.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tphmmap.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tphmset.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tphset.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tpmap.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tpmmap.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tpmset.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tpordvec.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tpset.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tpsldict.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tpslist.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tpsrtdli.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tpsrtvec.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tpvector.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tqueue.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tstack.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tvdeque.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tvdlist.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tvhasht.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tvhdict.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tvhmap.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tvhmmap.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tvhmset.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tvhset.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tvmap.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tvmmap.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tvmset.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tvordvec.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tvref.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tvrtarry.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tvset.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tvsldict.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tvslist.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tvsrtdli.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tvsrtvec.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\tvvector.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\vpage.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\vref.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\vstream.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\winstrea.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\wstring.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\wtoken.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\xdrstrea.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\xpdlist.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\xphasht.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\xphdict.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\xphset.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\xpordvec.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\xpslist.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\xpsrtvec.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\xvdlist.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\xvhasht.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\xvhdict.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\xvhset.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\xvordvec.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\xvslist.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\xvsrtvec.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\rogue\rw\zone.h">
+      <Filter>RogueWave</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\CallbackColl.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\CallbackName.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\DBState.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\DBTypeColl.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\DBTypeVal.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\IccError.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\MareaTp.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PdCopyTo.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PDCTokenizer.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PDExcept.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PdExchangeMeth.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PDLanguage.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PDLocaleSnapshot.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PdOperationalUnit.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PdOperatorTp.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PDPathName.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PDSingleton.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PDSuffixedTempName.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PDTempFileAdm.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PdToCustomer.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PdTransferDef.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\ProtoTp.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RefCounted.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\SafeNotifyChangeCallback.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\TrareTp.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\rp\src\stdafx.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\log\src\icc_log.h">
+      <Filter>LOG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\log\src\log_locals.h">
+      <Filter>LOG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\log\src\PDLog4Cxx.h">
+      <Filter>LOG</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\XMLUtilities.h">
+      <Filter>XMLUtil</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\EasyLicense.h">
+      <Filter>License</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\utility\XMLTransformer\XMLTransformer.h">
+      <Filter>XMLTransformer</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\gen\src\CurrencyHandler.h">
+      <Filter>GEN</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PDDate.h">
+      <Filter>TIME</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\random\RandomNumberGenerator.h">
+      <Filter>Random</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\excel8.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\ExcelAPI.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\ExcelDevice.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\JSONUtilities.h">
+      <Filter>JSON</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\CsvDevice.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\HTMLDevice.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpAcronym.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpAttributeColl.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpAttributeValue.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpBody.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpBreak.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpDevice.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpElement.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpElementColl.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpElementSub.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpHead.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpHeading.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpImage.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpLists.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpParagraph.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpReport.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpTable.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpTableBody.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpTableBodyColl.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpTableCaption.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpTableData.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpTableFoot.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpTableHead.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpTableHeader.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpTableRow.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpTableRowColl.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpTableRowGroup.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\RpTitle.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\SdvDevice.h">
+      <Filter>rp</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\StringFunctions.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="..\..\..\icc\ConfigurationSystem\CfgServer\CfgServer.idl">
+      <Filter>ENV</Filter>
+    </Midl>
+  </ItemGroup>
+</Project>

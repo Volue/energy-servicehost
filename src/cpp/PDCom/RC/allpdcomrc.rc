@@ -1,0 +1,206 @@
+/////////////////////////////////////////////////////////////////////////////
+//
+// Common resource file for all applications using PDCom.
+// NB: When changing this file, do it using manual edit - do not use
+// Visual Studio's resource editor!
+//
+/////////////////////////////////////////////////////////////////////////////
+
+#ifndef APSTUDIO_INVOKED
+#include "allpdcomrc.h"
+#include <winver.h>
+#endif
+#include <winresrc.h>
+
+// Manifest
+CREATEPROCESS_MANIFEST_RESOURCE_ID RT_MANIFEST "Powel.std.auto.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// English (U.S.) resources
+//
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU) // If not localized in MFC resource language dll
+#ifdef _WIN32
+LANGUAGE 0x09, 0x01 // LANG_ENGLISH, SUBLANG_ENGLISH_US (defined in WinNT.h)
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+#ifndef NOVERSIONINFO
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 99,0,0,0
+ PRODUCTVERSION 99,0,0,0
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS VOS_NT
+ FILETYPE VFT_APP
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "040904b0"
+        BEGIN
+#include "CompanyStringFileInfo.rc"
+            VALUE "OriginalFilename", "generic.exe\0"
+            VALUE "FileDescription", "Application for ICC\0"
+            VALUE "InternalName", "generic\0"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x409, 1200
+    END
+END
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Registry
+//
+IDR_EchoServer			REGISTRY DISCARDABLE    "echoserverapp.rgs"
+IDR_PDEchoServer		REGISTRY DISCARDABLE    "echoserver.rgs"
+IDR_navigatoruis		REGISTRY DISCARDABLE    "navigatoruis.rgs"
+IDR_navigatoruisapp		REGISTRY DISCARDABLE    "navigatoruisapp.rgs"
+IDR_exchpntuis			REGISTRY DISCARDABLE    "exchpntuis.rgs"
+IDR_exchpntuisapp		REGISTRY DISCARDABLE    "exchpntuisapp.rgs"
+IDR_measpntuis			REGISTRY DISCARDABLE    "measpntuis.rgs"
+IDR_measpntuisapp		REGISTRY DISCARDABLE    "measpntuisapp.rgs"
+IDR_netareauis			REGISTRY DISCARDABLE    "netareauis.rgs"
+IDR_netareauisapp		REGISTRY DISCARDABLE    "netareauisapp.rgs"
+IDR_customeruis			REGISTRY DISCARDABLE    "customeruis.rgs"
+IDR_customeruisapp		REGISTRY DISCARDABLE    "customeruisapp.rgs"
+IDR_hvcuis				REGISTRY DISCARDABLE    "hvcuis.rgs"
+IDR_hvcuisapp			REGISTRY DISCARDABLE    "hvcuisapp.rgs"
+IDR_solver				REGISTRY DISCARDABLE    "solver.rgs"
+IDR_solverapp			REGISTRY DISCARDABLE    "solverapp.rgs"
+IDR_impexpuis			REGISTRY DISCARDABLE    "impexpuis.rgs"
+IDR_impexpuisapp		REGISTRY DISCARDABLE    "impexpuisapp.rgs"
+IDR_debituis			REGISTRY DISCARDABLE    "debituis.rgs"
+IDR_debituisapp			REGISTRY DISCARDABLE    "debituisapp.rgs"
+IDR_tspanel				REGISTRY DISCARDABLE    "tspanel.rgs"
+IDR_tspanelapp			REGISTRY DISCARDABLE    "tspanelapp.rgs"
+IDR_calcdebit			REGISTRY DISCARDABLE    "calcdebit.rgs"
+IDR_calcdebitapp		REGISTRY DISCARDABLE    "calcdebitapp.rgs"
+IDR_calcdelivery		REGISTRY DISCARDABLE    "calcdelivery.rgs"
+IDR_calcdeliveryapp		REGISTRY DISCARDABLE    "calcdeliveryapp.rgs"
+IDR_calcreport			REGISTRY DISCARDABLE    "calcreport.rgs"
+IDR_calcreportapp		REGISTRY DISCARDABLE    "calcreportapp.rgs"
+IDR_ediimp				REGISTRY DISCARDABLE    "ediimp.rgs"
+IDR_ediimpapp			REGISTRY DISCARDABLE    "ediimpapp.rgs"
+IDR_ediexp				REGISTRY DISCARDABLE    "ediexp.rgs"
+IDR_ediexpapp			REGISTRY DISCARDABLE    "ediexpapp.rgs"
+IDR_gs2imp				REGISTRY DISCARDABLE    "gs2imp.rgs"
+IDR_gs2impapp			REGISTRY DISCARDABLE    "gs2impapp.rgs"
+IDR_gs2exp				REGISTRY DISCARDABLE    "gs2exp.rgs"
+IDR_gs2expapp			REGISTRY DISCARDABLE    "gs2expapp.rgs"
+IDR_hydval				REGISTRY DISCARDABLE    "hydval.rgs"
+IDR_hydvalapp			REGISTRY DISCARDABLE    "hydvalapp.rgs"
+IDR_hydcorr				REGISTRY DISCARDABLE    "hydcorr.rgs"
+IDR_hydcorrapp			REGISTRY DISCARDABLE    "hydcorrapp.rgs"
+IDR_activityloguis		REGISTRY DISCARDABLE    "activityloguis.rgs"
+IDR_activityloguisapp	REGISTRY DISCARDABLE    "activityloguisapp.rgs"
+IDR_pdaudituis			REGISTRY DISCARDABLE    "pdaudituis.rgs"
+IDR_pdaudituisapp		REGISTRY DISCARDABLE    "pdaudituisapp.rgs"
+IDR_tsrserver			REGISTRY DISCARDABLE    "tsrserver.rgs"
+IDR_tsrserverapp		REGISTRY DISCARDABLE    "tsrserverapp.rgs"
+IDR_tsrclient			REGISTRY DISCARDABLE    "tsrclient.rgs"
+IDR_tsrclientapp		REGISTRY DISCARDABLE    "tsrclientapp.rgs"
+IDR_logonuis			REGISTRY DISCARDABLE    "logonuis.rgs"
+IDR_logonuisapp			REGISTRY DISCARDABLE    "logonuisapp.rgs"
+IDR_tsriclient			REGISTRY DISCARDABLE    "tsriclient.rgs"
+IDR_tsriclientapp		REGISTRY DISCARDABLE    "tsriclientapp.rgs"
+IDR_tsrviewexcelfile	REGISTRY DISCARDABLE    "tsrviewexcelfile.rgs"
+IDR_tsrviewexcelfileapp	REGISTRY DISCARDABLE    "tsrviewexcelfileapp.rgs"
+IDR_pdlog				REGISTRY DISCARDABLE    "pdlog.rgs"
+IDR_pdlogapp			REGISTRY DISCARDABLE    "pdlogapp.rgs"
+IDR_tsrstartreport		REGISTRY DISCARDABLE    "tsrstartreport.rgs"
+IDR_tsrstartreportapp	REGISTRY DISCARDABLE    "tsrstartreportapp.rgs"
+IDR_tsrviewhtmlfile		REGISTRY DISCARDABLE    "tsrviewhtmlfile.rgs"
+IDR_tsrviewhtmlfileapp	REGISTRY DISCARDABLE    "tsrviewhtmlfileapp.rgs"
+IDR_tssearch			REGISTRY DISCARDABLE    "tssearch.rgs"
+IDR_tssearchapp			REGISTRY DISCARDABLE    "tssearchapp.rgs"
+IDR_ester				REGISTRY DISCARDABLE    "ester.rgs"
+IDR_esterapp			REGISTRY DISCARDABLE    "esterapp.rgs"
+IDR_regmeasuis			REGISTRY DISCARDABLE    "regmeasuis.rgs"
+IDR_regmeasuisapp		REGISTRY DISCARDABLE    "regmeasuisapp.rgs"
+IDR_mvsreport			REGISTRY DISCARDABLE    "mvsreport.rgs"
+IDR_mvsreportapp		REGISTRY DISCARDABLE    "mvsreportapp.rgs"
+IDR_tsrviewpsfile		REGISTRY DISCARDABLE    "tsrviewpsfile.rgs"
+IDR_tsrviewpsfileapp	REGISTRY DISCARDABLE    "tsrviewpsfileapp.rgs"
+IDR_kisclient			REGISTRY DISCARDABLE    "kisclient.rgs"
+IDR_kisclientapp		REGISTRY DISCARDABLE    "kisclientapp.rgs"
+IDR_kisdataload			REGISTRY DISCARDABLE    "kisdataload.rgs"
+IDR_kisdataloadapp		REGISTRY DISCARDABLE    "kisdataloadapp.rgs"
+IDR_structloaduis		REGISTRY DISCARDABLE    "structloaduis.rgs"
+IDR_structloaduisapp	REGISTRY DISCARDABLE    "structloaduisapp.rgs"
+IDR_meteruis			REGISTRY DISCARDABLE    "meteruis.rgs"
+IDR_meteruisapp			REGISTRY DISCARDABLE    "meteruisapp.rgs"
+IDR_hbv					REGISTRY DISCARDABLE    "hbv.rgs"
+IDR_hbvapp				REGISTRY DISCARDABLE    "hbvapp.rgs"
+IDR_sim					REGISTRY DISCARDABLE    "sim.rgs"
+IDR_simapp				REGISTRY DISCARDABLE    "simapp.rgs"
+IDR_biduis				REGISTRY DISCARDABLE    "biduis.rgs"
+IDR_biduisapp			REGISTRY DISCARDABLE    "biduisapp.rgs"
+IDR_simnt				REGISTRY DISCARDABLE    "simnt.rgs"
+IDR_simntapp			REGISTRY DISCARDABLE    "simntapp.rgs"
+IDR_tshyd				REGISTRY DISCARDABLE    "tshyd.rgs"
+IDR_tshydapp			REGISTRY DISCARDABLE    "tshydapp.rgs"
+IDR_accounting			REGISTRY DISCARDABLE    "accounting.rgs"
+IDR_accountingapp		REGISTRY DISCARDABLE    "accountingapp.rgs"
+IDR_mvsapp				REGISTRY DISCARDABLE    "mvsapp.rgs"
+IDR_mvsappapp			REGISTRY DISCARDABLE    "mvsappapp.rgs"
+IDR_chart				REGISTRY DISCARDABLE    "chart.rgs"
+IDR_chartapp			REGISTRY DISCARDABLE    "chartapp.rgs"
+IDR_rceditor			REGISTRY DISCARDABLE    "rceditor.rgs"
+IDR_rceditorapp			REGISTRY DISCARDABLE    "rceditorapp.rgs"
+IDR_integrator			REGISTRY DISCARDABLE    "integrator.rgs"
+IDR_integratorapp		REGISTRY DISCARDABLE    "integratorapp.rgs"
+IDR_createvts			REGISTRY DISCARDABLE    "createvts.rgs"
+IDR_createvtsapp		REGISTRY DISCARDABLE    "createvtsapp.rgs"
+IDR_instrreg			REGISTRY DISCARDABLE    "instrreg.rgs"
+IDR_instrregapp			REGISTRY DISCARDABLE    "instrregapp.rgs"
+IDR_prodcode			REGISTRY DISCARDABLE    "prodcode.rgs"
+IDR_prodcodeapp			REGISTRY DISCARDABLE    "prodcodeapp.rgs"
+IDR_tradeorg			REGISTRY DISCARDABLE    "tradeorg.rgs"
+IDR_tradeorgapp			REGISTRY DISCARDABLE    "tradeorgapp.rgs"
+IDR_inflow				REGISTRY DISCARDABLE    "inflow.rgs"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_ECHOSERVER_DESC     "generic  Class"
+END
+
+#endif    // End of English (U.S.) resources
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon and splash
+//
+#ifndef NOILVICON
+ILVICON ICON DISCARDABLE "ilvicon.ico"
+#endif
+#ifndef NOSPLASH
+IDB_SPLASH BITMAP "splash.bmp"
+#endif
+#ifndef NOILVGADGETS
+#include "ilvgadgt.rc"
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Type library
+//
+#ifndef APSTUDIO_INVOKED
+1 TYPELIB "PDCom.tlb"
+#endif

@@ -1,0 +1,24 @@
+HKCR
+{
+	gs2exp.gs2exp.1 = s 'gs2exp Class'
+	{
+		CLSID = s '{43C48178-F2F3-11d1-9107-0000F80355F3}'
+	}
+	gs2exp.gs2exp = s 'gs2exp Class'
+	{
+		CLSID = s '{43C48178-F2F3-11d1-9107-0000F80355F3}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43C48178-F2F3-11d1-9107-0000F80355F3} = s 'gs2exp Class'
+		{
+			val AppID = s '{43C48278-F2F3-11d1-9107-0000F80355F3}'
+			ProgID = s 'gs2exp.gs2exp.1'
+			VersionIndependentProgID = s 'gs2exp.gs2exp'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

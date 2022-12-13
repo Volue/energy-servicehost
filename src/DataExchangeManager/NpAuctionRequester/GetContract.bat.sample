@@ -1,0 +1,4 @@
+@echo off
+rem Sample procedure to be run from task scheduler evry 5 minute between 13:00 and 15:00 to fetch elspot contract
+rem See NpAuctionRequester -h for help on parameters
+regenv_app NpAuctionRequester.exe GetContract -u

@@ -1,0 +1,36 @@
+{
+  "MessageOrigin": "SCADA",
+  "LocalParameters": { "ApTitle": "1.1.1.999", "AeQualifier": 12, "PSelector": "0 0 0 1", "SSelector": "0 1", "TSelector": "0 1", "Tls": { "UseTls": false, "TlsChainValidation": true, "TlsAllowOnlyKnownCertificates": false, "TlsOwnKeyFile": "server-key.pem", "TlsOwnKeyPassword": null, "TlsOwnCertificateFile": "server.cer", "TlsCACertificateFiles": "root.cer" }, "ListeningTimeout": "0:1:0" },
+  "Clients": [
+    { "Hostname": "localhost", "ApTitle": "1.1.1.999", "AeQualifier": 12, "PSelector": "0 0 0 1", "SSelector": "0 1", "TSelector": "0 1", "Tls": { "UseTls": false, "TlsChainValidation": true, "TlsAllowOnlyKnownCertificates": false, "TlsOwnKeyFile": "client1-key.pem", "TlsOwnKeyPassword": null, "TlsOwnCertificateFile": "client1.cer", "TlsCACertificateFiles": "root.cer" } }
+  ],
+  "TlsCertificateDirectory": "certificates",
+  "ReceiveInformationMessages": false, 
+  "LogDomainDescription": true,
+  "LogMessageReceived": false,
+  "EnableTase2Logging": false,
+  "ReconnectDelayTime": "0:1:0",
+  "UseDbTimeseriesMaps": true,
+  "ExternalReferenceDelimiter": '.', 
+  "UseDynamicDatasets": true,
+  "TimeseriesMaps": [
+    { "Variable": { "Domain": "domain1", "Dataset": "dataset1", "VariableCode": "variable1" }, "ExternalReference": "externalReference1", "ValueUnit": "" },
+    { "Variable": { "Domain": "domain1", "Dataset": "dataset1", "VariableCode": "variable2" }, "ExternalReference": "externalReference2", "ValueUnit": "MW" }
+  ],
+  // The "interval timeout" means the server sends the data for events during the interval. It will send an empty report when no changes happen during the interval.
+  // You should use either "INTERVAL" or "CHANGE". Both options together make no sense.
+  // But you can combine CHANGE with "INTEGRITY". "INTEGRITY" means that all data is sent when the integrity timeout expires.
+  "TransferSetIntervals": [
+    { "Dataset": "default", "Timespan": "0:0:00" }
+  ],
+  "TransferSetReportIntegrityTimeouts": [
+    { "Dataset": "default", "Timespan": "0:15:0" }
+  ],
+  "TransferSetReportObjectChanges": [
+    { "Dataset": "default", "Boolean": false }
+  ],
+  "UseImportApplicationManagerService": true,
+  "Priorities": [
+    { "Dataset": "default", "String": "NORMAL" }
+  ]
+}

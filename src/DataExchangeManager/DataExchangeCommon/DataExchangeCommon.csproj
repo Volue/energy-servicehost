@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{59E99C7E-EC69-4FA7-8671-464C80CBBE44}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Powel.Icc.Messaging.DataExchangeCommon</RootNamespace>
+    <AssemblyName>DataExchangeCommon</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>..\..\..\..\..\iccruntime\bin\Win32\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\iccruntime\bin\Win32\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Win32\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\..\..\..\iccruntime\bin\Win32\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\packages\log4net.2.0.15\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Abstract\DataExchangeManagerServiceBase.cs" />
+    <Compile Include="Abstract\IDataExchangeModule.cs" />
+    <Compile Include="Abstract\IExternalEventLogger.cs" />
+    <Compile Include="Abstract\IImportApplication.cs" />
+    <Compile Include="Abstract\IWsLogicBase.cs" />
+    <Compile Include="Abstract\PushExportModule.cs" />
+    <Compile Include="Abstract\TaskBasedModule.cs" />
+    <Compile Include="Abstract\ThreadBasedModule.cs" />
+    <Compile Include="AssemblyInfoCompany.cs" />
+    <Compile Include="AssemblyInfoVersion.cs" />
+    <Compile Include="Settings\Constants.cs" />
+    <Compile Include="Settings\DataExchangeFeatureSettings.cs" />
+    <Compile Include="ExpressionHelper.cs" />
+    <Compile Include="ExternalEventLogger.cs" />
+    <Compile Include="MessageExporter.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Settings\PushExportModuleSettings.cs" />
+    <Compile Include="WsLogicBase.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Powel\Icc\Common\Powel.Icc.Common.csproj">
+      <Project>{a85166f5-c8e5-43a7-80d5-245f2ee86f04}</Project>
+      <Name>Powel.Icc.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Powel\Icc\Interop\Powel.Icc.Interop.vcxproj">
+      <Project>{280cdb7f-4146-45d0-8f84-605dd5b2c431}</Project>
+      <Name>Powel.Icc.Interop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Powel\Icc\Powel.Icc.csproj">
+      <Project>{c5cebeb7-c2d3-446d-a2b7-e99b01fed6a0}</Project>
+      <Name>Powel.Icc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Powel\Icc\Services\Powel.Icc.Services.csproj">
+      <Project>{c48e6d56-4a58-460f-b48d-b98a99c19834}</Project>
+      <Name>Powel.Icc.Services</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataExchangeAPI\DataExchangeAPI.csproj">
+      <Project>{09076f6e-5f4f-41ff-a4e5-eb20688039a5}</Project>
+      <Name>DataExchangeAPI</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

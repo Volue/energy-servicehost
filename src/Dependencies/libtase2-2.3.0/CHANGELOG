@@ -1,0 +1,339 @@
+CHANGELOG
+---------
+
+2.3.0
+-----
+
+- added support for edition 1 (1996.08)
+- updated mbedtls version to 2.16.12
+- allow multiple client instances on a passive endpoint
+- allow to add and remove server and client instances to/from (passive) endpoints during runtime
+- server: added new callback (Tase2_DataSetEventHandler) when dynamic data set are created or deleted
+- server: added new callback (Tase2_DSTransferSetUpdatedHandler) when  DS transfer set is updated
+- server: added new callback (Tase2_DSTransferSetReportSentHandler) when IM transfer set is enabled or disabled
+- server: added new callback when DS transfer set reports are send (Tase2_DSTransferSetReportSentHandler)
+- fixed - remote addresses (p-selector, s-selector, t-selector) are shown wrong in the log
+- server: performance optimzation in DS transfer set handling 
+- Java API: Added access functions to DSTransferSet
+- .NET API: fixed bug in mapping of function Tase2_DSTransferSet_getEventCodeRequested
+- MacOs thread layer: replaced named semaphores by mutex
+- fixed - Server: wrong time calculation for next DSTS interval timeout (LIBTASE2-1707)
+- fixed - passive endpoint sends malformed presentation layer message when psel length is 1 (LIBTASE2-1706)
+- server: fixed mixed up domain/list name in logging of create data set service
+- MMS server: fixed problem with continueAfter in some get-name-list responses (LIBTASE2-1703)
+- don't accept DS transfer sets in VCC scope (also fixed documentation)
+- other small bug fixes
+
+2.2.0
+-----
+
+- TLS layer: added support for X509 CRLs
+- Performance improvements in data model handling (replaced linked lists by AVL trees)
+- passive endpoints can have multiple servers
+- added function Tase2_Server_updateOnlineValueNoTrigger to support application specific limit and deadband handling for analogue values
+- MMS endpoint: fixed bug - called t-selector is ignored
+- Updated mbedtls version to 2.16.10
+
+2.1.4
+-----
+
+- Updated mbedtls version to 2.16.9
+- TLS layer: allow setting of minimal and maximal TLS version
+- added project files for .NET core 3.0
+- Java API: fixed problem with potential premature garbage collection of TLSConfiguration objects when using Server, Client, and Endpoint
+- ICCP server: fixed problem that VCC scope data sets were not added to MMS data model
+- .NET API: fixed bug in handling of write access callback (wrong type in callback that causes a crash on windows)
+- .NET API: fixed potential memory access violation in Client.GetPeerIdentity method
+- Java API: fixed bit flip problem with state helper types (StateValue, Validity, Source, TagValue) - leading to wrong interpretation of state values!
+- Java API: all ClientDSTransferSet methods that send/receive messages now throw ClientException in case of error
+- TASE.2/MMS client: log request timeout
+- TASE.2 client: added support for component access in define data set service
+- MMS: updated define named variable list service decoding to be compatible with indefinite length BER encoding
+- Active endpoint: fixed bug - connection is not terminated correctly when timeout occurs while waiting for ACSE initiate response
+
+2.1.3
+-----
+
+- added function Tase2_Endpoint_disconnectPeer
+- added missing access specifier for function Tase2_DataPoint_getPointValue
+- MMS: fixed problem in handling of indefinite length encoded BER elements
+- .NET API: fixed problem caching managed BilateralTable instances
+
+
+2.1.2
+-----
+
+- .NET API: Added Endpoint.SetTLSConfiguration method
+- Java API: fixed buggy encoding/decoding in DataState and StatStateSupplemental classes
+- .NET API: Fixed memory leak in Client.GetPeerIdentity method.
+- fixed potential deadlock in server side request handling when transfer sets are enabled
+- added functions Tase2_Endpoint_setMaxServOutstandingCalling and Tase2_Endpoint_setMaxServOutstandingCalled
+- MMS library: server - change outstanding service buffers to work like a queue/decouple request handling and sending of response message
+- allow $ character in variable names
+- Java API: fixed problem in DataModel when VCC domain is not initialized (can cause crash when transfer set or control handler is called)
+
+2.1.1
+-----
+
+- Java API: fixed boolean mapping to C99 bool
+- MMS: also update bitstring value when source bit string is of smaller size than the bitstring to be updated
+- updated documentation
+- changed wrong desctruction sequence in some examples
+
+2.1.0
+-----
+
+- Java API: fixed bug when adding control points (use domain name for control point name)
+- Java API: fixed problem in handling of lower layer addresses
+- added more checks for out-of-memory conditions
+- call user log handler when memory allocation fails
+- server: added function Tase2_Server_setMaxDSTSEventQueueSize to limit number of entries in DSTS event buffers
+- added function Tase2_ControlPoint_getDomain
+- Tase2_Endpoint_Connection: added functions to access ISO layer addresses (P-,S-,T-selector)
+- fixed: crash when access to a variable ending with "_SBO" but was not defined as a device with SBO
+- Tase2_Endpoint: added feature to change TLS configuration at runtime
+- server: fixed bug with integrity reports
+- TASE.2 endpoint: added application callback to accept/reject new connection (Tase2_Endpoint_ConnectionAcceptHandler)
+- added extended log handler and Tase2_setLogFunctionEx (support log sources, endpoint, and connection information)
+- change behavior of API functions Tase2_Endpoint_Connection_getPeerIpAddress and Tase2_Endpoint_Connection_getPeerIpAddress
+- added thread layer for macOS (code can now compile and run on macOS)
+- fixed memory leak in windows socket layer
+
+2.0.11
+------
+- new function Tase2_DataModel_hideSpecialTSVariables to hide special transfer set variables in get-name-list response
+
+2.0.10
+------
+
+- new function Tase2_Endpoint_isPassive to check if the endpoint instance is passive (TCP server) or active (TCP client)
+- Tase2_Client_setRemoteAddresses, and other functions to set remote parameters now also change the underlying endpoint parameters when the endpoint is active
+
+2.0.9
+-----
+- new function Tase2_PointValue_getTimeStampClass to determine the time stamp class of a point value
+- fixed bug in Tase2_PointValue_createStateExtended
+- fixed bug in Tase2_PointValue_getTimeStamp
+- fixed bug in Tase2_PointValue_hasTimeStamp
+- fixed bug in function Tase2_IndicationPoint_setDiscreteQ
+- fixed bug in function Tase2_IndicationPoint_setRealQ
+- fixed: server can crash when server data is updated while DSTS is enabled
+
+2.0.8
+-----
+- TASE.2 endpoint: added function (Tase2_Endpoint_Connection_getMaxPduSize) to access the negotiated maximum PDU size of a connection
+- TASE.2 client: fixed bug when creating and reading VCC scope data sets
+- updated API documentation with hints when functions are not allowed to be called in library callbacks
+- fixed order of some locks to ensure consistent client state
+- Tase2_Server_isRunning now also useful for active endpoint (returns true when endpoint is connected to a passive endpoint)
+- TASE.2 server: respect BLT also when running as active server
+- fixed: passive client is not authenticated by active server
+- ACSE: active ACSE instance assumes called AP address when passive instance provides no address information (e.g. responded-AP-title, ...)
+- ACSE: check responded-AP-title/responded-AE-qualifier, ...
+
+2.0.7
+-----
+
+- TASE.2 endpoint/client: added functions to set local/remote AE/AP invocation IDs
+
+2.0.6
+-----
+- TASE.2 server: added functions Tase2_TransferSet_getDomain and Tase2_Domain_getName
+- TASE.2 server: fixed type in Tase2_DSTransferSetStateChangedHandler
+
+2.0.5
+-----
+- TASE.2 client: added function Tase2_Client_readMultiplePointValues to read multiple values at once with a single request
+- added Tase2_PointValue_getError to get the individual error code when reading multiple data points at once (.NET API: PointValue.Error property)
+- TASE.2 server: fixed problem that DATA_CHANGE report was also triggered by time stamp update
+- TASE.2 server: implemented RBE and AllChangesReported behavior for interval timeout reports
+- TASE.2 server: implemented AllChangesReported behavior
+- TASE.2 endpoint: check peer ISO parameters (AP-title, AE-qualifier, P-,S-,T-selector) according to configured matching rules
+
+2.0.4
+-----
+- added API function Tase2_PointValue_setType to set correct type when type guess cannot determine the exact type
+- added TCP_USER_TIMEOUT parameter in Linux Socket implementation
+- activated TCP keep alive in Windows and Linux Socket implementations
+- added API functions Tase2_Endpoint_setRequestTimeout and Tase2_Endpoint_setConnectTimeout
+- improved Tase2_Client reusability and reconnect handling
+- fixed some race conditions in active dual-role endpoint
+- allow "$" character in variable names
+
+2.0.3
+-----
+- Tase2_Client_disconnect is not called when Tase2_Client_connect doesn't succeed reading Tase2_Version and explicit Tase2_Endpoint is used
+- Add support to build with MinGW
+- MMS active endpoint: fixed synchronization problems with client and server --> caused malformed MMS messages under some circumstances
+- MMS client: terminate all outstanding requests when connection is closed (prevent client lock)
+- MMS endpoint: passive endpoint - fixed problem in connection setup (association response not sent under certain conditions)
+- MMS client: fixed bug in identify response handling
+- server: fixed bug in IM buffer handling
+
+2.0.2
+-----
+- .NET API: added EndpointConnection and Endpoint.ConnectionHandler
+- .NET API: Added DSTransferSetStateChangedHandler
+- TASE.2 server: added Tase2_DSTranferSetStateChangedHandler to track transfer set enable/disable events
+- TASE.2 endpoint: added Tase2_Endpoint_ConnectionHandler and Tase2_Endpoint_Connection to track connect/disconnect events
+- improved presentation layer address handling
+- fixed race condition with critical transfer set reports on dual-role endpoints
+- TASE.2 client: added Tase2_Client_StateChangedHandler (.NET: Client.StateChangedHandler) to track client state changes
+- fixed problem with setQuality/setFlags for STATE type indication points
+
+2.0.1
+-----
+- MMS endpoint: fixed bug in remote hostname/address handling
+- .NET API: fixed problem with GC'd state changed hander delegate
+- Tase2_Client_readPointValue: now returns an error code instead of a Tase2_PointValue with type UNKNOWN in case of a data-access-error.
+- added function Tase2_Endpoint_setMaxMmsPduSize
+- updated documentation
+
+2.0.0
+-----
+- updated to new version of libmms 2.0.0 with dual-role endpoint support
+- added support for dual-role endpoints (active or passive MMS endpoint can have both client and server roles)
+- new object Tase2_Endpoint
+- added examples for dual-role endpoints
+- new functions for Tase2_Client and Tase2_Server to be used together with the new Tase2_Endpoint
+- MMS server: support alternate-access/component for read service 
+- better handling of lower layer addresses (P-,S-,T-selector)
+- checks for ACSE and ISO parameters are more strict. When porting existing code please take care to set the correct parameters!
+
+1.2.4
+-----
+- server/.NET API: added Tase2_Server_setLocalIpAddress to bind server to a specific local IP address
+- library: some small refactorings
+- added install target to cmake file
+- make printAppTitle compatible with VS <= 2013
+- fixed problem that code doesn't compile without TASE2_DEBUG_OUTPUT set
+
+1.2.3
+-----
+- library/.NET API: added support for user provided log message handler and configurable log levels
+- library: refactored include folders
+- .NET API: Added DataPoint.GetPointValue method
+- server: new function Tase2_DataPoint_getPointValue (can be used server side to get current values of server data points)
+- server: fixed bug when STATE indication point has NO_QUALITY set
+
+1.2.2
+-----
+- server: fixed bugs in set functions for STATE type indication point variables
+- server: fixed problem with setting server identity when using .NET API
+- client: added functions to set own identity and read peer identity
+- added example code for indication point variables of type state
+
+1.2.1
+-----
+- server: fixed bug in set tag handler call
+- client: fixed - no callback for reports containing only a single variable
+- client: support to handle MMS identify request from server
+- client: support to write/enable DS transfer set without prior read
+- client: added missing implementation of Tase2_Client_getSupportedFeatures
+- client: fixed crash when connecting to MMS server that has no or invalid Tase2_Version variable
+- client: close conenction automatically when Tase2_Client_destroy is called
+- server: fixed crash when enabling DSTS with data set that has no special variables
+
+1.2.0
+-----
+- client/server: implemented support for IM transfer set (CB 4)
+- .NET API: client/server - added support for IM transfer set (CB 4)
+- .NET API: client/server - added support to set/read the supported services
+- MMS server: get name variable list response for VMD named variables is now sorted correctly
+
+1.1.6
+-----
+- bug fix in support of configuring/enabling a data set transfer set with a single (structure) write request
+- always expect/send optional "AllChangesReported" attribute of data set transfer sets
+- allow flexible order of special elements in data set transfer sets
+- added new client example
+- server: fixed problem sending integrity reports
+
+1.1.5
+-----
+- client C/.NET API: added function to get connection state and callback when the connections is closed by the server
+- removed incompatibility with VS 2013
+
+1.1.4
+-----
+- client C/.NET API: added functions to configure lower layer address parameters
+- updated documentation
+
+1.1.3
+-----
+- .NET API: client - add support to read data set directory
+- client: handle domain specific special transfer set variables
+- server: changed special transfer set variable to be domain specific
+- added client example to show how to browse server name space
+- added PICS document for library
+
+1.1.2
+-----
+
+- .NET API: Added PointValue.HasTimeStamp property
+- .NET API: fixed problem: ClientDataSet used by ClientDSTransferSet can be destroyed by garbage collector while still in use
+- TLS client: fixed problem with high CPU load
+
+1.1.1
+-----
+
+- .NET client API: moved native DSTransferSet list to Client.cs
+
+1.1.0
+-----
+- client: added new Tase2_DSTransferSetReportHandler callback
+- client: added support for optional DSTransferSet attribute "AllChangesReported"
+- client: implemented Tase2_ClientDSTransferSet_writeValues function
+- added function Tase2_PointValue_hasTimeStamp
+- .NET API: added new functions to create PointValue instances for single event and packed event types
+- .NET API: added missing functions/properties for protection events to PointValue
+- client/.NET API: added support to create and delete dynamic data sets
+- client/.NET API: added access functions to special transfer report variables
+- server: fixed bug in handling malformed initial messages
+
+1.0.5
+-----
+- added project files for .NET core 2.0
+- added properties for ClientDSTransferSet
+- fixed problem with bool marshalling in .NET wrapper
+
+1.0.4
+-----
+- removed unused code
+- added missing export declaration for Tase2_Client_getStatistics
+- added missing certificates for .NET example client
+- new error code TASE2_CLIENT_ERROR_OBJECT_NOT_EXISTING
+
+1.0.3
+------
+- fixed bug in tag/command handling
+- updated examples
+- updated documentation
+- added optional debug compilation
+
+1.0.2
+------
+- updated to mbedtls 2.7.0
+- .NET: updated TLSConfiguration documentation
+- added access functions to statistics information to client and server
+
+1.0.1
+-----
+- added ClientConnectionHandler for C and .NET
+- updated documentation
+- added .NET wrapper for client side
+- removed Tase2_Server_tick - is now called internally by MMS stack
+- added .NET wrapper for server side
+- server side handling of critical report confirmation
+- added more client functionality
+- client send Transfer_Report_NACK
+- client send Transfer_Report_ACK for critical reports
+- added access functions for Tase2_DataPoint types
+- impoved handling of device model
+- TAG values can be reported by transfer sets
+- some bug fixes
+
+1.0.0
+-----
+- Initial version
+

@@ -1,0 +1,24 @@
+HKCR
+{
+	hydval.hydval.1 = s 'hydval Class'
+	{
+		CLSID = s '{43C48179-F2F3-11d1-9107-0000F80355F3}'
+	}
+	hydval.hydval = s 'hydval Class'
+	{
+		CLSID = s '{43C48179-F2F3-11d1-9107-0000F80355F3}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43C48179-F2F3-11d1-9107-0000F80355F3} = s 'hydval Class'
+		{
+			val AppID = s '{43C48279-F2F3-11d1-9107-0000F80355F3}'
+			ProgID = s 'hydval.hydval.1'
+			VersionIndependentProgID = s 'hydval.hydval'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

@@ -1,0 +1,15 @@
+/*
+ * Contains common company stringinfo to be included in the StringFileInfo resource block
+ */
+#ifndef versionFileString
+#define versionFileString "99.0.0.0\0"
+#endif
+#ifndef versionProductString
+#define versionProductString "99.0.0 (Debug)\0"
+#endif
+            VALUE "CompanyName", "Volue ASA\0"
+            VALUE "CompanyWeb", "https://www.volue.com\0"
+            VALUE "FileVersion", versionFileString
+            VALUE "LegalCopyright", "Copyright © 2022 Volue ASA\0"
+            VALUE "ProductName", "Energy Smart Generation\0"
+            VALUE "ProductVersion", versionProductString

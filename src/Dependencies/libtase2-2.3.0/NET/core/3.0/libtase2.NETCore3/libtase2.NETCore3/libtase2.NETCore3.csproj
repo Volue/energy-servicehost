@@ -1,0 +1,35 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="..\..\..\..\libtase2.NET\client\Client.cs" Link="Client.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\client\ClientDataSet.cs" Link="ClientDataSet.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\client\ClientDSTransferSet.cs" Link="ClientDSTransferSet.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\client\ClientException.cs" Link="ClientException.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\common\AuthenticationMethod.cs" Link="AuthenticationMethod.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\common\CommandValue.cs" Link="CommandValue.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\common\Endpoint.cs" Link="Endpoint.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\common\EndpointConnection.cs" Link="EndpointConnection.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\common\PointValue.cs" Link="PointValue.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\common\ReportReason.cs" Link="ReportReason.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\common\SupportedFeatures.cs" Link="SupportedFeatures.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\common\TagValue.cs" Link="TagValue.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\common\Tase2Library.cs" Link="Tase2Library.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\common\TLSConfiguration.cs" Link="TLSConfiguration.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\common\TLSVersion.cs" Link="TLSVersion.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\server\BilateralTable.cs" Link="BilateralTable.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\server\ControlPoint.cs" Link="ControlPoint.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\server\DataModel.cs" Link="DataModel.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\server\DataPoint.cs" Link="DataPoint.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\server\DataSet.cs" Link="DataSet.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\server\Domain.cs" Link="Domain.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\server\DSTransferSet.cs" Link="DSTransferSet.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\server\IndicationPoint.cs" Link="IndicationPoint.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\server\ProtectionEquipment.cs" Link="ProtectionEquipment.cs" />
+    <Compile Include="..\..\..\..\libtase2.NET\server\Server.cs" Link="Server.cs" />
+  </ItemGroup>
+
+</Project>

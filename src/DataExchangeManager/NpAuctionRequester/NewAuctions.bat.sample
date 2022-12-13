@@ -1,0 +1,5 @@
+echo off
+rem Bat procedure to be run from task scheduler once a day to fetch new elspot auction definitions
+rem See NpAuctionRequester -h for help on parameters.
+for /f %%i in ('timeconv -T localday+14d') do set START=%%i
+regenv_app NpAuctionRequester NewAuction -s %START% -d 7

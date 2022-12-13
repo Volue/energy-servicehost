@@ -1,0 +1,31 @@
+/* XPM */
+static char *ictitleb[] = {
+/* width height num_colors chars_per_pixel */
+"    16    16        8            1",
+/* colors */
+". c #000000",
+"# c #008000",
+"a c #000080",
+"b c #008080",
+"c c #00ff00",
+"d c #ffff00",
+"e c #00ffff",
+"f c none",
+/* pixels */
+"aee.ffffffffffff",
+"aee.bbbbbbbbbbbb",
+"a...............",
+"ffffffffffffffff",
+"aeebbbbbbbbbbbbb",
+"aee.ddffffffffab",
+"aee.ddbbccccffab",
+"aee.dd.fffc#ffab",
+"aee.dd.fffccffa#",
+"aee.dd.fffc#ff#c",
+"aee.dd.fffccf#c.",
+"aee.dd.fffc#fc.b",
+"aee.dd.fffccc.ab",
+"aee.dd..ffc#.fab",
+"aee.ddddddccaaab",
+"aee.ddddddddbbbb"
+};

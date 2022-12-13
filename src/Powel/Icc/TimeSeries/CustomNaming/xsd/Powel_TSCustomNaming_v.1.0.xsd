@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2007 (http://www.altova.com) by Gøran Henriksen (private) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.powel.no/icc/timeseries/TSCustomNaming/1.0/" xmlns:data="http://www.powel.no/icc/timeseries/TSCustomNamingData/1.0/" xmlns:enums="http://www.powel.no/icc/timeseries/TSCustomNamingEnums/1.0/" targetNamespace="http://www.powel.no/icc/timeseries/TSCustomNaming/1.0/" elementFormDefault="qualified" attributeFormDefault="unqualified" version="0.1" id="TSCustomNaming">
+	<xs:import namespace="http://www.powel.no/icc/timeseries/TSCustomNamingData/1.0/" schemaLocation="Powel_TSCustomNamingData_v.1.0.xsd" id="TSCustomNamingData"/>
+	<xs:element name="TSCustomNaming">
+		<xs:annotation>
+			<xs:documentation>Comment describing your root element</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="NameRules">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="NameRule" maxOccurs="unbounded">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="NameElements">
+											<xs:complexType>
+												<xs:sequence>
+													<xs:element name="NameElement" type="data:NameElementType" maxOccurs="unbounded"/>
+												</xs:sequence>
+											</xs:complexType>
+										</xs:element>
+									</xs:sequence>
+									<xs:attribute name="name" use="required"/>
+									<xs:attribute name="delimiter" use="required"/>
+									<xs:attribute name="context"/>
+								</xs:complexType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="IndexElements">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="IndexElement" type="data:IndexElementType" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

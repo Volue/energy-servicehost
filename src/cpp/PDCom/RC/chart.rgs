@@ -1,0 +1,24 @@
+HKCR
+{
+	chart.pdcom.1 = s 'chart Class'
+	{
+		CLSID = s '{43C48208-F2F3-11d1-9107-0000F80355F3}'
+	}
+	chart.pdcom = s 'chart Class'
+	{
+		CLSID = s '{43C48208-F2F3-11d1-9107-0000F80355F3}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43C48208-F2F3-11d1-9107-0000F80355F3} = s 'chart Class'
+		{
+			val AppID = s '{43C48308-F2F3-11d1-9107-0000F80355F3}'
+			ProgID = s 'chart.pdcom.1'
+			VersionIndependentProgID = s 'chart.pdcom'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

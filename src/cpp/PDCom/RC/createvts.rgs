@@ -1,0 +1,24 @@
+HKCR
+{
+	createvts.pdcom.1 = s 'createvts Class'
+	{
+		CLSID = s '{43C48211-F2F3-11d1-9107-0000F80355F3}'
+	}
+	createvts.pdcom = s 'createvts Class'
+	{
+		CLSID = s '{43C48211-F2F3-11d1-9107-0000F80355F3}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43C48211-F2F3-11d1-9107-0000F80355F3} = s 'createvts Class'
+		{
+			val AppID = s '{43C48311-F2F3-11d1-9107-0000F80355F3}'
+			ProgID = s 'createvts.pdcom.1'
+			VersionIndependentProgID = s 'createvts.pdcom'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

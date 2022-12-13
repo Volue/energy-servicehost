@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<nodeSet version="1.0">
+    <view uin="id2n195g043grkzg044smac">
+        <property name="$metaclass" value="Class Diagram"/>
+        <property name="@__options" value=""/>
+        <reference df-class-name="reference" referencedUin="csharp:e_class:src:ConfigurationSystem:Powel.ConfigurationSystemService.ConfigurationProviderFactory">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="@hideAttributes" value=""/>
+            <property name="bounds" value="10,10,410,110"/>
+            <property name="bounds_setted_by_user" value="true"/>
+        </reference>
+        <reference df-class-name="reference12" referencedUin="csharp:e_class:src:ConfigurationSystem:Powel.ConfigurationSystemService.CachingConfigurationProvider">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="@hideAll" value=""/>
+            <property name="bounds" value="260,170,200,34"/>
+            <reference referencedUin="csharp:l_impl:src:ConfigurationSystem:Powel.ConfigurationSystemService.CachingConfigurationProvider:Powel.ConfigurationSystemService.IConfigurationProvider">
+                <property name="sourceAnchor" value="260,187"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="210,187"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference13" referencedUin="csharp:e_class:src:ConfigurationSystem:Powel.ConfigurationSystemService.IConfigurationProvider">
+            <property name="$shortcutReference" value="true"/>
+            <property name="$imported" value=""/>
+            <property name="bounds" value="10,170,200,162"/>
+        </reference>
+        <reference df-class-name="reference14" referencedUin="design:node:::id2n195g043grkzg044smac.nodeid5jzzbg043grkzg0450qyd">
+            <property name="$shortcutReference" value="true"/>
+            <property name="background_color" value="255,255,204"/>
+            <property name="bounds" value="10,360,220,70"/>
+            <property name="bounds_setted_by_user" value="true"/>
+            <reference referencedUin="design:link:::id2n195g043grkzg044smac.nodeid5jzzbg043grkzg0450qyd.linkid24t8kg043grkzg045238n:id2n195g043grkzg044smac.nodeid5jzzbg043grkzg0450qyd">
+                <property name="sourceAnchor" value="110,360"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="110,332"/>
+            </reference>
+        </reference>
+        <reference df-class-name="reference15" referencedUin="design:node:::id2n195g043grkzg044smac.nodeide5wsxg043grkzg04564gy">
+            <property name="$shortcutReference" value="true"/>
+            <property name="background_color" value="255,255,204"/>
+            <property name="bounds" value="260,230,201,66"/>
+            <property name="bounds_setted_by_user" value="true"/>
+            <reference referencedUin="design:link:::id2n195g043grkzg044smac.nodeide5wsxg043grkzg04564gy.linkidfov9xg043grkzg0456xr7:id2n195g043grkzg044smac.nodeide5wsxg043grkzg04564gy">
+                <property name="sourceAnchor" value="360,230"/>
+                <property name="bendpoints" value=""/>
+                <property name="targetAnchor" value="360,204"/>
+            </reference>
+        </reference>
+    </view>
+    <node uin="id2n195g043grkzg044smac.nodeid5jzzbg043grkzg0450qyd">
+        <property name="$metaclass" value="Note"/>
+        <property name="$name" value="Note1"/>
+        <property name="$note_text" value="Extend this interface to create interfaces with more features, e.g. for change awareness."/>
+        <link uin="id2n195g043grkzg044smac.nodeid5jzzbg043grkzg0450qyd.linkid24t8kg043grkzg045238n">
+            <participant role="Supplier" referencedUin="csharp:e_class:src:ConfigurationSystem:Powel.ConfigurationSystemService.IConfigurationProvider"/>
+            <participant role="Client" referencedUin="design:node:::id2n195g043grkzg044smac.nodeid5jzzbg043grkzg0450qyd"/>
+            <property name="$metaclass" value="Note Link"/>
+        </link>
+    </node>
+    <node uin="id2n195g043grkzg044smac.nodeide5wsxg043grkzg04564gy">
+        <property name="$metaclass" value="Note"/>
+        <property name="$name" value="Note2"/>
+        <property name="$note_text" value="Handles the caching logic for both the simple and remote providers."/>
+        <link uin="id2n195g043grkzg044smac.nodeide5wsxg043grkzg04564gy.linkidfov9xg043grkzg0456xr7">
+            <participant role="Supplier" referencedUin="csharp:e_class:src:ConfigurationSystem:Powel.ConfigurationSystemService.CachingConfigurationProvider"/>
+            <participant role="Client" referencedUin="design:node:::id2n195g043grkzg044smac.nodeide5wsxg043grkzg04564gy"/>
+            <property name="$metaclass" value="Note Link"/>
+        </link>
+    </node>
+</nodeSet>

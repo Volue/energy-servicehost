@@ -1,0 +1,10 @@
+﻿<Window x:Class="DataExchange.Administration.Shell.ShellView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:regions="clr-namespace:Microsoft.Practices.Prism.Regions;assembly=Microsoft.Practices.Prism"
+        Title="{Binding Title}" Height="{Binding Height, Mode=TwoWay}" Width="{Binding Width, Mode=TwoWay}"
+        MinWidth="{Binding MinWidth, Mode=TwoWay}" MinHeight="{Binding MinHeight, Mode=TwoWay}" WindowStartupLocation="CenterScreen">
+    <Grid>
+        <ContentControl regions:RegionManager.RegionName="MainRegion" />
+    </Grid>
+</Window>

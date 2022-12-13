@@ -1,0 +1,24 @@
+HKCR
+{
+	tsrstartreport.tsrstartreport.1 = s 'tsrstartreport Class'
+	{
+		CLSID = s '{43C48189-F2F3-11d1-9107-0000F80355F3}'
+	}
+	tsrstartreport.tsrstartreport = s 'tsrstartreport Class'
+	{
+		CLSID = s '{43C48189-F2F3-11d1-9107-0000F80355F3}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43C48189-F2F3-11d1-9107-0000F80355F3} = s 'tsrstartreport Class'
+		{
+			val AppID = s '{43C48289-F2F3-11d1-9107-0000F80355F3}'
+			ProgID = s 'tsrstartreport.tsrstartreport.1'
+			VersionIndependentProgID = s 'tsrstartreport.tsrstartreport'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

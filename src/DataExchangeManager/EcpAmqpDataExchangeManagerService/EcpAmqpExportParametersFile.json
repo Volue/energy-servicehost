@@ -1,0 +1,8 @@
+{
+  "UseEdx": "false",
+  "EcpAmqpUrl": "amqp://ecp:[$SECRET:EcpAmqpUrlPassword:$]@172.21.54.40:5672",
+  "Enable": "true",
+  "EcpAmqpOutboxQueue": "ecp.endpoint.outbox",
+  "EcpAmqpOutboxResponseQueue": "ecp.endpoint.outbox.reply",
+  "EcpAmqpSendTimeoutMs": "100"
+}

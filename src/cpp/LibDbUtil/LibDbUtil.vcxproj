@@ -1,0 +1,380 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{A0E07310-35C5-40F1-9130-99E89802D6D5}</ProjectGuid>
+    <RootNamespace>LibDbUtil</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="..\..\..\build\toolset.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <AdditionalOptions>-D_CRT_SECURE_NO_DEPRECATE %(AdditionalOptions)</AdditionalOptions>
+      <AdditionalIncludeDirectories>../../../rogue;../../../icc/api/include;../../../icc/sim/include;../../../icc/api/dbi/include;../../../icc/api/dbi/include/dig_h;../../../icc/api/ICC;../../../icc/api/PDCom;../../../icc/api/CB;../../../icc/api/dbi/src/common_classes;../../../icc/api/log/src;../../../icc/api/PDComponent;../../../icc/basis/tsreport/libsolver;../../../icc/mvs/src/App/mvs;../../../icc/basis/tsreport/rcmapi;../../../icc/basis/tsreport/reportdata;../../../icc/basis/tsreport/printdlg;../../../icc/basis/tsreport/statusfilter;../../../icc/sim/src/sim;../../../icc/api/gen/src;../../../otl;../../../icc/TimeSeries;../../../icc/TimeSeries/Shared;$(ILVHOME)/include;$(ORACLEX_HOME)/oci/include;$(ProjectDir);../../../Log4powel/apache-log4cxx/src/main/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>PDDEBUG;_CRT_SECURE_NO_DEPRECATE;WIN32;_NDEBUG;_LIB;PD_IOSTD;ID_TIPP;IL_DLL;IL_STD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <MinimalRebuild>false</MinimalRebuild>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>../../../rogue;../../../icc/api/include;../../../icc/sim/include;../../../icc/api/dbi/include;../../../icc/api/dbi/include/dig_h;../../../icc/api/ICC;../../../icc/api/PDCom;../../../icc/api/CB;../../../icc/api/dbi/src/common_classes;../../../icc/api/log/src;../../../icc/api/PDComponent;../../../icc/basis/tsreport/libsolver;../../../icc/mvs/src/App/mvs;../../../icc/basis/tsreport/rcmapi;../../../icc/basis/tsreport/reportdata;../../../icc/basis/tsreport/printdlg;../../../icc/basis/tsreport/statusfilter;../../../icc/sim/src/sim;../../../icc/api/gen/src;../../../otl;../../../icc/TimeSeries;../../../icc/TimeSeries/Shared;$(ILVHOME)/include;$(ORACLEX_HOME)/oci/include;$(ProjectDir);../../../icc/api/log/src;../../../Log4powel/apache-log4cxx/src/main/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;WIN32;_NDEBUG;_LIB;PD_IOSTD;ID_TIPP;IL_DLL;IL_STD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DisableSpecificWarnings>4996;%(DisableSpecificWarnings)</DisableSpecificWarnings>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+    </ClCompile>
+    <Lib>
+      <AdditionalDependencies>
+      </AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\ActivityLog.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\BeginTrans.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\CommitTrans.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\DBI_auditing.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\DBI_count_rows.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\DBI_count_xy_values.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\DBI_ts_routin.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\DBI_ts_text.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\DBI_tscode_tims_key.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\DBICommon.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\DBIICC_error.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\EFITime.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\GetStatusValue.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\icc_send_log.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\LocalCursor.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\MiscDB.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\PALinit.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\PDDBEnv.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\PDLogCollMessage.cpp">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\PDLogEntry.cc">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\PDLogHeader.cpp">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\PDLogMailTo.cpp">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\PDLogMessage.cpp">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\RollbackTrans.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\TS_export_import.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\TsInfoQuery.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\TsXyValues.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\efi_classes\efi_classes_gen\dataset_func_gen.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\efi_classes\efi_classes_gen\get_resv_data_gen.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\sec_classes\CheckProgramId.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\sec_classes\SEC_dbconnect.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\sec_classes\SEC_user_info.C">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\NetarTp.cpp" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PdCountryTp.cpp" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDDbCursor.cc" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDDbTransaction.cc" />
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PdProtocolTp.cpp" />
+    <ClCompile Include="..\..\..\icc\api\pdutil\src\CalcDefCObj.cc" />
+    <ClCompile Include="..\..\..\icc\api\pdutil\src\CalcDefColl.cc" />
+    <ClCompile Include="..\..\..\icc\api\pdutil\src\FetchTsUnitAndType.cpp" />
+    <ClCompile Include="..\..\..\icc\api\pdutil\src\NormSeriesMap.cpp" />
+    <ClCompile Include="..\..\..\icc\api\pdutil\src\RCDefiniCApi.cc" />
+    <ClCompile Include="..\..\..\icc\api\pdutil\src\ReportDefCObj.cc" />
+    <ClCompile Include="..\..\..\icc\api\pdutil\src\ReportDefColl.cc" />
+    <ClCompile Include="..\..\..\icc\api\ts\src\TseriTp.cc" />
+    <ClCompile Include="..\..\..\icc\api\ts\src\TseriTpColl.cc" />
+    <ClCompile Include="..\..\..\icc\api\ts\src\UnmeaTp.cc" />
+    <ClCompile Include="..\..\..\icc\api\ts\src\UnmeaTpColl.cc" />
+    <ClCompile Include="..\..\..\icc\basis\logon\clientCon\LogonclientConDispatch.cc">
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">../../../icc/basis/logon/clientCon;../../../icc/api/environment/regenv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalIncludeDirectories Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">../../../icc/basis/logon/clientCon;../../../icc/api/environment/regenv;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <ClCompile Include="..\..\..\otl\otlutil.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\DBI_func_protocol.h">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\MATH_DBI.h">
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">CompileAsCpp</CompileAs>
+      <CompileAs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">CompileAsCpp</CompileAs>
+    </ClCompile>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\ActivityLog.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\ActivityLogDefinitions.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\AutoCommit.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\Batch.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\ByteStream.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBHostVariable.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_auditing.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_c_misc.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_c_types.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_enums.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_ERRNO.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_error.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_fixquotes.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_func.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_TS_enums.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_ts_header.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_ts_routines.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_ts_text.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_tscode_tims_key.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBICommon.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBILineFile.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBInterf.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBInterfaceBasic.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBInterfaceErr.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\dbmsapi.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBOption.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBTransaction.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\EFITime.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\EFI_db_routines.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\EFI_db_routines_gen.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\ErrMessage.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\ExTable.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\general_functions.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\HostArray.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\HydFn.h" />
+    <ClInclude Include="..\..\..\icc\api\include\icc_db.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\icc_db_programs.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\IndexGen.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\IntArray.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\Join.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\KeyNameCObj.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\KeyNameColl.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\LocalCursor.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\MiscDB.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\object_struct.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OprList.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OprRst.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSDataType.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSDataTypeList.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSDateTime.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSDouble.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSInt.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSLong.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSNumeric.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSSInt.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSString.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSTypes.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\PDDBEnv.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\PDLogCollMessage.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\PDLogEntry.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\PDLogHeader.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\PDLogMailTo.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\PDLogMessage.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\PriceDepProdPlan.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\PriceListRegPlan.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\RelTable.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SEC_dbconnect.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SEC_func.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIM_clear.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SimDBI.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_aggr.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SimDBI_c.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_catch.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_commo.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_dataset.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_gate.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_list.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_objects.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_plant.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_resvo.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_scada.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SimDBI_sim_warning_all.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_wtrou.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SimRestriction.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SimRevision.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SqlCache.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SqlFunc.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\Table.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\TBTseriVl.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\TimesSeriesAid.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\TRADBI_ELCMP_enum.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\TsInfoCObj.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\TsInfoColl.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\TsInfoQuery.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\TsListe.h" />
+    <ClInclude Include="..\..\..\icc\api\include\NetarTp.h" />
+    <ClInclude Include="..\..\..\icc\basis\tsreport\libsolver\TsRAdm.h" />
+    <ClInclude Include="..\..\..\icc\basis\tsreport\rcmapi\TsRBModel.h" />
+    <ClInclude Include="..\..\..\icc\basis\tsreport\reportdata\TsRDataColumnInfo.h" />
+    <ClInclude Include="..\..\..\icc\basis\tsreport\statusfilter\TsRFilter.h" />
+    <ClInclude Include="..\..\..\icc\basis\tsreport\printdlg\TsRPrintOptions.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\TSSequence.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\TsValues.h" />
+    <ClInclude Include="..\..\..\icc\api\dbi\include\TsXyValues.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PDDbCursor.h" />
+    <ClInclude Include="..\..\..\icc\api\include\PDDbTransaction.h" />
+    <ClInclude Include="..\..\..\icc\api\include\CalcDefCObj.h" />
+    <ClInclude Include="..\..\..\icc\api\include\CalcDefColl.h" />
+    <ClInclude Include="..\..\..\icc\api\include\FetchTsUnitAndType.h" />
+    <ClInclude Include="..\..\..\icc\api\include\ReportDefCObj.h" />
+    <ClInclude Include="..\..\..\icc\api\include\ReportDefColl.h" />
+    <ClInclude Include="..\..\..\icc\api\include\TseriTp.h" />
+    <ClInclude Include="..\..\..\icc\api\include\TseriTpColl.h" />
+    <ClInclude Include="..\..\..\icc\api\include\UnmeaTp.h" />
+    <ClInclude Include="..\..\..\icc\api\include\UnmeaTpColl.h" />
+    <ClInclude Include="..\..\..\icc\basis\logon\clientCon\LogonclientConDispatch.h" />
+    <ClInclude Include="..\..\..\otl\otl.h" />
+    <ClInclude Include="..\..\..\otl\otl_and_pdtime.h" />
+    <ClInclude Include="..\..\..\otl\otlv4.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties DevPartner_IsInstrumented="1" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

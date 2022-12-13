@@ -1,0 +1,22 @@
+{
+  //"pipServiceBusBaseAddress": "sb://pip-sb-eonnor-dev.servicebus.windows.net/",
+  //"pipServiceBusNamespace": "pip-sb-eonnor-dev",
+  "pipBlobStorageUrlAndSas": "https://pipeonnorpoweldev.blob.core.windows.net/smgexmespull?sv=2015-07-08&sr=c&si=smgexmespull-pull-0&sig=%2F52cizjwLoDzMhPuFPwcx8z0mNcUmoK0TLRZ%2Bj6A0Ac%3D&spr=https",
+  //"pipOutputTopicKeyName": "smgexmespull",
+  //"pipOutputTopicPrimaryKey": "iMjWJk6yHk2sWYi3mKx5xJbxA2NEH9UTlJkNU1/nKuM=",
+  //"pipOutputTopicSecondaryKey": "HZv622Ye6/5TVnId53IDK+DGbeyua0eRgCGutQsr04A=",
+  //"pipOutputTopicName": "pip-int-powel-smgexmespull-out",
+  //"pipOutputTopicPrimaryConnectionString": "Endpoint=sb://pip-sb-eonnor-dev.servicebus.windows.net/;SharedAccessKeyName=smgexmespull;SharedAccessKey=iMjWJk6yHk2sWYi3mKx5xJbxA2NEH9UTlJkNU1/nKuM=",
+  //"pipOutputTopicSecondaryConnectionString": "Endpoint=sb://pip-sb-eonnor-dev.servicebus.windows.net/;SharedAccessKeyName=smgexmespull;SharedAccessKey=HZv622Ye6/5TVnId53IDK+DGbeyua0eRgCGutQsr04A=",
+  //"pipInputQueueKeyName": "smgexmespull",
+  //"pipInputQueuePrimaryKey": "DzNElW9G2tH1895uRIOeccm/HRGvN2/JecJHhqlKAck=",
+  //"pipInputQueueSecondaryKey": "0I5N1Etg1MHBF0QP1hvSA3z1AAoquXmjxGiWtIxhYGs=",
+  "pipInputQueueName": "pip-int-powel-smgexmespull-in",
+  "pipInputQueuePrimaryConnectionString": "[$SECRET:pipInputQueuePrimaryConnectionString:$]",
+  //"pipInputQueuePrimaryConnectionString": "Endpoint=sb://pip-sb-eonnor-dev.servicebus.windows.net/;SharedAccessKeyName=smgexmespull;SharedAccessKey=DzNElW9G2tH1895uRIOeccm/HRGvN2/JecJHhqlKAck=",
+  //"pipInputQueueSecondaryConnectionString": "Endpoint=sb://pip-sb-eonnor-dev.servicebus.windows.net/;SharedAccessKeyName=smgexmespull;SharedAccessKey=0I5N1Etg1MHBF0QP1hvSA3z1AAoquXmjxGiWtIxhYGs=",
+  "AzurePollTimeoutMs": "1000",
+  "DebugPolling": "false",
+  "HeartbeatIntervalWhenPumpingInMinutes": "5",
+  "PollLogInterval": "600"
+}

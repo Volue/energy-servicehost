@@ -1,0 +1,209 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="ComImpl">
+      <UniqueIdentifier>{37ebb83e-7c4a-440c-909f-f9ce74e6e8bc}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{b5e37c4d-5fa6-46ed-9fe5-f4e0d6aeff64}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{8dff3a78-76b5-40f4-8df8-c75f9df1e3bb}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe</Extensions>
+    </Filter>
+    <Filter Include="ApplicationCom">
+      <UniqueIdentifier>{1873ccef-d880-4e4a-b650-0a77efa38283}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="UnixImpl">
+      <UniqueIdentifier>{dc9bdb81-5dee-4781-8d05-00a415d02c17}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="allpdcomrc.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="LogonUisCollMessage.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="LogonUisMessage.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PDACKMsg.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PDBASEMsg.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PDCmdResult.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PDCom.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PDComClient.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PDCOMMANDMsg.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PDComModule.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PDComMsgQ.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PDComServer.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PDEchoReply.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PDEchoRequest.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PDHbvResultInfoMsg.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PDHBVSETTINGSMsg.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PDHbvSimPeriodMsg.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PDHbvSnowValuesMsg.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PDMULTIMsg.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PDNAKMsg.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PDSTRINGSMsg.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PDSYNCMsg.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PDTXYMsg.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="PrePDCom.h">
+      <Filter>ComImpl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ICC\EDIname.h">
+      <Filter>ApplicationCom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ICC\ICCAppCommInterface.h">
+      <Filter>ApplicationCom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ICC\ICCAppCommProgram.h">
+      <Filter>ApplicationCom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ICC\ICCNavigator.h">
+      <Filter>ApplicationCom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ICC\icc_internal.h">
+      <Filter>UnixImpl</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LogonUisCollMessage.cc">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="LogonUisMessage.cc">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PDACKMsg.cpp">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PDBASEMsg.cpp">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PDCmdResult.cpp">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PDCom.cpp">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PDComClient.cpp">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PDCOMMANDMsg.cpp">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PDComModule.cpp">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PDComMsgQ.cpp">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PDComServer.cpp">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PDEchoReply.cpp">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PDEchoRequest.cpp">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PDHbvResultInfoMsg.cc">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PDHBVSETTINGSMsg.cc">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PDHbvSimPeriodMsg.cc">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PDHbvSnowValuesMsg.cc">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PDMULTIMsg.cpp">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PDNAKMsg.cpp">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PDSTRINGSMsg.cpp">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PDSYNCMsg.cpp">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PDTXYMsg.cpp">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="PrePDCom.cpp">
+      <Filter>ComImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ICC\EDIname.cc">
+      <Filter>ApplicationCom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ICC\ICCAppCommInterface.cc">
+      <Filter>ApplicationCom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ICC\ICCAppCommProgram.cc">
+      <Filter>ApplicationCom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ICC\ICCNavigator.cc">
+      <Filter>ApplicationCom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ICC\icc_cleanup.c">
+      <Filter>UnixImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ICC\icc_exit.c">
+      <Filter>UnixImpl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ICC\icc_send_flog.c">
+      <Filter>UnixImpl</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="PDCom.idl">
+      <Filter>ComImpl</Filter>
+    </Midl>
+  </ItemGroup>
+</Project>

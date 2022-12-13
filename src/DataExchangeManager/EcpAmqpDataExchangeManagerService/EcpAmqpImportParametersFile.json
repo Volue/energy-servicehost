@@ -1,0 +1,11 @@
+{
+  "UseEdx": "false",
+  "EcpAmqpUrl": "amqp://ecp:[$SECRET:EcpAmqpUrlPassword:$]@172.21.54.40:5672",
+  "Enable": "true",
+  "EcpAmqpInboxQueue": "ecp.endpoint.inbox",
+  "EcpAmqpPollTimeoutMs": "100",
+  "EcpAmqpPollIntervalMs": "100",
+  "EcpAmqpImportDocQueryPriorityList": "\"<DocumentType v=\\\"Activation\\\",High\"",
+  "EcpAmqpImportDocQueryProtocolList": "\"<ActivationDocument xmlns=\\\"urn:entsoe.eu:wgedi:errp,ENTSOE\"", // "<DocumentType v=\"(A40|Z15|A39)\"";
+  "UseImportApplicationManagerService": "false"
+}

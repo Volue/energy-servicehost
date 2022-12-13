@@ -1,0 +1,24 @@
+HKCR
+{
+	hvcuis.hvcuis.1 = s 'hvcuis Class'
+	{
+		CLSID = s '{43C48168-F2F3-11d1-9107-0000F80355F3}'
+	}
+	hvcuis.hvcuis = s 'hvcuis Class'
+	{
+		CLSID = s '{43C48168-F2F3-11d1-9107-0000F80355F3}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43C48168-F2F3-11d1-9107-0000F80355F3} = s 'hvcuis Class'
+		{
+			val AppID = s '{43C48268-F2F3-11d1-9107-0000F80355F3}'
+			ProgID = s 'hvcuis.hvcuis.1'
+			VersionIndependentProgID = s 'hvcuis.hvcuis'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

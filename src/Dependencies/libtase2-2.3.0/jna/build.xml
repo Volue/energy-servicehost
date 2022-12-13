@@ -1,0 +1,30 @@
+<project>
+
+    <property name="src.dir" value="src/main" />
+    <property name="lib.dir" value="libs" />
+    <property name="classes.dir" value="build/classes" />
+	
+    <target name="clean">
+        <delete dir="build"/>
+    </target>
+
+    <target name="compile">
+        <mkdir dir="${classes.dir}"/>
+        <javac source="1.6" target="1.6" srcdir="${src.dir}" destdir="${classes.dir}">
+            <classpath>
+                <pathelement path="${lib.dir}/jna-4.5.2.jar"/>
+            </classpath>
+        </javac>
+    </target>
+
+    <target name="jar">
+        <mkdir dir="build/jar"/>
+        <jar destfile="build/jar/libtase2-java.jar" basedir="${classes.dir}">
+        	<zipgroupfileset dir="${lib.dir}" includes="**/*.jar" />
+            <manifest>
+                
+            </manifest>
+        </jar>
+    </target>
+
+</project>

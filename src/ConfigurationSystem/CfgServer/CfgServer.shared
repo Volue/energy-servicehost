@@ -1,0 +1,126 @@
+//Any:AnyPrettyIO 
+ProjectAttributes (
+	APIPositions               : 1,
+	DependenciesFile           : "dependencies.incl",
+	ExecTarget                 : "PowelCfgServer.exe",
+	FileCount                  : 13,
+	FileSet                    : array (
+		"Makefile",
+		"CfgServer.shared",
+		"stdafx.h",
+		"stdafx.cpp",
+		"Resource.h",
+		"CfgManager.cpp",
+		"CfgManager.h",
+		"CfgReader.cpp",
+		"CfgReader.h",
+		"CfgServer.cpp",
+		"CfgServer.rc",
+		"CfgServer.rgs",
+		"CfgServerps.def"
+	),
+	FileTypes                  : struct (
+		Header                    : File_Types_Info (
+			Icon                     : "$SNIFF_DIR/config/icons/FT_header.gif",
+			Name                     : "Header",
+			Parser                   : "SNiFF-C++",
+			"Retriever Priority"       : "1",
+			Signatures               : "*.h:*.H:*.hxx:*.ci",
+			"Tool Names"               : "Edit:Set Writable:Set Read Only:ls -l",
+			Tools                    : "SniffEdit:chmod u+w %f:chmod a-w %f:ls -l %f",
+			Type                     : "Header"
+		),
+		Implementation            : File_Types_Info (
+			"General Makefile"         : "$SNIFF_DIR/make_support/general.c.mk",
+			Icon                     : "$SNIFF_DIR/config/icons/FT_source.gif",
+			Name                     : "Implementation",
+			Parser                   : "SNiFF-C++",
+			"Retriever Priority"       : "2",
+			Signatures               : "*.c:*.cc:*.C:*.cxx:*.cpp",
+			"Tool Names"               : "Edit:Set Writable:Set Read Only:ls -l",
+			Tools                    : "SniffEdit:chmod u+w %f:chmod a-w %f:ls -l %f",
+			Type                     : "Implementation"
+		),
+		Make                      : File_Types_Info (
+			"Create Symbolic Link"     : true,
+			Icon                     : "$SNIFF_DIR/config/icons/FT_make.gif",
+			Name                     : "Make",
+			"Retriever Priority"       : "6",
+			Signatures               : "Makefile:makefile:*.mk:*.cron",
+			"Tool Names"               : "Edit:Set Writable:Set Read Only:ls -l",
+			Tools                    : "SniffEdit:chmod u+w %f:chmod a-w %f:ls -l %f",
+			Type                     : "Make"
+		),
+		"Project Description"       : File_Types_Info (
+			Icon                     : "$SNIFF_DIR/config/icons/FT_pdf.gif",
+			Name                     : "Project Description",
+			"Retriever Priority"       : "8",
+			Signatures               : "*.proj:*.shared",
+			"Tool Names"               : "Open Project:Edit PDF:Set Writable:Set Read Only:ls -l",
+			Tools                    : "SniffOpen:SniffEdit:chmod u+w %f:chmod a-w %f:ls -l %f",
+			Type                     : "Project"
+		),
+		"Windows Module Definition" : File_Types_Info (
+			"Derived From"             : "undefined",
+			Icon                     : "$SNIFF_DIR/config/icons/FT_file.gif",
+			Name                     : "Windows Module Definition",
+			"Retriever Priority"       : "3",
+			Signatures               : "*.def:*.DEF",
+			"Tool Names"               : "Edit:Set Writeable:Set Read Only:Properties",
+			Tools                    : "SniffEdit:SniffSetWritable:SniffSetReadOnly:ls -l %f",
+			Type                     : "Windows Module Definition"
+		),
+		"Windows Registry Script"   : File_Types_Info (
+			"Derived From"             : "undefined",
+			Icon                     : "$SNIFF_DIR/config/icons/FT_file.gif",
+			Name                     : "Windows Registry Script",
+			"Retriever Priority"       : "3",
+			Signatures               : "*.rgs:*.RGS:*.idl:*.IDL",
+			"Tool Names"               : "Edit:Set Writeable:Set Read Only:Properties",
+			Tools                    : "SniffEdit:SniffSetWritable:SniffSetReadOnly:ls -l %f",
+			Type                     : "Windows Registry Script"
+		),
+		"Windows Resource Template" : File_Types_Info (
+			"Derived From"             : "undefined",
+			Icon                     : "$SNIFF_DIR/config/icons/FT_source.gif",
+			Name                     : "Windows Resource Template",
+			"Retriever Priority"       : "0",
+			Signatures               : "*.rc:*.RC",
+			"Tool Names"               : "Edit:Set Writeable:Set Read Only:Properties",
+			Tools                    : "SniffEdit:SniffSetWritable:SniffSetReadOnly:ls -l %f",
+			Type                     : "RC_Implementation"
+		)
+	),
+	GenerateDir                : ".sniffdir",
+	HelpTarget                 : "all:symbolic_links:check_obsolete_files:clean:clean_targets:help",
+	IgnoreStringsFile          : "$SNIFF_DIR/config/IgnoreStrings",
+	IncludeFilesFile           : "include.incl",
+	IncludeMacro               : array (
+		"-I.",
+		"-I../../../icc/api/dbi/include",
+		"-I../../../icc/api/include",
+		"-I../../../otl",
+		"-I$(ORACLEX_HOME)/oci/include",
+		"-I$(ROGUE_HOME)",
+		"-I$(PD_STDINC)"
+	),
+	JavaClasspath              : array (
+		""
+	),
+	MacrosFile                 : "macros.incl",
+	MakeCommand                : "gmake check_vpath; gmake",
+	MakefileSupport            : true,
+	ObjectFilesFile            : "ofiles.incl",
+	PreprocessorSwitch         : array ( ),
+	ProjectDir                 : "icc/ConfigurationSystem/CfgServer",
+	ProjectType                : 2,
+	Release                    : "V3.0",
+	SharedProject              : true,
+	StandardHeaderDependencies : true,
+	SubDirs                    : array ( ),
+	SubProj                    : array ( ),
+	TabLength                  : 4,
+	UseParserComments          : 1,
+	VCSystem                   : "CVS",
+	VPathFile                  : "vpath.incl"
+)

@@ -1,0 +1,20 @@
+ServiceHost.exe needs a configuration file called ServiceHost.exe.config in
+order to run. We don't deploy this file because we don't want to overwrite the
+configuration settings that you may have set in it.
+
+Instead, we deploy a file called ServiceHost.exe.config.sample. You should use
+this file as a guideline for what needs to go into ServiceHost.exe.config.
+
+In particular, the sample file contains a full list of modules that can run in
+ServiceHost. Most likely you will only need some of these. For example, for
+just running Data Exchange Manager (the new communication solution), you will
+need the following in your config file:
+
+<serviceIterationClasses>
+  <add value="Powel.Icc.Messaging.DataExchangeManager.ImportApplicationManagerService.ImportApplicationManagerService, ImportApplicationManagerService"/>
+  <add value="Powel.Icc.Messaging.DataExchangeManager.DataExchangeManagerService.DataExchangeManagerService, DataExchangeManagerService"/>
+</serviceIterationClasses>
+
+For ECP communication: Replace the address localhost with the address of the computer running the ECP/MADES Endpoint.
+
+See also implementationDescription.md

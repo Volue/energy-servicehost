@@ -1,0 +1,110 @@
+//Any:AnyPrettyIO 
+ProjectAttributes (
+	DependenciesFile           : "dependencies.incl",
+	FileCount                  : 1349,
+	FileSet                    : array (
+		"Dummy.C",
+		"Makefile",
+		"dig.mk",
+		"libicc_dig.shared",
+		"makeicc_dig.mk"
+	),
+	FileTypes                  : struct (
+		Header              : File_Types_Info (
+			Icon                     : "$SNIFF_DIR/icons/CatHeader.image",
+			Name                     : "Header",
+			Parser                   : "SNiFF-C++",
+			"Retriever Priority"       : "1",
+			Signatures               : "*.h:*.H:*.hxx:*.ci",
+			"Tool Names"               : "Edit:Set Writable:Set Read Only:ls -l",
+			Tools                    : "SniffEdit:chmod u+w %f:chmod a-w %f:ls -l %f",
+			Type                     : "Header"
+		),
+		Implementation      : File_Types_Info (
+			Icon                     : "$SNIFF_DIR/icons/CatSource.image",
+			Name                     : "Implementation",
+			Parser                   : "SNiFF-C++",
+			"Retriever Priority"       : "2",
+			Signatures               : "*.c:*.cc:*.C:*.cxx:*.cpp",
+			"Tool Names"               : "Edit:Set Writable:Set Read Only:ls -l",
+			Tools                    : "SniffEdit:chmod u+w %f:chmod a-w %f:ls -l %f",
+			Type                     : "Implementation"
+		),
+		Make                : File_Types_Info (
+			"Create Symbolic Link"     : true,
+			Icon                     : "$SNIFF_DIR/icons/CatMake.image",
+			Name                     : "Make",
+			"Retriever Priority"       : "6",
+			Signatures               : "Makefile:makefile:*.mk:*.cron",
+			"Tool Names"               : "Edit:Set Writable:Set Read Only:ls -l",
+			Tools                    : "SniffEdit:chmod u+w %f:chmod a-w %f:ls -l %f",
+			Type                     : "Make"
+		),
+		"Project Description" : File_Types_Info (
+			Icon                     : "$SNIFF_DIR/icons/CatProj.image",
+			Name                     : "Project Description",
+			"Retriever Priority"       : "8",
+			Signatures               : "*.proj:*.shared",
+			"Tool Names"               : "Open Project:Edit PDF:Set Writable:Set Read Only:ls -l",
+			Tools                    : "SniffOpen:SniffEdit:chmod u+w %f:chmod a-w %f:ls -l %f",
+			Type                     : "Project"
+		)
+	),
+	GenerateDir                : ".sniffdir",
+	HelpTarget                 : "all:symbolic_links:check_obsolete_files:clean:clean_targets:help",
+	IgnoreStringsFile          : "$SNIFF_DIR/config/IgnoreStrings",
+	IncludeFilesFile           : "include.incl",
+	IncludeMacro               : array (
+		"-I../../../../../../icc/api/dbi/include/dig_h",
+		"-I../../../../../../icc/api/dbi/include",
+		"-I../../../../../../icc/api/include"
+	),
+	JavaClasspath              : array (
+		""
+	),
+	LibTarget                  : "libiccdig.lib",
+	LinkObjects                : 2,
+	MacrosFile                 : "macros.incl",
+	MakeCommand                : "gmake check_vpath;gmake ",
+	MakefileSupport            : true,
+	ObjectFilesFile            : "ofiles.incl",
+	OtherTarget                : "GENERATE_DIG_FILES:libicc_dig.a",
+	PreprocessorSwitch         : array ( ),
+	ProjectDir                 : "icc/api/dbi/src/icc_basic/dig",
+	ProjectType                : 2,
+	Release                    : "V3.0",
+	SharedProject              : true,
+	SubDirs                    : array (
+		"../../../../../../icc/api/dbi/src/so_classes",
+		"../../../../../../icc/api/dbi/src/icc_basic/modified",
+		"IccGet",
+		"TB",
+		"TBEx"
+	),
+	SubProj                    : array (
+		SubProjSchema (
+			SubProjDir  : "icc/api/dbi/src/so_classes",
+			SubProjName : "libso_classes.shared"
+		),
+		SubProjSchema (
+			SubProjDir  : "icc/api/dbi/src/icc_basic/modified",
+			SubProjName : "libdig_modified.shared"
+		),
+		SubProjSchema (
+			SubProjDir  : "icc/api/dbi/src/icc_basic/dig/IccGet",
+			SubProjName : "libIccGet.shared"
+		),
+		SubProjSchema (
+			SubProjDir  : "icc/api/dbi/src/icc_basic/dig/TB",
+			SubProjName : "libTB.shared"
+		),
+		SubProjSchema (
+			SubProjDir  : "icc/api/dbi/src/icc_basic/dig/TBEx",
+			SubProjName : "libTBEx.shared"
+		)
+	),
+	TabLength                  : 8,
+	UseCache                   : true,
+	VCSystem                   : "CVS",
+	VPathFile                  : "vpath.incl"
+)

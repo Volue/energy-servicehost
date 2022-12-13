@@ -1,0 +1,24 @@
+HKCR
+{
+	mvsreport.mvsreport.1 = s 'mvsreport Class'
+	{
+		CLSID = s '{43C48194-F2F3-11d1-9107-0000F80355F3}'
+	}
+	mvsreport.mvsreport = s 'mvsreport Class'
+	{
+		CLSID = s '{43C48194-F2F3-11d1-9107-0000F80355F3}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43C48194-F2F3-11d1-9107-0000F80355F3} = s 'mvsreport Class'
+		{
+			val AppID = s '{43C48294-F2F3-11d1-9107-0000F80355F3}'
+			ProgID = s 'mvsreport.mvsreport.1'
+			VersionIndependentProgID = s 'mvsreport.mvsreport'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

@@ -1,0 +1,26 @@
+HKCR
+{
+	EchoServer.PDEchoServer.1 = s 'PDEchoServer Class'
+	{
+		CLSID = s '{CCE84202-DB31-11CF-9D75-00A0C90391D3}'
+	}
+	EchoServer.PDEchoServer = s 'PDEchoServer Class'
+	{
+		CLSID = s '{CCE84202-DB31-11CF-9D75-00A0C90391D3}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {CCE84202-DB31-11CF-9D75-00A0C90391D3} = s 'PDEchoServer Class'
+		{
+			val AppID = s '{CCE84210-DB31-11CF-9D75-00A0C90391D3}'
+			ProgID = s 'EchoServer.PDEchoServer.1'
+			VersionIndependentProgID = s 'EchoServer.PDEchoServer'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+
+
+}

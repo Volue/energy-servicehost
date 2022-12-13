@@ -1,0 +1,173 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{09076F6E-5F4F-41FF-A4E5-EB20688039A5}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Powel.Icc.Messaging.DataExchangeManager.DataExchangeApi</RootNamespace>
+    <AssemblyName>DataExchangeAPI</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Win32\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+    <GenerateSerializationAssemblies>Auto</GenerateSerializationAssemblies>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\iccruntime\bin\Win32\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="log4net, Version=2.0.15.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
+      <HintPath>..\DataExchangeManager\packages\log4net.2.0.15\lib\net45\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Azure.KeyVault.Core, Version=3.0.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\DataExchangeManager\packages\Microsoft.Azure.KeyVault.Core.3.0.5\lib\net461\Microsoft.Azure.KeyVault.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\DataExchangeManager\packages\Microsoft.Data.Edm.5.8.5\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\DataExchangeManager\packages\Microsoft.Data.OData.5.8.5\lib\net40\Microsoft.Data.OData.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Data.Services.Client, Version=5.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\DataExchangeManager\packages\Microsoft.Data.Services.Client.5.8.5\lib\net40\Microsoft.Data.Services.Client.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=2.0.414.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\DataExchangeManager\packages\Cquential.Microsoft.Practices.Unity.2.0.414\lib\net35\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\DataExchangeManager\packages\Microsoft.Rest.ClientRuntime.2.3.24\lib\net461\Microsoft.Rest.ClientRuntime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Rest.ClientRuntime.Azure, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\DataExchangeManager\packages\Microsoft.Rest.ClientRuntime.Azure.3.3.19\lib\net461\Microsoft.Rest.ClientRuntime.Azure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.WindowsAzure.Storage, Version=9.3.2.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\DataExchangeManager\packages\WindowsAzure.Storage.9.3.3\lib\net45\Microsoft.WindowsAzure.Storage.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=13.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\DataExchangeManager\packages\Newtonsoft.Json.13.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Messaging" />
+    <Reference Include="System.Net" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Net.Http.WebRequest" />
+    <Reference Include="System.Runtime" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Spatial, Version=5.8.5.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\DataExchangeManager\packages\System.Spatial.5.8.5\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfoCompany.cs" />
+    <Compile Include="AssemblyInfoVersion.cs" />
+    <Compile Include="ClaimCheck\Abstract\IClaimHandler.cs" />
+    <Compile Include="ClaimCheck\Abstract\IClaimTicket.cs" />
+    <Compile Include="ClaimCheck\ClaimCheckFactory.cs" />
+    <Compile Include="ClaimCheck\ClaimHandlerException.cs" />
+    <Compile Include="ClaimCheck\CloudBlobClaimHandler.cs" />
+    <Compile Include="ClaimCheck\CloudBlobClaimTicket.cs" />
+    <Compile Include="ClaimCheck\DatabaseClaimHandler.cs" />
+    <Compile Include="ClaimCheck\DatabaseClaimTicket.cs" />
+    <Compile Include="ClaimCheck\LocalFileshareClaimHandler.cs" />
+    <Compile Include="ClaimCheck\LocalFileshareClaimTicket.cs" />
+    <Compile Include="DataExchangeAPI.cs" />
+    <Compile Include="DataExchangeApiModule.cs" />
+    <Compile Include="DataExchangeMessage.cs" />
+    <Compile Include="DataExchangeQueuePriority.cs" />
+    <Compile Include="DataExchangeSettings.cs" />
+    <Compile Include="DataExchangeSettingsFactory.cs" />
+    <Compile Include="Feature.cs" />
+    <Compile Include="FileWriter\DataExchangeFileWriter.cs" />
+    <Compile Include="IDataExchangeApi.cs" />
+    <Compile Include="IDataExchangeFileWriter.cs" />
+    <Compile Include="IDataExchangeMetaData.cs" />
+    <Compile Include="IDataExchangeQueue.cs" />
+    <Compile Include="IDataExchangeQueueFactory.cs" />
+    <Compile Include="IDataExchangeQueueTransaction.cs" />
+    <Compile Include="IDataExchangeMessageLog.cs" />
+    <Compile Include="IDataExchangeSettingsFactory.cs" />
+    <Compile Include="MachineNameType.cs" />
+    <Compile Include="MessageLog\DataExchangeMessageLog.cs" />
+    <Compile Include="MetaData\DataExchangeMetaData.cs" />
+    <Compile Include="Msmq\Abstract\TransactionWrapper.cs" />
+    <Compile Include="Msmq\Exceptions\InvalidMessageBodyException.cs" />
+    <Compile Include="Msmq\MsmqExtensions.cs" />
+    <Compile Include="Msmq\MsdtcDataExchangeTransaction.cs" />
+    <Compile Include="Msmq\MsmqDataExchangeQueue.cs" />
+    <Compile Include="Msmq\MsmqDataExchangeQueueFactory.cs" />
+    <Compile Include="Msmq\MsmqDataExchangeTransaction.cs" />
+    <Compile Include="Msmq\MsmqPathExtensions.cs" />
+    <Compile Include="Msmq\MsmqPath.cs" />
+    <Compile Include="Msmq\MsmqPathFactory.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\ConfigurationSystem\ConfigurationSystemService\Powel.ConfigurationSystemService.csproj">
+      <Project>{2fa6ed92-582f-47fa-9c2b-7bbb59d6875f}</Project>
+      <Name>Powel.ConfigurationSystemService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Powel\Icc\Common\Powel.Icc.Common.csproj">
+      <Project>{a85166f5-c8e5-43a7-80d5-245f2ee86f04}</Project>
+      <Name>Powel.Icc.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Powel\Icc\Data\Powel.Icc.Data.csproj">
+      <Project>{ea3d99af-dff0-4725-bc23-51fc85dc4040}</Project>
+      <Name>Powel.Icc.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Powel\Icc\Interop\Powel.Icc.Interop.vcxproj">
+      <Project>{280cdb7f-4146-45d0-8f84-605dd5b2c431}</Project>
+      <Name>Powel.Icc.Interop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Powel\Icc\Powel.Icc.csproj">
+      <Project>{c5cebeb7-c2d3-446d-a2b7-e99b01fed6a0}</Project>
+      <Name>Powel.Icc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Powel\Icc\Services\Powel.Icc.Services.csproj">
+      <Project>{c48e6d56-4a58-460f-b48d-b98a99c19834}</Project>
+      <Name>Powel.Icc.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

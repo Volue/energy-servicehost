@@ -1,0 +1,5 @@
+﻿{
+  "FileWatcherParametersArray": [
+  { "Directory": "D:/tmp/MassTransitFileWatcher/Import/ExampleMessage", "FileNameTemplate": "Prefix_*.json", "Host": "amqp://guest:guest@localhost", "MessageType": "ExampleMessage" }
+  ]
+}

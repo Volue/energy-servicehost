@@ -1,0 +1,28 @@
+# Project makefile $Id: makedig_modified.mk 57596 2008-02-21 14:34:21Z jma $
+
+SNIFF_MAKEDIR    = .sniffdir
+SNIFF_VPATH_INCL = vpath.incl
+SNIFF_DEPEND_INCL = dependencies.incl
+
+include $(SNIFF_MAKEDIR)/macros.incl
+include $(SNIFF_MAKEDIR)/ofiles.incl
+include $(SNIFF_MAKEDIR)/$(SNIFF_VPATH_INCL)
+
+XINCLUDE = $(SNIFF_INCLUDE)
+IMPLEMENTATION_DIR = $(SNIFF_Implementation_DIR)
+LINK_TARGET       = $(SNIFF_LINK_TARGET)
+RELINK_TARGET     = $(SNIFF_RELINK_TARGET)
+LIB_TARGET        = $(SNIFF_LIB_TARGET)
+SUB_LIBS          = $(SNIFF_SUB_LIBS)
+SUB_RELINK_OFILES = $(SNIFF_SUB_RELINK_OFILES)
+OTHER_LIBS        = $(SNIFF_OTHER_LIBS)
+RELINK_OTHER_LIBS = $(SNIFF_RELINK_OTHER_LIBS)
+SUBDIRS = $(SNIFF_SUBDIRS)
+OTHER_CFLAGS    = $(SLIB_CFLAGS) 
+OTHER_CXXFLAGS  = $(SLIB_CCFLAGS)
+
+include $(SNIFF_DIR)/make_support/general.mk
+
+include $(SNIFF_MAKEDIR)/$(SNIFF_DEPEND_INCL)
+DEBUG_FLAGS= -O
+MAKEFILE=makedig_modified.mk

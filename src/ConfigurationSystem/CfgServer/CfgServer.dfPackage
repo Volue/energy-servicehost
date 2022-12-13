@@ -1,0 +1,145 @@
+package id204lxdpkwzb5adpkx0o25;
+
+/**
+@version 2.0
+@physicalPackage
+@__modelType diagram 
+*/
+class diagram {
+/**
+@__ref <oiref:cpp#Class#_IID:oiref><oihard>
+@__modelType reference 
+*/
+class reference3 {
+}/**
+@__ref <oiref:cpp#Class#ProtectedSection:oiref><oihard>
+@__modelType reference 
+*/
+class reference4 {
+}
+/**
+@__ref <oiref:cpp#Class#__CfgServer_MIDL_PROC_FORMAT_STRING:oiref><oihard>
+@__modelType reference 
+*/
+class reference {
+}
+/**
+@__ref <oiref:design#Class#id4e46ggjoivpedgjoiygbj.diagram:oiref><oihard>
+@__modelType reference
+@__fqn <oiref:#Package#Powel.ConfigurationSystem.CfgServer.Win32:oiref> 
+*/
+class reference13 {
+}
+/**
+@__ref <oiref:cpp#Class#__CfgServer_MIDL_EXPR_FORMAT_STRING:oiref><oihard>
+@__modelType reference 
+*/
+class reference14 {
+}
+/**
+@__ref <oiref:cpp#Class#__CfgServer_MIDL_TYPE_FORMAT_STRING:oiref><oihard>
+@__modelType reference 
+*/
+class reference15 {
+}
+/**
+@__ref <oiref:cpp#Class#StringExpander:oiref><oihard>
+@__modelType reference 
+*/
+class reference16 {
+}
+}/**
+@__tags
+@shapeType ClassDiagram 
+*/
+class __tags {
+}/**
+@__options 
+*/
+class __options {
+}/**
+@__positions <oigroup:MemberLink#<oiref:cpp#Member#otl_tmpl_select_stream#sl_desc:oiref>=3382,2516,3087,2985:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_stream#shell:oiref>=3702,2905,3555,2985:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_datetime_tab#v:oiref>=558,546,558,556,140,636,140,646:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_refcur_stream#sl:oiref>=2700,1778,2806,1778:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_tmpl_dyn_pl_tab#otl_pl_tab_generic:oiref>=1371,388,821,328:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_refcur_stream#override:oiref>=2633,2361,3164,2985:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_ref_select_stream#sl:oiref>=3112,1778,3006,1778:oigroup>
+<oigroup:<oiref:cpp#Class#_IID:oiref>=4311,1030,125,155,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_refcur_stream#sl_desc:oiref>=2566,2361,3016,2985:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_cur#db:oiref>=4365,632,28,16,0:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_tmpl_pl_tab#otl_pl_tab_generic:oiref>=797,388,797,328:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_stream_shell#adb:oiref>=3438,2985,2424,2330,2424,1840:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_stream_shell#iov:oiref>=3815,1721,28,16,0:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_long_int_tab#otl_tmpl_pl_tab:oiref>=251,646,676,576:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_tmpl_select_stream#sl_desc:oiref>=3055,2965,28,16,0:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_refcur_base_cursor#otl_tmpl_cursor:oiref>=2660,657,2801,597:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_int_tab#otl_tmpl_pl_tab:oiref>=1001,646,818,576:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_tmpl_select_stream#otl_tmpl_select_cursor:oiref>=3364,1483,3364,971:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_stream_shell#io:oiref>=3417,3284,2402,3284:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_var#connect:oiref>=4215,321,4321,321:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_stream_shell#io:oiref>=2406,3264,28,16,0:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_stream_shell#ov:oiref>=3570,2985,3809,2899,3809,1721:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_stream_shell#ov:oiref>=3777,1721,28,16,0:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_tmpl_select_stream#override:oiref>=3432,2516,3250,2985:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_unsigned_tab#otl_tmpl_pl_tab:oiref>=401,646,689,576:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_tmpl_lob_stream#otl_lob_stream_generic:oiref>=2976,657,2976,376:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_tmpl_lob_stream#connect:oiref>=2788,967,2532,967:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_refcur_stream#sl:oiref>=2774,1758,28,16,0:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_stream_shell#adb:oiref>=2392,1840,28,16,0:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_stream_shell#ref_ss:oiref>=3230,2473,28,16,0:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_dynamic_short_tab#otl_tmpl_dyn_pl_tab:oiref>=1843,646,1403,561:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_inout_stream#adb2:oiref>=2336,1840,28,16,0:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_inout_stream#adb2:oiref>=2368,2985,2368,1840:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_dynamic_datetime_tab#otl_pl_tab_generic:oiref>=175,388,741,328:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_ref_cursor#rvl:oiref>=2919,1463,28,16,0:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_stream_shell#ref_ss:oiref>=3460,2985,3262,2473:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_double_tab#otl_tmpl_pl_tab:oiref>=802,646,802,576:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_stream#shell:oiref>=3523,2965,28,16,0:oigroup>
+<oigroup:<oiref:cpp#Class#ProtectedSection:oiref>=4091,1570,194,110,1:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_stream#override:oiref>=3602,2905,3288,2985:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_dynamic_unsigned_tab#otl_tmpl_dyn_pl_tab:oiref>=1171,646,1307,561:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_ref_select_stream#sl_desc:oiref>=3020,2965,28,16,0:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_ref_cursor#sel_cur:oiref>=3120,657,2887,597:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_tmpl_lob_stream#bind_var:oiref>=2897,988,2897,1483:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_stream#shell_pt:oiref>=3652,2905,3517,2985:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_stream_shell#otl_stream_shell_generic:oiref>=3601,2985,3986,2875,3986,1593:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_stream#override:oiref>=3256,2965,28,16,0:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_ref_cursor#rvl:oiref>=3076,1055,2951,1483:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_stream#shell_pt:oiref>=3487,2965,26,16,0:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_stream_shell#override:oiref>=3417,3120,3317,3120:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_var#connect:oiref>=4289,301,28,16,0:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_tmpl_lob_stream#cursor:oiref>=2829,657,2829,597:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_ref_select_stream#sl_desc:oiref>=3162,2473,3052,2985:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_cstr_tab#otl_pl_tab_generic:oiref>=367,388,759,328:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_inout_stream#otl_tmpl_inout_stream:oiref>=2246,2985,2246,2165:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_datetime_tab#otl_pl_tab_generic:oiref>=558,388,778,328:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_ref_select_stream#override:oiref>=3212,2473,3212,2985:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_tmpl_inout_stream#otl_tmpl_out_stream:oiref>=2211,1483,2211,1403:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_dynamic_float_tab#otl_tmpl_dyn_pl_tab:oiref>=1328,646,1328,561:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_dynamic_int_tab#otl_tmpl_dyn_pl_tab:oiref>=1684,646,1378,561:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_dynamic_datetime_tab#v:oiref>=82,626,28,16,0:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_stream_shell#iov:oiref>=3585,2985,3847,2901,3847,1721:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_tmpl_select_stream#override:oiref>=3218,2965,28,16,0:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_short_tab#otl_tmpl_pl_tab:oiref>=551,646,702,576:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_stream_shell#ss:oiref>=3482,2985,3482,2516:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_tmpl_out_stream#otl_tmpl_cursor:oiref>=2212,657,2773,597:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_dynamic_datetime_tab#v:oiref>=114,530,114,646:oigroup>
+<oigroup:MemberLink#<oiref:cpp#Member#otl_cur#db:oiref>=4224,996,4407,632:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_stream_shell#ss:oiref>=3450,2516,28,16,0:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_ref_select_stream#sl:oiref>=3010,1758,28,16,0:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_float_tab#otl_tmpl_pl_tab:oiref>=715,646,715,576:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_dynamic_double_tab#otl_tmpl_dyn_pl_tab:oiref>=2014,646,1429,561:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_connect#otl_tmpl_connect:oiref>=2406,1483,2406,1101:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_ref_select_stream#override:oiref>=3180,2965,28,16,0:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_refcur_stream#otl_refcur_base_cursor:oiref>=2641,1483,2641,927:oigroup>
+<oigroup:Composite#supplierCardinality#MemberLink#<oiref:cpp#Member#otl_refcur_stream#sl_desc:oiref>=2970,2965,28,16,0:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_dynamic_long_int_tab#otl_tmpl_dyn_pl_tab:oiref>=1518,646,1353,561:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_ref_cursor#otl_tmpl_cursor:oiref>=3064,657,2858,597:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_dynamic_cstr_tab#otl_pl_tab_generic:oiref>=1552,388,1552,378,845,328:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_tmpl_select_cursor#otl_tmpl_cursor:oiref>=3297,657,2916,597:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_ref_select_stream#otl_ref_cursor:oiref>=3144,1483,3144,1055:oigroup>
+<oigroup:<oiref:cpp#Extends#otl_cur#otl_cur0:oiref>=4157,996,3974,928,3974,92:oigroup>
+*/
+class __positions {
+}

@@ -1,0 +1,10 @@
+#define versionFileMajor 99
+#define versionFileMinor 0
+#define versionFilePatch 0
+#define versionFileBuild 0
+#define versionFileString "99.0.0.0\0"
+#define versionProductMajor 99
+#define versionProductMinor 0
+#define versionProductPatch 0
+#define versionProductBuild 0
+#define versionProductString "99.0.0 (Debug)\0"

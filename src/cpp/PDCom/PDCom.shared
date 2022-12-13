@@ -1,0 +1,179 @@
+//Any:AnyPrettyIO 
+ProjectAttributes (
+	DependenciesFile           : "dependencies.incl",
+	FileCount                  : 477,
+	FileSet                    : array (
+		"IPDCom.idl",
+		"Makefile",
+		"PDACKMsg.cpp",
+		"PDACKMsg.h",
+		"PDBASEMsg.cpp",
+		"PDBASEMsg.h",
+		"PDCOMMANDMsg.cpp",
+		"PDCOMMANDMsg.h",
+		"PDCom.cpp",
+		"PDCom.h",
+		"PDCom.shared",
+		"PDComClient.cpp",
+		"PDComClient.h",
+		"PDComModule.cpp",
+		"PDComModule.h",
+		"PDComMsgQ.cpp",
+		"PDComMsgQ.h",
+		"PDComServer.cpp",
+		"PDComServer.h",
+		"PDEchoReply.cpp",
+		"PDEchoReply.h",
+		"PDEchoRequest.cpp",
+		"PDEchoRequest.h",
+		"PDMULTIMsg.cpp",
+		"PDMULTIMsg.h",
+		"PDNAKMsg.cpp",
+		"PDNAKMsg.h",
+		"PDSTRINGSMsg.cpp",
+		"PDSTRINGSMsg.h",
+		"PDSYNCMsg.cpp",
+		"PDSYNCMsg.h",
+		"PDTXYMsg.cpp",
+		"PDTXYMsg.h",
+		"PrePDCom.cpp",
+		"PrePDCom.h",
+		"allpdcomrc.h",
+		"LogonUisCollMessage.cc",
+		"LogonUisCollMessage.h",
+		"LogonUisMessage.cc",
+		"LogonUisMessage.h",
+		"PDHbvResultInfoMsg.cc",
+		"PDHbvResultInfoMsg.h",
+		"PDHBVSETTINGSMsg.cc",
+		"PDHBVSETTINGSMsg.h",
+		"PDHbvSimPeriodMsg.cc",
+		"PDHbvSimPeriodMsg.h",
+		"PDHbvSnowValuesMsg.cc",
+		"PDHbvSnowValuesMsg.h",
+		"PDCmdResult.cpp",
+		"PDCmdResult.h"
+	),
+	FileTypes                  : struct (
+		Header                    : File_Types_Info (
+			Icon                     : "$SNIFF_DIR/config/icons/FT_header.gif",
+			Name                     : "Header",
+			Parser                   : "SNiFF-C++",
+			"Retriever Priority"       : "1",
+			Signatures               : "*.h:*.H:*.hh:*.HH:*.hpp:*.HPP:*.hxx:*.HXX:*.ci",
+			"Tool Names"               : "Edit:Set Writable:Set Read Only:ls -l",
+			Tools                    : "SniffEdit:chmod u+w %f:chmod a-w %f:ls -l %f",
+			Type                     : "Header"
+		),
+		"IDL Interface"             : File_Types_Info (
+			Icon                     : "$SNIFF_DIR/config/icons/FT_source.gif",
+			Name                     : "IDL Interface",
+			"Retriever Priority"       : "2",
+			Signatures               : "*.idl",
+			"Tool Names"               : "Edit:Set Writable:Set Read Only:ls -l",
+			Tools                    : "SniffEdit:chmod u+w %f:chmod a-w %f:ls -l %f",
+			Type                     : "MIDL"
+		),
+		Implementation            : File_Types_Info (
+			"General Makefile"         : "$SNIFF_DIR/make_support/general.c.mk",
+			Icon                     : "$SNIFF_DIR/config/icons/FT_source.gif",
+			Name                     : "Implementation",
+			Parser                   : "SNiFF-C++",
+			"Retriever Priority"       : "2",
+			Signatures               : "*.c:*.C:*.cc:*.CC:*.cpp:*.CPP:*.cxx:*.CXX",
+			"Tool Names"               : "Edit:Set Writable:Set Read Only:ls -l",
+			Tools                    : "SniffEdit:chmod u+w %f:chmod a-w %f:ls -l %f",
+			Type                     : "Implementation"
+		),
+		Make                      : File_Types_Info (
+			"Create Symbolic Link"     : true,
+			Icon                     : "$SNIFF_DIR/config/icons/FT_make.gif",
+			Name                     : "Make",
+			"Retriever Priority"       : "6",
+			Signatures               : "Makefile:makefile:*.mk:*.MAK:MAKEFILE:*.cron",
+			"Tool Names"               : "Edit:Set Writable:Set Read Only:ls -l",
+			Tools                    : "SniffEdit:chmod u+w %f:chmod a-w %f:ls -l %f",
+			Type                     : "Make"
+		),
+		"Project Description"       : File_Types_Info (
+			Icon                     : "$SNIFF_DIR/config/icons/FT_pdf.gif",
+			Name                     : "Project Description",
+			"Retriever Priority"       : "8",
+			Signatures               : "*.proj:*.shared",
+			"Tool Names"               : "Open Project:Edit PDF:Set Writable:Set Read Only:ls -l",
+			Tools                    : "SniffOpen:SniffEdit:chmod u+w %f:chmod a-w %f:ls -l %f",
+			Type                     : "Project"
+		),
+		RoseCategory              : File_Types_Info (
+			"Derived From"             : "RoseModel",
+			Icon                     : "$SNIFF_DIR/config/icons/IconCat.gif",
+			Name                     : "RoseCategory",
+			Signatures               : "*.cat",
+			Type                     : "Category"
+		),
+		RoseModel                 : File_Types_Info (
+			Icon                     : "$SNIFF_DIR/config/icons/IconMdl.gif",
+			Name                     : "RoseModel",
+			Signatures               : "*.mdl",
+			"Tool Names"               : "Open in Rose:Set Writable:Set Read-Only:Properties",
+			Tools                    : "snifftorose -open_model %f:SniffSetWritable:SniffSetReadOnly:ls -l %f",
+			Type                     : "Model"
+		),
+		"Windows Resource Template" : File_Types_Info (
+			Icon                     : "$SNIFF_DIR/config/icons/FT_source.gif",
+			Name                     : "Windows Resource Template",
+			Signatures               : "*.rc:*.RC",
+			"Tool Names"               : "Edit:Set Writeable:Set Read Only:ls -l",
+			Tools                    : "SniffEdit:chmod u+w %f:chmod a-w %f:ls -l %f",
+			Type                     : "RC_Implementation"
+		)
+	),
+	GenerateDir                : ".sniffdir",
+	HelpTarget                 : "idl:all:symbolic_links:check_obsolete_files:clean:clean_targets:help",
+	IgnoreStringsFile          : "$SNIFF_DIR/config/winapi_ignore",
+	IncludeFilesFile           : "include.incl",
+	IncludeMacro               : array (
+		"-I.",
+		"-I../../../icc/api/include",
+		"-I../../../icc/api/dbi/include"
+	),
+	JavaClasspath              : array (
+		""
+	),
+	LibTarget                  : "libpdcom.lib",
+	LinkObjects                : 2,
+	MacrosFile                 : "macros.incl",
+	MakeCommand                : "gmake check_vpath; gmake",
+	MakefileSupport            : true,
+	ObjectFilesFile            : "ofiles.incl",
+	PreprocessorSwitch         : array (
+		"-DSNIFF_PARSER",
+		"-I$ROGUE_HOME",
+		"-I../../../ms/include",
+		"-I../../../ms/atl/include",
+		"-I../../../mfc/include"
+	),
+	ProjectDir                 : "icc/api/PDCom",
+	ProjectType                : 2,
+	Release                    : "V3.0",
+	SharedProject              : true,
+	StandardHeaderDependencies : true,
+	SubDirs                    : array (
+		"../../../icc/api/TXY/src",
+		"RC"
+	),
+	SubProj                    : array (
+		SubProjSchema (
+			SubProjDir  : "icc/api/TXY/src",
+			SubProjName : "libTXY.shared"
+		),
+		SubProjSchema (
+			SubProjDir  : "icc/api/PDCom/RC",
+			SubProjName : "PDComRC.shared"
+		)
+	),
+	TabLength                  : 4,
+	UseCache                   : true,
+	VCSystem                   : "CVS",
+	VPathFile                  : "vpath.incl"
+)

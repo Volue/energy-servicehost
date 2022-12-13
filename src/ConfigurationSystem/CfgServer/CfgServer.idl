@@ -1,0 +1,94 @@
+// CfgServer.idl : IDL source for CfgServer
+//
+
+// This file will be processed by the MIDL tool to
+// produce the type library (CfgServer.tlb) and marshalling code.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+[
+	object,
+	uuid(8F92CB12-BA65-4A86-9F22-750CEBF895D7),
+	dual,
+	helpstring("Powel CfgManager Interface"),
+	pointer_default(unique)
+] 
+interface ICfgManager : IDispatch {
+	[id(1),helpstring("method createParameters")] HRESULT  createParameters([in] VARIANT pname, [in] VARIANT ptype, [in] VARIANT pdesc, [out,retval] VARIANT *result);
+	[id(2),helpstring("method deleteParameters")] HRESULT  deleteParameters([in] VARIANT pname, [out,retval] VARIANT *result);
+	[id(3),helpstring("method findParameters")] HRESULT  findParameters([in] BSTR searchMask, [out] VARIANT *pname, [out,retval] VARIANT *result);
+	[id(4),helpstring("method getParameters")] HRESULT  getParameters([in] VARIANT pname, [out] VARIANT *ptype, [out] VARIANT *pdesc, [out,retval] VARIANT *result);
+	[id(5),helpstring("method logon")] HRESULT  logon([in] BSTR usr, [in] BSTR pwd, [in] BSTR db, [out,retval] VARIANT *result);
+	[id(6),helpstring("method logoff")] HRESULT  logoff();
+	[id(7),helpstring("method createGroups")] HRESULT  createGroups([in] VARIANT gname, [in] VARIANT gtype, [in] VARIANT gpri, [in] VARIANT gdesc, [out,retval] VARIANT *result);
+	[id(8),helpstring("method deleteGroups")] HRESULT  deleteGroups([in] VARIANT gname, [out,retval] VARIANT *result);
+	[id(9),helpstring("method findGroups")] HRESULT  findGroups([in] BSTR searchGname, [out] VARIANT *foundGroup, [out,retval] VARIANT *result);
+	[id(10),helpstring("method getGroups")] HRESULT  getGroups([in] VARIANT gname, [out] VARIANT *gtype, [out] VARIANT *gpri, [out] VARIANT *gdesc, [out,retval] VARIANT *result);
+	[id(11),helpstring("method renameGroups")] HRESULT  renameGroups([in] VARIANT gname, [in] VARIANT newGname, [out,retval] VARIANT *result);
+	[id(12),helpstring("method createGroupMembers")] HRESULT  createGroupMembers([in] VARIANT mname, [out,retval] VARIANT *result);
+	[id(13),helpstring("method deleteGroupMembers")] HRESULT  deleteGroupMembers([in] VARIANT mname, [out,retval] VARIANT *result);
+	[id(14),helpstring("method findGroupMembers")] HRESULT  findGroupMembers([in] BSTR searchMname, [out] VARIANT *foundGroupMember, [out,retval] VARIANT *result);
+	[id(15),helpstring("method renameGroupMembers")] HRESULT  renameGroupMembers([in] VARIANT mname, [in] VARIANT newMname, [out,retval] VARIANT *result);
+	[id(16),helpstring("method addMembersToGroup")] HRESULT  addMembersToGroup([in] BSTR gname, [in] VARIANT mname, [out,retval] VARIANT *result);
+	[id(17),helpstring("method removeMembersFromGroup")] HRESULT  removeMembersFromGroup([in] BSTR gname, [in] VARIANT mname, [out,retval] VARIANT *result);
+	[id(18),helpstring("method getMembersForGroup")] HRESULT  getMembersForGroup([in] BSTR gname, [out] VARIANT *mname, [out,retval] VARIANT *result);
+	[id(19),helpstring("method getParametersForGroup")] HRESULT  getParametersForGroup([in] BSTR gname, [out] VARIANT *pname, [out] VARIANT *ptype, [out] VARIANT *pdesc, [out] VARIANT *pval, [out,retval] VARIANT *result);
+	[id(20),helpstring("method removeParametersFromGroup")] HRESULT  removeParametersFromGroup([in] BSTR gname, [in] VARIANT pname, [out,retval] VARIANT *result);
+	[id(21),helpstring("method setGroupParameter")] HRESULT  setGroupParameter([in] BSTR gname, [in] BSTR pname, [in] VARIANT pval, [out,retval] VARIANT *result);
+	[id(22),helpstring("method getGroupMembers. Returns number of entries in minfo or -1 on error.")] HRESULT  getGroupMembers([in] VARIANT mname, [out] VARIANT *minfo, [out,retval] VARIANT *result);
+	[id(23),helpstring("method updateGroups")] HRESULT  updateGroups([in] VARIANT gname, [in] VARIANT newGname, [in] VARIANT newGtype, [in] VARIANT newGpri, [in] VARIANT newGdescr, [out,retval] VARIANT *result);
+	[id(24),helpstring("method updateParameters")] HRESULT  updateParameters([in] VARIANT pname, [in] VARIANT newPname, [in] VARIANT newPdescr, [out,retval] VARIANT *result);
+	[id(25),helpstring("method getParametersForGroupWithDate")] HRESULT  getParametersForGroupWithDate([in] BSTR gname, [out] VARIANT *pname, [out] VARIANT *ptype, [out] VARIANT *pdesc, [out] VARIANT *pmod, [out] VARIANT *pval, [out,retval] VARIANT *result);
+	[id(26),helpstring("method setGroupParameterWithDate")] HRESULT  setGroupParameterWithDate([in] BSTR gname, [in] BSTR pname, [in] VARIANT pval, [in] DATE pmod, [out,retval] VARIANT *result);
+	[id(27),helpstring("method getRolesForMember")] HRESULT  getRolesForMember([in] VARIANT mname, [out] VARIANT *roleTable, [out] VARIANT *roleUserTable, [out,retval] VARIANT *result);
+};
+
+[
+	object,
+	uuid(918E2BA2-D265-4B6A-8864-DD29C4AAAE39),
+	dual,
+	helpstring("Powel CfgReader Interface"),
+	pointer_default(unique)
+] 
+interface ICfgReader : IDispatch {
+	[id(1), helpstring(" GetConfiguration returns a list of configuration parameters according to supplied arguments")] HRESULT  GetConfiguration([in] BSTR osUser, [in] BSTR computerName, [in] BSTR progName, [out] VARIANT* configResult, [out, retval] VARIANT* bResult);
+	[id(2),helpstring(" GetConfigurationWithGroup returns a list of configuration parameters according to supplied arguments")] HRESULT  GetConfigurationWithGroup([in] BSTR osUser, [in] BSTR computerName, [in] BSTR progName, [out] VARIANT *gname, [out] VARIANT *pname, [out] VARIANT *pvalue, [out,retval] VARIANT *bResult);
+	[id(3),helpstring(" GetRolesForUser gets a list of the os user's available groups and a list with the corresponding configuration users. Returns number of groups or -1 on error.")] HRESULT  GetRolesForUser([in] BSTR osUser, [out] VARIANT *roles, [out] VARIANT *users, [out,retval] VARIANT *bResult);
+	[id(4),helpstring(" GetExpandedConfiguration returns a list of configuration parameters according to supplied arguments where parameters referring to other parameters are resolved")] HRESULT  GetExpandedConfiguration([in] BSTR osUser, [in] BSTR computerName, [in] BSTR progName, [out] VARIANT *pname, [out] VARIANT *pvalue, [out,retval] VARIANT *bResult);
+	[id(5),helpstring(" GetExpandedConfigurationByRole returns a list of configuration parameters for the configuration user associated with the supplied role name. Values are retrieved according to supplied arguments and parameters referring to other parameters are resolved")] HRESULT  GetExpandedConfigurationByRole([in] int roleKey, [in] BSTR computerName, [in] BSTR progName, [out] VARIANT *pname, [out] VARIANT *pvalue, [out,retval] VARIANT *bResult);
+	[id(6),helpstring(" GetRoles gets a list of all roles in the configuration system. Returns number of roles or -1 on error.")] HRESULT  GetRoles([out] VARIANT *ids, [out] VARIANT *roleNames, [out,retval] VARIANT *bResult);
+	[id(7),helpstring(" GetRolesWithRoleUser gets a list of all roles in the configuration system. Returns number of roles or -1 on error.")] HRESULT  GetRolesWithRoleUser([out] VARIANT *ids, [out] VARIANT *roleNames, [out] VARIANT *roleUsers, [out,retval] VARIANT *bResult);
+	[id(8),helpstring(" GetUsers gets a list of all users in the configuration system. Returns number of users or -1 on error.")] HRESULT  GetUsers([out] VARIANT *userNames, [out,retval] VARIANT *bResult);
+	[id(9), helpstring(" GetEncryptedParameters returns a list of encrypted parameters")] HRESULT  GetEncryptedParameters([out] VARIANT* configResult, [out, retval] VARIANT* bResult);
+};
+
+[
+	uuid(00B20303-30A7-466D-9F41-7829F150DE8A),
+	version(1.0),
+	helpstring("Powel Configuration Server Type Library")
+]
+library PowelCfgServer
+{
+	importlib("stdole2.tlb");
+	importlib("olepro32.dll");
+
+	[
+		version(1.0),
+		uuid(DDFD9EC1-4577-4104-8686-D5C79ABD08EF),
+		helpstring("Powel CfgManager Factory Class")
+	] 
+	coclass CfgManagerFactory {
+		interface ICfgManager;
+	};
+
+	[
+		version(1.0),
+		uuid(A71028BF-9C86-4E7A-A87B-7264668FF725),
+		helpstring("Powel CfgReader Factory Class")
+	] 
+	coclass CfgReaderFactory {
+		interface ICfgReader;
+	};
+
+}

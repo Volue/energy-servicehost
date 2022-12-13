@@ -1,0 +1,24 @@
+HKCR
+{
+	kisclient.kisclient.1 = s 'kisclient Class'
+	{
+		CLSID = s '{43C48196-F2F3-11d1-9107-0000F80355F3}'
+	}
+	kisclient.kisclient = s 'kisclient Class'
+	{
+		CLSID = s '{43C48196-F2F3-11d1-9107-0000F80355F3}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43C48196-F2F3-11d1-9107-0000F80355F3} = s 'kisclient Class'
+		{
+			val AppID = s '{43C48295-F2F3-11d1-9107-0000F80355F3}'
+			ProgID = s 'kisclient.kisclient.1'
+			VersionIndependentProgID = s 'kisclient.kisclient'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

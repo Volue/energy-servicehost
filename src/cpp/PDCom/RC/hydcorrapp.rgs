@@ -1,0 +1,11 @@
+HKCR
+{
+	NoRemove AppID
+	{
+		{43C48280-F2F3-11d1-9107-0000F80355F3} = s 'hydcorr'
+		'hydcorr.EXE'
+		{
+			val AppID = s '{43C48280-F2F3-11d1-9107-0000F80355F3}'
+		}
+	}
+}

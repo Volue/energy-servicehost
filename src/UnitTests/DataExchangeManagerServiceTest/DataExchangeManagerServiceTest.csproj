@@ -1,0 +1,138 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BB9ED845-F235-4C54-AD71-41F5BF003684}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Powel.Icc.Messaging.DataExchangeManager.DataExchangeManagerServiceTest</RootNamespace>
+    <AssemblyName>DataExchangeManagerServiceTest</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Win32\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\..\..\iccruntime\bin\Win32\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <PlatformTarget>x86</PlatformTarget>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EDI.Server.API.Client">
+      <HintPath>..\..\Dependencies\EDI.Server.API.Client.3.6_09062022\EDI.Server.API.Client.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.ServiceBus, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\Packages\WindowsAzure.ServiceBus.3.1.7\lib\net45-full\Microsoft.ServiceBus.dll</HintPath>
+    </Reference>
+    <Reference Include="Powel.Icc.Interop, Version=99.0.0.0, Culture=neutral, PublicKeyToken=1daac38178bee09f, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\..\..\iccruntime\bin\Win32\$(Configuration)\Powel.Icc.Interop.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfoCompany.cs" />
+    <Compile Include="AssemblyInfoVersion.cs" />
+    <Compile Include="Modules\Common\EventHandlersManagerTests.cs" />
+    <Compile Include="Modules\Compello\CompelloImportModuleTests.cs" />
+    <Compile Include="Modules\Compello\CompelloTimerTest.cs" />
+    <Compile Include="Modules\Compello\DataExchangeExportMessageValidatorTest.cs" />
+    <Compile Include="Modules\Compello\ExportSettingsBuilderTest.cs" />
+    <Compile Include="Modules\Compello\HeartbeatTimerTests.cs" />
+    <Compile Include="Modules\Compello\ImportMessageTranslatorTest.cs" />
+    <Compile Include="Modules\Compello\MessageImporterTest.cs" />
+    <Compile Include="DataExchangeManagerServiceTest.cs" />
+    <Compile Include="DataExchangeModuleBaseTest.cs" />
+    <Compile Include="Exporters\MessageExporterTest.cs" />
+    <Compile Include="Modules\Compello\CompelloExportModuleTest.cs" />
+    <Compile Include="Modules\Compello\MessageStatusServiceTest.cs" />
+    <Compile Include="Modules\Compello\RestrictionTest.cs" />
+    <Compile Include="Modules\Compello\StatusChangerTest.cs" />
+    <Compile Include="Modules\Defaults.cs" />
+    <Compile Include="Modules\StandardMsmq\StandardMsmqExportModuleTest.cs" />
+    <Compile Include="Modules\StandardMsmq\StandardMsmqImportModuleTest.cs" />
+    <Compile Include="Modules\PushExportModuleBaseTest.cs" />
+    <Compile Include="Modules\StandardWS\StandardWsLogicTest.cs" />
+    <Compile Include="Modules\RoutingAddressParserTest.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\DataExchangeManager\DataExchangeAPI\DataExchangeAPI.csproj">
+      <Project>{09076f6e-5f4f-41ff-a4e5-eb20688039a5}</Project>
+      <Name>DataExchangeAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataExchangeManager\DataExchangeManagerService\DataExchangeManagerService.csproj">
+      <Project>{31D6C3DF-97F8-4773-BAA0-C36115DD2014}</Project>
+      <Name>DataExchangeManagerService</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\DataExchangeManager\DataExchangeModuleStandardWsInterface\DataExchangeModuleStandardWsInterface.csproj">
+      <Project>{FFE6160E-2926-49BA-AB44-7BB82B8029B0}</Project>
+      <Name>DataExchangeModuleStandardWsInterface</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Powel\Icc\Common\Powel.Icc.Common.csproj">
+      <Project>{a85166f5-c8e5-43a7-80d5-245f2ee86f04}</Project>
+      <Name>Powel.Icc.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Powel\Icc\Powel.Icc.csproj">
+      <Project>{c5cebeb7-c2d3-446d-a2b7-e99b01fed6a0}</Project>
+      <Name>Powel.Icc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Powel\Icc\Services\Powel.Icc.Services.csproj">
+      <Project>{c48e6d56-4a58-460f-b48d-b98a99c19834}</Project>
+      <Name>Powel.Icc.Services</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Moq">
+      <Version>4.18.3</Version>
+    </PackageReference>
+    <PackageReference Include="Newtonsoft.Json">
+      <Version>13.0.1</Version>
+    </PackageReference>
+    <PackageReference Include="NUnit">
+      <Version>3.8.1</Version>
+    </PackageReference>
+    <PackageReference Include="WindowsAzure.ServiceBus">
+      <Version>3.1.7</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

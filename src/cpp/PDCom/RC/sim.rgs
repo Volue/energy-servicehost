@@ -1,0 +1,24 @@
+HKCR
+{
+	sim.pdcom.1 = s 'sim Class'
+	{
+		CLSID = s '{43C48201-F2F3-11d1-9107-0000F80355F3}'
+	}
+	sim.pdcom = s 'sim Class'
+	{
+		CLSID = s '{43C48201-F2F3-11d1-9107-0000F80355F3}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43C48201-F2F3-11d1-9107-0000F80355F3} = s 'sim Class'
+		{
+			val AppID = s '{43C48301-F2F3-11d1-9107-0000F80355F3}'
+			ProgID = s 'sim.pdcom.1'
+			VersionIndependentProgID = s 'sim.pdcom'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

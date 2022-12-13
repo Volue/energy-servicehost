@@ -1,0 +1,137 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="15.0">
+  <PropertyGroup>
+    <ProjectType>Local</ProjectType>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{4C80EF77-6C1F-4272-9BB9-418CFB8A4B90}</ProjectGuid>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <AssemblyName>Powel.Icc.Messaging</AssemblyName>
+    <AssemblyOriginatorKeyFile>..\..\keyPair.snk</AssemblyOriginatorKeyFile>
+    <DefaultClientScript>JScript</DefaultClientScript>
+    <DefaultHTMLPageLayout>Grid</DefaultHTMLPageLayout>
+    <DefaultTargetSchema>IE50</DefaultTargetSchema>
+    <DelaySign>false</DelaySign>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Powel.Icc.Messaging</RootNamespace>
+    <SignAssembly>true</SignAssembly>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\Win32\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <FileAlignment>4096</FileAlignment>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>..\..\..\iccruntime\bin\Win32\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <BaseAddress>285212672</BaseAddress>
+    <Optimize>true</Optimize>
+    <FileAlignment>4096</FileAlignment>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Powel.csproj">
+      <Project>{55f4a851-9fc3-4e84-a50d-989214ba8028}</Project>
+      <Name>Powel</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Common\Powel.Icc.Common.csproj">
+      <Project>{a85166f5-c8e5-43a7-80d5-245f2ee86f04}</Project>
+      <Name>Powel.Icc.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Powel.Icc.Data.csproj">
+      <Project>{ea3d99af-dff0-4725-bc23-51fc85dc4040}</Project>
+      <Name>Powel.Icc.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Interop\Powel.Icc.Interop.vcxproj">
+      <Project>{280cdb7f-4146-45d0-8f84-605dd5b2c431}</Project>
+      <Name>Powel.Icc.Interop</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Powel.Icc.csproj">
+      <Project>{c5cebeb7-c2d3-446d-a2b7-e99b01fed6a0}</Project>
+      <Name>Powel.Icc</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Services\Powel.Icc.Services.csproj">
+      <Project>{c48e6d56-4a58-460f-b48d-b98a99c19834}</Project>
+      <Name>Powel.Icc.Services</Name>
+    </ProjectReference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1daac38178bee09f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Services3, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\Dependencies\Microsoft.Web.Services3.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=3.8.1.0, Culture=neutral, PublicKeyToken=2638cd05610744eb, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\Packages\NUnit.3.8.1\lib\net45\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="AssemblyInfoCompany.cs" />
+    <Compile Include="AssemblyInfoVersion.cs" />
+    <Compile Include="EmbeddedTestMessageXml\EmbeddedTextMessageProxy.cs" />
+    <Compile Include="EmbeddedTestMessageXml\IEmbeddedTextMessage.cs" />
+    <Compile Include="GS2Export.cs" />
+    <Compile Include="GS2ExportService.cs" />
+    <Compile Include="GS2Message.cs" />
+    <Compile Include="SubmitTimeSeriesParser.cs" />
+    <Compile Include="TimeSeriesImport.cs" />
+    <Compile Include="TimeSeriesXML\ITimeSeriesResponseWSPort.cs" />
+    <Compile Include="TimeSeriesXML\StatusType.cs" />
+    <Compile Include="TimeSeriesXML\StringCollection.cs" />
+    <Compile Include="TimeSeriesXML\SubmitTimeSeriesResponse.cs" />
+    <Compile Include="TimeSeriesXML\TimeSeriesResponseType.cs" />
+    <Compile Include="TimeSeriesXML\TimeSeriesResponseTypeCollection.cs" />
+    <Compile Include="TimeSeriesXML\TimeSeriesResponseWSProxy.cs" />
+    <Compile Include="TimeSeriesXML\TimeSeriesType.cs" />
+    <Compile Include="TimeSeriesXML\TimeSeriesXMLAdapter.cs" />
+    <Compile Include="TimeSeriesXML\TsCorMethodType.cs" />
+    <Compile Include="TimeSeriesXML\TsEnumMapper.cs" />
+    <Compile Include="TimeSeriesXML\TsIntervalType.cs" />
+    <Compile Include="TimeSeriesXML\TsPVQItemType.cs" />
+    <Compile Include="TimeSeriesXML\TsPVQItemTypeCollection.cs" />
+    <Compile Include="TimeSeriesXML\TsResponseLevelType.cs" />
+    <Compile Include="TimeSeriesXML\TsTimePeriodType.cs" />
+    <Compile Include="TimeSeriesXML\TsValMethodType.cs" />
+    <Compile Include="TimeSeriesXML\TsValueMetaInfoType.cs" />
+    <Compile Include="TsItemsResponseType.cs" />
+    <Compile Include="TsItemsResponseTypeCollection.cs" />
+    <Compile Include="TsReferenceType.cs" />
+    <None Include="..\..\keyPair.snk">
+      <Link>keyPair.snk</Link>
+    </None>
+    <None Include="App.config" />
+    <None Include="EmbeddedTestMessageXml\EmbeddedTextMessage.wsdl" />
+    <None Include="EmbeddedTestMessageXml\EmbeddedTextMessage.xsd">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Properties\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+</Project>

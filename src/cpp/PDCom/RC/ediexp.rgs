@@ -1,0 +1,24 @@
+HKCR
+{
+	ediexp.ediexp.1 = s 'ediexp Class'
+	{
+		CLSID = s '{43C48176-F2F3-11d1-9107-0000F80355F3}'
+	}
+	ediexp.ediexp = s 'ediexp Class'
+	{
+		CLSID = s '{43C48176-F2F3-11d1-9107-0000F80355F3}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43C48176-F2F3-11d1-9107-0000F80355F3} = s 'ediexp Class'
+		{
+			val AppID = s '{43C48276-F2F3-11d1-9107-0000F80355F3}'
+			ProgID = s 'ediexp.ediexp.1'
+			VersionIndependentProgID = s 'ediexp.ediexp'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

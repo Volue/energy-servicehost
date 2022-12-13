@@ -1,0 +1,24 @@
+HKCR
+{
+	gs2imp.gs2imp.1 = s 'gs2imp Class'
+	{
+		CLSID = s '{43C48177-F2F3-11d1-9107-0000F80355F3}'
+	}
+	gs2imp.gs2imp = s 'gs2imp Class'
+	{
+		CLSID = s '{43C48177-F2F3-11d1-9107-0000F80355F3}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43C48177-F2F3-11d1-9107-0000F80355F3} = s 'gs2imp Class'
+		{
+			val AppID = s '{43C48277-F2F3-11d1-9107-0000F80355F3}'
+			ProgID = s 'gs2imp.gs2imp.1'
+			VersionIndependentProgID = s 'gs2imp.gs2imp'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

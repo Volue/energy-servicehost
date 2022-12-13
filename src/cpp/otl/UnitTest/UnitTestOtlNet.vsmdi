@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestLists xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2006">
+  <TestList name="Lists of Tests" id="8c43106b-9dc1-4907-a29f-aa66a61bf5b6" />
+  <TestList name="OTL.NET" id="cce108fc-a80e-4d71-aa7f-e47b2e052f20" parentListId="8c43106b-9dc1-4907-a29f-aa66a61bf5b6">
+    <Description>All tests for the OTL.NET </Description>
+    <TestLinks>
+      <TestLink id="f27649f7-2f45-9488-7ba5-f69fd1ac870f" name="putgetTest" storage="bin\debug\unittestotlnet.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="b1301c73-c3c8-43ea-9cbf-78292bd404fc" name="dbvalueConstructorTest" storage="bin\debug\unittestotlnet.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+      <TestLink id="625d455e-3886-3f30-55f4-a8d96f210a5f" name="set_nullTest1" storage="bin\release\unittestotlnet.dll" type="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestElement, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.ObjectModel,   PublicKeyToken=b03f5f7f11d50a3a" />
+    </TestLinks>
+  </TestList>
+</TestLists>

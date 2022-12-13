@@ -1,0 +1,552 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="CommonClasses">
+      <UniqueIdentifier>{1a7a65ed-1625-43ce-b431-e925682d5ec4}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{25898642-8d94-4a80-ae80-788ca670902a}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc</Extensions>
+    </Filter>
+    <Filter Include="EfiClasses">
+      <UniqueIdentifier>{7ca950ee-e328-4ef7-9b33-699c2be6eea2}</UniqueIdentifier>
+      <SourceControlFiles>False</SourceControlFiles>
+    </Filter>
+    <Filter Include="EfiClasses\EfiClassesGen">
+      <UniqueIdentifier>{64a1ed34-aebc-4cba-8f6e-f257d8274be5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SecClasses">
+      <UniqueIdentifier>{6587e48a-f3f4-4796-8670-6e665dad0df8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="ICCBASE">
+      <UniqueIdentifier>{b779b5d1-bcd6-48e9-a75c-9d034f087f4a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="PDUTIL">
+      <UniqueIdentifier>{436bedfb-9684-45b0-887f-e51efdcd7e80}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="logon">
+      <UniqueIdentifier>{a7b13e1b-2de8-4e49-a579-54202ba19dc4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="otl">
+      <UniqueIdentifier>{12621aba-97bd-4759-be0f-f7f6da5752e5}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\ActivityLog.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\BeginTrans.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\CommitTrans.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\DBI_auditing.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\DBI_count_rows.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\DBI_count_xy_values.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\DBI_ts_routin.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\DBI_ts_text.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\DBI_tscode_tims_key.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\DBICommon.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\DBIICC_error.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\EFITime.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\GetStatusValue.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\icc_send_log.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\LocalCursor.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\MiscDB.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\PALinit.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\PDDBEnv.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\PDLogCollMessage.cpp">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\PDLogEntry.cc">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\PDLogHeader.cpp">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\PDLogMailTo.cpp">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\PDLogMessage.cpp">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\RollbackTrans.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\TS_export_import.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\TsInfoQuery.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\TsXyValues.C">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\efi_classes\efi_classes_gen\dataset_func_gen.C">
+      <Filter>EfiClasses\EfiClassesGen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\efi_classes\efi_classes_gen\get_resv_data_gen.C">
+      <Filter>EfiClasses\EfiClassesGen</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\sec_classes\CheckProgramId.C">
+      <Filter>SecClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\sec_classes\SEC_dbconnect.C">
+      <Filter>SecClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\sec_classes\SEC_user_info.C">
+      <Filter>SecClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\NetarTp.cpp">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PdCountryTp.cpp">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDDbCursor.cc">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PDDbTransaction.cc">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\iccbase\src\PdProtocolTp.cpp">
+      <Filter>ICCBASE</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\pdutil\src\CalcDefCObj.cc">
+      <Filter>PDUTIL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\pdutil\src\CalcDefColl.cc">
+      <Filter>PDUTIL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\pdutil\src\FetchTsUnitAndType.cpp">
+      <Filter>PDUTIL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\pdutil\src\NormSeriesMap.cpp">
+      <Filter>PDUTIL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\pdutil\src\RCDefiniCApi.cc">
+      <Filter>PDUTIL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\pdutil\src\ReportDefCObj.cc">
+      <Filter>PDUTIL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\pdutil\src\ReportDefColl.cc">
+      <Filter>PDUTIL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\ts\src\TseriTp.cc">
+      <Filter>PDUTIL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\ts\src\TseriTpColl.cc">
+      <Filter>PDUTIL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\ts\src\UnmeaTp.cc">
+      <Filter>PDUTIL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\ts\src\UnmeaTpColl.cc">
+      <Filter>PDUTIL</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\basis\logon\clientCon\LogonclientConDispatch.cc">
+      <Filter>logon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\otl\otlutil.cpp">
+      <Filter>otl</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\DBI_func_protocol.h">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\..\icc\api\dbi\src\common_classes\MATH_DBI.h">
+      <Filter>CommonClasses</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\ActivityLog.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\ActivityLogDefinitions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\AutoCommit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\Batch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\ByteStream.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBHostVariable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_auditing.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_c_misc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_c_types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_enums.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_ERRNO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_error.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_fixquotes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_func.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_TS_enums.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_ts_header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_ts_routines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_ts_text.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBI_tscode_tims_key.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBICommon.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBILineFile.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBInterf.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBInterfaceBasic.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBInterfaceErr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\dbmsapi.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBOption.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\DBTransaction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\EFITime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\ErrMessage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\ExTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\general_functions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\HostArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\HydFn.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\icc_db.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\icc_db_programs.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\IndexGen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\IntArray.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\Join.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\KeyNameCObj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\KeyNameColl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\LocalCursor.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\MiscDB.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\object_struct.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OprList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OprRst.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSDataType.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSDataTypeList.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSDateTime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSDouble.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSInt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSLong.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSNumeric.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSSInt.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSString.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\OSTypes.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\PDDBEnv.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\PDLogCollMessage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\PDLogEntry.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\PDLogHeader.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\PDLogMailTo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\PDLogMessage.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\PriceDepProdPlan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\PriceListRegPlan.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\RelTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SEC_dbconnect.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SEC_func.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIM_clear.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SimDBI.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_aggr.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SimDBI_c.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_catch.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_commo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_dataset.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_gate.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_list.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_objects.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_plant.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_resvo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_scada.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SimDBI_sim_warning_all.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SIMDBI_wtrou.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SimRestriction.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SimRevision.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SqlCache.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\SqlFunc.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\Table.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\TBTseriVl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\TimesSeriesAid.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\TRADBI_ELCMP_enum.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\TsInfoCObj.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\TsInfoColl.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\TsInfoQuery.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\TsListe.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\basis\tsreport\rcmapi\TsRBModel.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\basis\tsreport\reportdata\TsRDataColumnInfo.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\basis\tsreport\statusfilter\TsRFilter.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\basis\tsreport\printdlg\TsRPrintOptions.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\TSSequence.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\TsValues.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\TsXyValues.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PDDbCursor.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\PDDbTransaction.h">
+      <Filter>ICCBASE</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\CalcDefCObj.h">
+      <Filter>PDUTIL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\CalcDefColl.h">
+      <Filter>PDUTIL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\FetchTsUnitAndType.h">
+      <Filter>PDUTIL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\ReportDefCObj.h">
+      <Filter>PDUTIL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\ReportDefColl.h">
+      <Filter>PDUTIL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\TseriTp.h">
+      <Filter>PDUTIL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\TseriTpColl.h">
+      <Filter>PDUTIL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\UnmeaTp.h">
+      <Filter>PDUTIL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\UnmeaTpColl.h">
+      <Filter>PDUTIL</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\basis\logon\clientCon\LogonclientConDispatch.h">
+      <Filter>logon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\otl\otl.h">
+      <Filter>otl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\otl\otl_and_pdtime.h">
+      <Filter>otl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\otl\otlv4.h">
+      <Filter>otl</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\basis\tsreport\libsolver\TsRAdm.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\include\NetarTp.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\EFI_db_routines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\..\icc\api\dbi\include\EFI_db_routines_gen.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

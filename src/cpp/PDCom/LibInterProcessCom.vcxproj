@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{EBFAD35D-AF02-4AA2-A4A0-B390BDC4A216}</ProjectGuid>
+    <RootNamespace>LibInterProcessCom</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="..\..\..\build\toolset.props" />
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>StaticLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Platform)\$(Configuration)\</IntDir>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Platform)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)%(Filename).tlb</TypeLibraryName>
+      <OutputDirectory>%(RootDir)%(Directory)</OutputDirectory>
+      <HeaderFileName>%(Filename)_i.h</HeaderFileName>
+      <DllDataFileName>%(Filename)_d.c</DllDataFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <AdditionalIncludeDirectories>../../../rogue;../../../icc/api/include;../../../icc/api/dbi/include;../../../icc/api/dbi/include/dig_h;../../../icc/api/ICC;../../../icc/api/PDCom;../../../icc/api/CB;../../../icc/api/dbi/src/common_classes;../../../icc/api/log/src;../../../icc/api/PDComponent;../../../icc/sim/src/sim;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;WIN32;_NDEBUG;_LIB;PD_IOSTD;ID_TIPP;IL_DLL;IL_STD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <BasicRuntimeChecks>Default</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeaderFile>PrePDCom.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+    </ClCompile>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <GenerateStublessProxies>true</GenerateStublessProxies>
+      <TypeLibraryName>$(IntDir)%(Filename).tlb</TypeLibraryName>
+      <OutputDirectory>%(RootDir)%(Directory)</OutputDirectory>
+      <HeaderFileName>%(Filename)_i.h</HeaderFileName>
+      <DllDataFileName>%(Filename)_d.c</DllDataFileName>
+      <InterfaceIdentifierFileName>%(Filename)_i.c</InterfaceIdentifierFileName>
+      <ProxyFileName>%(Filename)_p.c</ProxyFileName>
+    </Midl>
+    <ClCompile>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>../../../rogue;../../../icc/api/include;../../../icc/api/dbi/include;../../../icc/api/dbi/include/dig_h;../../../icc/api/ICC;../../../icc/api/PDCom;../../../icc/api/CB;../../../icc/api/dbi/src/common_classes;../../../icc/api/log/src;../../../icc/api/PDComponent;../../../icc/sim/src/sim;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_DEPRECATE;WIN32;_NDEBUG;_LIB;PD_IOSTD;ID_TIPP;IL_DLL;IL_STD;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>PrePDCom.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+    </ClCompile>
+    <Lib />
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="allpdcomrc.h" />
+    <ClInclude Include="LogonUisCollMessage.h" />
+    <ClInclude Include="LogonUisMessage.h" />
+    <ClInclude Include="PDACKMsg.h" />
+    <ClInclude Include="PDBASEMsg.h" />
+    <ClInclude Include="PDCmdResult.h" />
+    <ClInclude Include="PDCom.h" />
+    <ClInclude Include="PDComClient.h" />
+    <ClInclude Include="PDCOMMANDMsg.h" />
+    <ClInclude Include="PDComModule.h" />
+    <ClInclude Include="PDComMsgQ.h" />
+    <ClInclude Include="PDComServer.h" />
+    <ClInclude Include="PDEchoReply.h" />
+    <ClInclude Include="PDEchoRequest.h" />
+    <ClInclude Include="PDHbvResultInfoMsg.h" />
+    <ClInclude Include="PDHBVSETTINGSMsg.h" />
+    <ClInclude Include="PDHbvSimPeriodMsg.h" />
+    <ClInclude Include="PDHbvSnowValuesMsg.h" />
+    <ClInclude Include="PDMULTIMsg.h" />
+    <ClInclude Include="PDNAKMsg.h" />
+    <ClInclude Include="PDSTRINGSMsg.h" />
+    <ClInclude Include="PDSYNCMsg.h" />
+    <ClInclude Include="PDTXYMsg.h" />
+    <ClInclude Include="PrePDCom.h" />
+    <ClInclude Include="..\ICC\EDIname.h" />
+    <ClInclude Include="..\ICC\ICCAppCommInterface.h" />
+    <ClInclude Include="..\ICC\ICCAppCommProgram.h" />
+    <ClInclude Include="..\ICC\ICCNavigator.h" />
+    <ClInclude Include="..\ICC\icc_internal.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="LogonUisCollMessage.cc" />
+    <ClCompile Include="LogonUisMessage.cc" />
+    <ClCompile Include="PDACKMsg.cpp" />
+    <ClCompile Include="PDBASEMsg.cpp" />
+    <ClCompile Include="PDCmdResult.cpp" />
+    <ClCompile Include="PDCom.cpp" />
+    <ClCompile Include="PDComClient.cpp" />
+    <ClCompile Include="PDCOMMANDMsg.cpp" />
+    <ClCompile Include="PDComModule.cpp" />
+    <ClCompile Include="PDComMsgQ.cpp" />
+    <ClCompile Include="PDComServer.cpp" />
+    <ClCompile Include="PDEchoReply.cpp" />
+    <ClCompile Include="PDEchoRequest.cpp" />
+    <ClCompile Include="PDHbvResultInfoMsg.cc" />
+    <ClCompile Include="PDHBVSETTINGSMsg.cc" />
+    <ClCompile Include="PDHbvSimPeriodMsg.cc" />
+    <ClCompile Include="PDHbvSnowValuesMsg.cc" />
+    <ClCompile Include="PDMULTIMsg.cpp" />
+    <ClCompile Include="PDNAKMsg.cpp" />
+    <ClCompile Include="PDSTRINGSMsg.cpp" />
+    <ClCompile Include="PDSYNCMsg.cpp" />
+    <ClCompile Include="PDTXYMsg.cpp" />
+    <ClCompile Include="PrePDCom.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\ICC\EDIname.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\ICC\ICCAppCommInterface.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\ICC\ICCAppCommProgram.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\ICC\ICCNavigator.cc">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\ICC\icc_cleanup.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\ICC\icc_exit.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="..\ICC\icc_send_flog.c">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">NotUsing</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">NotUsing</PrecompiledHeader>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <Midl Include="PDCom.idl">
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">%(Filename).tlb</TypeLibraryName>
+      <TypeLibraryName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">%(Filename).tlb</TypeLibraryName>
+    </Midl>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties DevPartner_IsInstrumented="1" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

@@ -1,0 +1,599 @@
+// IPDCom.idl
+// $Header: E:\cvsroot/icc/api/PDCom/IPDCom.idl,v 1.36 2009-05-14 22:31:23 DBKRAFT4\icc Exp $
+//
+// This file will be processed by the MIDL tool to
+// produce the type library (Connect.tlb) and marshalling code.
+
+//Copyright (C) Powel Data AS
+//All rights reserved.
+
+import "oaidl.idl";
+import "ocidl.idl";
+
+	[
+		object,
+		uuid(CCE84200-DB31-11CF-9D75-00A0C90391D3),
+		dual,
+		helpstring("IPDCom Interface"),
+		pointer_default(unique)
+	]
+	interface IPDCom: IDispatch
+	{
+		[id(1), helpstring("method SendMsg")] HRESULT SendMsg([in] BSTR stringMsg,[in] DWORD cpid);
+
+    }
+	[
+		object,
+		uuid(CC084200-DB31-11CF-9D75-00A0C90391D3),
+		dual,
+		helpstring("IPDComScript Interface"),
+		pointer_default(unique)
+	]
+	interface IPDComScript: IDispatch
+	{
+		[id(1), helpstring("DoCommand(string,result)")] 
+		HRESULT DoCommand([in] BSTR cmdStr,[out,retval] VARIANT *result);
+		[id(2), helpstring("LastMessage(lastMsg)")] 
+		HRESULT LastMessage([out,retval] VARIANT *lastMsg);
+    }
+	[
+		object,
+		uuid(CC184200-DB31-11CF-9D75-00A0C90391D3),
+		dual,
+		helpstring("IValCorrServer Interface"),
+		pointer_default(unique)
+	]
+	interface IValCorrServer: IDispatch
+	{
+		[id(1), helpstring("VCOneTS(tscode,T17cfrom, T17cto,valAndCorr)")] 
+		HRESULT VCOneTS([in] BSTR tscodeA,[in] BSTR TstartA,[in] BSTR TendA,[in] long valAndCorr,[out,retval] VARIANT *result);
+		[id(2), helpstring("VCAuto(T17cfrom, T17cto,valAndCorr)")] 
+		HRESULT VCAuto([in] BSTR TstartA,[in] BSTR TendA,[in] long valAndCorr,[out,retval] VARIANT *result);
+		[id(3), helpstring("VCFile(file,T17cfrom, T17cto,valAndCorr)")] 
+		HRESULT VCFile([in] VARIANT file,[in] BSTR TstartA,[in] BSTR TendA,[in] long valAndCorr,[out,retval] VARIANT *result);
+		[id(4), helpstring("VCSql(Sqlcodes,T17cfrom, T17cto,valAndCorr)")] 
+		HRESULT VCSql([in] VARIANT Sqlcodes,[in] BSTR TstartA,[in] BSTR TendA,[in] long valAndCorr,[out,retval] VARIANT *result);
+		[id(5), helpstring("VCAbsEndOneTS(tscode,T17cfrom, T17cto,valAndCorr)")] 
+		HRESULT VCAbsEndOneTS([in] BSTR tscodeA,[in] BSTR TstartA,[in] BSTR TendA,[in] long valAndCorr,[out,retval] VARIANT *result);
+		[id(6), helpstring("VCAbsEndAuto(T17cfrom, T17cto,valAndCorr)")] 
+		HRESULT VCAbsEndAuto([in] BSTR TstartA,[in] BSTR TendA,[in] long valAndCorr,[out,retval] VARIANT *result);
+		[id(7), helpstring("VCAbsEndFile(file,T17cfrom, T17cto,valAndCorr)")] 
+		HRESULT VCAbsEndFile([in] VARIANT file,[in] BSTR TstartA,[in] BSTR TendA,[in] long valAndCorr,[out,retval] VARIANT *result);
+		[id(8), helpstring("VCAbsEndSql(Sqlcodes,T17cfrom, T17cto,valAndCorr)")] 
+		HRESULT VCAbsEndSql([in] VARIANT Sqlcodes,[in] BSTR TstartA,[in] BSTR TendA,[in] long valAndCorr,[out,retval] VARIANT *result);
+    }
+
+[
+	uuid(CCE84201-DB31-11CF-9D75-00A0C90391D3),
+	version(1.0),
+	helpstring("IPDCom 1.0 Type Library")
+]
+library IPDComLib
+{
+	importlib("stdole32.tlb");	
+	[
+		uuid(CCE84202-DB31-11CF-9D75-00A0C90391D3),
+		helpstring("PDEchoServer Class")
+	]
+	coclass PDEchoServer
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+
+	[
+		uuid(43C48161-F2F3-11d1-9107-0000F80355F3),
+		helpstring("PDEchoClient Class")
+	]
+	coclass PDEchoClient
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	
+	[
+		uuid(43C48162-F2F3-11d1-9107-0000F80355F3),
+		helpstring("navigatoruis Class")
+	]
+	coclass navigatoruis
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48163-F2F3-11d1-9107-0000F80355F3),
+		helpstring("Solver Class")
+	]
+	coclass solver
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+
+	[
+		uuid(43C48164-F2F3-11d1-9107-0000F80355F3),
+		helpstring("exchpntuis Class")
+	]
+	coclass exchpntuis
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+
+	[
+		uuid(43C48165-F2F3-11d1-9107-0000F80355F3),
+		helpstring("measpntuis Class")
+	]
+	coclass measpntuis
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+
+	[
+		uuid(43C48166-F2F3-11d1-9107-0000F80355F3),
+		helpstring("netareauis Class")
+	]
+	coclass netareauis
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+
+	[
+		uuid(43C48167-F2F3-11d1-9107-0000F80355F3),
+		helpstring("customeruis Class")
+	]
+	coclass customeruis
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48168-F2F3-11d1-9107-0000F80355F3),
+		helpstring("hvcuis Class")
+	]
+	coclass hvcuis
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48169-F2F3-11d1-9107-0000F80355F3),
+		helpstring("impexpuis Class")
+	]
+	coclass impexpuis
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48170-F2F3-11d1-9107-0000F80355F3),
+		helpstring("debituis Class")
+	]
+	coclass debituis
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48171-F2F3-11d1-9107-0000F80355F3),
+		helpstring("tspanel Class")
+	]
+	coclass tspanel
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48172-F2F3-11d1-9107-0000F80355F3),
+		helpstring("calcdebit Class")
+	]
+	coclass calcdebit
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48173-F2F3-11d1-9107-0000F80355F3),
+		helpstring("calcdelivery Class")
+	]
+	coclass calcdelivery
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48174-F2F3-11d1-9107-0000F80355F3),
+		helpstring("calcreport Class")
+	]
+	coclass calcreport
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48175-F2F3-11d1-9107-0000F80355F3),
+		helpstring("ediimp Class")
+	]
+	coclass ediimp
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48176-F2F3-11d1-9107-0000F80355F3),
+		helpstring("ediexp Class")
+	]
+	coclass ediexp
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48177-F2F3-11d1-9107-0000F80355F3),
+		helpstring("gs2imp Class")
+	]
+	coclass gs2imp
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48178-F2F3-11d1-9107-0000F80355F3),
+		helpstring("gs2exp Class")
+	]
+	coclass gs2exp
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48179-F2F3-11d1-9107-0000F80355F3),
+		helpstring("hydval Class")
+	]
+	coclass hydval
+	{
+		[default] interface IValCorrServer;
+		interface IPDCom;
+		[source] interface IPDCom;
+	};
+	[
+		uuid(43C48180-F2F3-11d1-9107-0000F80355F3),
+		helpstring("hydcorr Class")
+	]
+	coclass hydcorr
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48181-F2F3-11d1-9107-0000F80355F3),
+		helpstring("pdaudituis Class")
+	]
+	coclass pdaudituis
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48182-F2F3-11d1-9107-0000F80355F3),
+		helpstring("activityloguis Class")
+	]
+	coclass activityloguis
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48183-F2F3-11d1-9107-0000F80355F3),
+		helpstring("TsRServer Class")
+	]
+	coclass tsrserver
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+
+	[
+		uuid(43C48184-F2F3-11d1-9107-0000F80355F3),
+		helpstring("TsRClient Class")
+	]
+	coclass tsrclient
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48185-F2F3-11d1-9107-0000F80355F3),
+		helpstring("logonuis Class")
+	]
+	coclass logonuis
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48186-F2F3-11d1-9107-0000F80355F3),
+		helpstring("tsriclient Class")
+	]
+	coclass tsriclient
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48187-F2F3-11d1-9107-0000F80355F3),
+		helpstring("tsrviewexcelfile Class")
+	]
+	coclass tsrviewexcelfile
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48188-F2F3-11d1-9107-0000F80355F3),
+		helpstring("pdlog Class")
+	]
+	coclass pdlog
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48189-F2F3-11d1-9107-0000F80355F3),
+		helpstring("tsrstartreport Class")
+	]
+	coclass tsrstartreport
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48190-F2F3-11d1-9107-0000F80355F3),
+		helpstring("tsrviewhtmlfile Class")
+	]
+	coclass tsrviewhtmlfile
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48191-F2F3-11d1-9107-0000F80355F3),
+		helpstring("tssearch Class")
+	]
+	coclass tssearch
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48192-F2F3-11d1-9107-0000F80355F3),
+		helpstring("ester Class")
+	]
+	coclass ester
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48193-F2F3-11d1-9107-0000F80355F3),
+		helpstring("regmeasuis Class")
+	]
+	coclass regmeasuis
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48194-F2F3-11d1-9107-0000F80355F3),
+		helpstring("mvsreport Class")
+	]
+	coclass mvsreport
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48195-F2F3-11d1-9107-0000F80355F3),
+		helpstring("tsrviewpsfile Class")
+	]
+	coclass tsrviewpsfile
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48196-F2F3-11d1-9107-0000F80355F3),
+		helpstring("kisclient Class")
+	]
+	coclass kisclient
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48197-F2F3-11d1-9107-0000F80355F3),
+		helpstring("kisdataload Class")
+	]
+	coclass kisdataload
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48198-F2F3-11d1-9107-0000F80355F3),
+		helpstring("structloaduis Class")
+	]
+	coclass structloaduis
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48200-F2F3-11d1-9107-0000F80355F3),
+		helpstring("meteruis Class")
+	]
+	coclass meteruis
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48201-F2F3-11d1-9107-0000F80355F3),
+		helpstring("sim Class")
+	]
+	coclass sim
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48202-F2F3-11d1-9107-0000F80355F3),
+		helpstring("hbv Class")
+	]
+	coclass hbv
+	{
+		[default] interface IPDComScript;
+		interface IPDCom;
+		[source] interface IPDCom;
+	};
+	[
+		uuid(43C48203-F2F3-11d1-9107-0000F80355F3),
+		helpstring("biduis Class")
+	]
+	coclass biduis
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48204-F2F3-11d1-9107-0000F80355F3),
+		helpstring("tshyd Class")
+	]
+	coclass tshyd
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+	[
+		uuid(43C48205-F2F3-11d1-9107-0000F80355F3),
+		helpstring("simnt Class")
+	]
+	coclass simnt
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+
+	[
+		uuid(43C48206-F2F3-11d1-9107-0000F80355F3),
+		helpstring("accounting Class")
+	]
+	coclass accounting
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+
+	[
+		uuid(43C48207-F2F3-11d1-9107-0000F80355F3),
+		helpstring("mvsapp Class")
+	]
+	coclass mvsapp
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+
+	[
+		uuid(43C48208-F2F3-11d1-9107-0000F80355F3),
+		helpstring("chart Class")
+	]
+	coclass chart
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+
+	[
+		uuid(43C48209-F2F3-11d1-9107-0000F80355F3),
+		helpstring("rceditor Class")
+	]
+	coclass rceditor
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+
+	[
+		uuid(43C48210-F2F3-11d1-9107-0000F80355F3),
+		helpstring("integrator Class")
+	]
+	coclass integrator
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+
+	[
+		uuid(43C48211-F2F3-11d1-9107-0000F80355F3),
+		helpstring("createvts Class")
+	]
+	coclass createvts
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+
+	[
+		uuid(43C48212-F2F3-11d1-9107-0000F80355F3),
+		helpstring("instrreg Class")
+	]
+	coclass instrreg
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+
+	[
+		uuid(43C48213-F2F3-11d1-9107-0000F80355F3),
+		helpstring("prodcode Class")
+	]
+	coclass prodcode
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+
+	[
+		uuid(43C48214-F2F3-11d1-9107-0000F80355F3),
+		helpstring("tradeorg Class")
+	]
+	coclass tradeorg
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+
+	[
+		uuid(43C48251-F2F3-11d1-9107-0000F80355F3),
+		helpstring("inflow Class")
+	]
+	coclass inflow
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+
+	[
+		uuid(486B027F-2483-4DC9-B90D-DE47C7855ADF),
+		helpstring("nimbusconfig Class")
+	]
+	coclass nimbusconfig
+	{
+		[default] interface IPDCom;
+		[default, source] interface IPDCom;
+	};
+
+};

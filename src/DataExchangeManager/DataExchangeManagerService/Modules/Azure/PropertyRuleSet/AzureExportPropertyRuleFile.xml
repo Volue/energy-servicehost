@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<Rules>
+  <RuleConstants>
+    <Constant name="AzureTriggerVersion">1.0</Constant>
+    <Constant name="MqHost">0.0.0.0</Constant>
+    <Constant name="MqPort">1451</Constant>
+    <Constant name="CustQueue">POWELAS0</Constant>
+    <Constant name="GasSenders">(EdielAdr1|EdielAdr2)</Constant>
+    <Constant name="GasReceivers">10000</Constant>
+    <Constant name="EnerginetDkAddress">https://edi.preprod.energinet.dk/BRService.asmx</Constant>
+    <Constant name="EnerginetDkUsername">Username</Constant>
+    <Constant name="EnerginetDkPassword">[$SECRET:EnerginetDkPassword:$]</Constant>
+  </RuleConstants>
+  <Rule name="MqDelforEdigas">
+    <Select>
+      <MetaData>
+        <Property key="ProtocolId">12</Property>
+      </MetaData>
+      <Payload>^NP##.{8}$CONST(GasSenders).{51}$CONST(GasReceivers)</Payload>
+    </Select>
+    <Properties>
+      <Property key="TriggerVersion">$CONST(AzureTriggerVersion)</Property>
+      <Property key="Priority">Normal</Property>
+      <Property key="Upload_Protocol">Mq</Property>
+      <Property key="Upload_Mq_Host">$CONST(MqHost)</Property>
+      <Property key="Upload_Mq_Port">$CONST(MqPort)</Property>
+      <Property key="Upload_Mq_QueueManagerName">QMSNETPRP</Property>
+      <Property key="Upload_Mq_ChannelName">$CONST(CustQueue).SNETPRP</Property>
+      <Property key="Upload_Mq_QueueName">$CONST(CustQueue).SNET.EDIGAS</Property>
+      <Property key="Mapping_Component">NoMapping</Property>
+      <Property key="Routing_Component">Standard</Property>
+    </Properties>
+  </Rule>
+  <Rule name="Mq(Prodat)Edigas">
+    <Select>
+      <MetaData>
+        <Property key="ProtocolId">100</Property>
+      </MetaData>
+      <Payload>NAD+FR+($CONST(GasSenders))</Payload>
+    </Select>
+    <Properties>
+      <Property key="TriggerVersion">$CONST(AzureTriggerVersion)</Property>
+      <Property key="Priority">Normal</Property>
+      <Property key="Upload_Protocol">Mq</Property>
+      <Property key="Upload_Mq_Host">$CONST(MqHost)</Property>
+      <Property key="Upload_Mq_Port">$CONST(MqPort)</Property>
+      <Property key="Upload_Mq_QueueManagerName">QMSNETPRP</Property>
+      <Property key="Upload_Mq_ChannelName">$CONST(CustQueue).SNETPRP</Property>
+      <Property key="Upload_Mq_QueueName">$CONST(CustQueue).SNET.EDIGAS</Property>
+      <Property key="Mapping_Component">NoMapping</Property>
+      <Property key="Routing_Component">Standard</Property>
+    </Properties>
+  </Rule>
+  <Rule name="Mq(Prodat)Ediel">
+    <Select>
+      <MetaData>
+        <Property key="ProtocolId">100</Property>
+      </MetaData>
+    </Select>
+    <Properties>
+      <Property key="TriggerVersion">$CONST(AzureTriggerVersion)</Property>
+      <Property key="Priority">Normal</Property>
+      <Property key="Upload_Protocol">Mq</Property>
+      <Property key="Upload_Mq_Host">$CONST(MqHost)</Property>
+      <Property key="Upload_Mq_Port">$CONST(MqPort)</Property>
+      <Property key="Upload_Mq_QueueManagerName">QMSNETPRP</Property>
+      <Property key="Upload_Mq_ChannelName">$CONST(CustQueue).SNETPRP</Property>
+      <Property key="Upload_Mq_QueueName">$CONST(CustQueue).SNET.EDIEL</Property>
+      <Property key="Mapping_Component">NoMapping</Property>
+      <Property key="Routing_Component">Standard</Property>
+    </Properties>
+  </Rule>
+  <Rule name="MqNp">
+    <Select>
+      <Payload>^NP##</Payload>
+    </Select>
+    <Properties>
+      <Property key="TriggerVersion">$CONST(AzureTriggerVersion)</Property>
+      <Property key="Priority">Normal</Property>
+      <Property key="Upload_Protocol">Mq</Property>
+      <Property key="Upload_Mq_Host">$CONST(MqHost)</Property>
+      <Property key="Upload_Mq_Port">$CONST(MqPort)</Property>
+      <Property key="Upload_Mq_QueueManagerName">QMSNETPRP</Property>
+      <Property key="Upload_Mq_ChannelName">$CONST(CustQueue).SNETPRP</Property>
+      <Property key="Upload_Mq_QueueName">$CONST(CustQueue).SNET.NP</Property>
+      <Property key="Mapping_Component">NoMapping</Property>
+      <Property key="Routing_Component">Standard</Property>
+    </Properties>
+  </Rule>
+  <Rule name="MqPd">
+    <Select>
+      <Payload>^PD##</Payload>
+    </Select>
+    <Properties>
+      <Property key="TriggerVersion">$CONST(AzureTriggerVersion)</Property>
+      <Property key="Priority">Normal</Property>
+      <Property key="Upload_Protocol">Mq</Property>
+      <Property key="Upload_Mq_Host">$CONST(MqHost)</Property>
+      <Property key="Upload_Mq_Port">$CONST(MqPort)</Property>
+      <Property key="Upload_Mq_QueueManagerName">QMSNETPRP</Property>
+      <Property key="Upload_Mq_ChannelName">$CONST(CustQueue).SNETPRP</Property>
+      <Property key="Upload_Mq_QueueName">$CONST(CustQueue).SNET.PD</Property>
+      <Property key="Mapping_Component">NoMapping</Property>
+      <Property key="Routing_Component">Standard</Property>
+    </Properties>
+  </Rule>
+  <Rule name="Asmx(Ess|EntsoeAck)EnerginetDk">
+    <Select>
+      <MetaData>
+        <Property key="ProtocolId">(50|96)</Property>
+      </MetaData>
+      <Payload>energinet</Payload>
+    </Select>
+    <Properties>
+      <Property key="TriggerVersion">$CONST(AzureTriggerVersion)</Property>
+      <Property key="Priority">Normal</Property>
+      <Property key="Upload_Protocol">Asmx</Property>
+      <Property key="Upload_Asmx_Address">$CONST(EnerginetDkAddress)</Property>
+      <Property key="Upload_Asmx_Username">$CONST(EnerginetDkUsername)</Property>
+      <Property key="Upload_Asmx_Password">$CONST(EnerginetDkPassword)</Property>
+      <Property key="Mapping_Component">NoMapping</Property>
+      <Property key="Routing_Component">Standard</Property>
+      <Property key="Routing_PartnerId">powel</Property>
+      <Property key="Routing_IntegrationId">smgexmespull</Property>
+      <Property key="Download_Format">Entsoe</Property>
+      <Property key="Upload_Format">Entsoe</Property>
+      <Property key="MessageTarget">StandardWsWcfService</Property>
+    </Properties>
+  </Rule>
+  <Rule name="Mq(Ess|Errp|Esp|Nemm|Ecan|Eod|Ebix|Epd|EntsoeAck|EbixAck)Esett">
+    <Select>
+      <MetaData>
+        <Property key="ProtocolId">(50|89|90|91|92|93|94|95|96|97)</Property>
+      </MetaData>
+    </Select>
+    <Properties>
+      <Property key="TriggerVersion">$CONST(AzureTriggerVersion)</Property>
+      <Property key="Priority">Normal</Property>
+      <Property key="Upload_Protocol">Mq</Property>
+      <Property key="Upload_Mq_Host">$CONST(MqHost)</Property>
+      <Property key="Upload_Mq_Port">$CONST(MqPort)</Property>
+      <Property key="Upload_Mq_QueueManagerName">QMSNETPRP</Property>
+      <Property key="Upload_Mq_ChannelName">$CONST(CustQueue).SNETPRP</Property>
+      <Property key="Upload_Mq_QueueName">$CONST(CustQueue).SNET.ESETT</Property>
+      <Property key="Mapping_Component">NoMapping</Property>
+      <Property key="Routing_Component">Standard</Property>
+    </Properties>
+  </Rule>
+</Rules>

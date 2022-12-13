@@ -1,0 +1,98 @@
+//Any:AnyPrettyIO 
+ProjectAttributes (
+	APIPositions               : 1,
+	BrowsingOnly               : 1,
+	DependenciesFile           : "dependencies.incl",
+	FileCount                  : 5,
+	FileSet                    : array (
+		"otl.h",
+		"otlv4.h",
+		"otl.shared",
+		"otlutil.cpp",
+		"Makefile"
+	),
+	FileTypes                  : struct (
+		Header                    : File_Types_Info (
+			Icon                     : "$SNIFF_DIR/config/icons/FT_header.gif",
+			"Is Default File Type"     : 1,
+			Name                     : "Header",
+			Parser                   : "SNiFF-C++",
+			"Retriever Priority"       : "1",
+			Signatures               : "*.h:*.H:*.hh:*.HH:*.hpp:*.HPP:*.hxx:*.HXX:*.ci",
+			"Tool Names"               : "Edit:Set Writable:Set Read Only:Properties",
+			Tools                    : "SniffEdit:SniffSetWritable:SniffSetReadOnly:ls -l %f",
+			Type                     : "Header"
+		),
+		Implementation            : File_Types_Info (
+			"General Makefile"         : "$SNIFF_DIR/make_support/general.c.mk",
+			Icon                     : "$SNIFF_DIR/config/icons/FT_source.gif",
+			"Is Default File Type"     : 1,
+			Name                     : "Implementation",
+			Parser                   : "SNiFF-C++",
+			"Retriever Priority"       : "2",
+			Signatures               : "*.c:*.C:*.cc:*.CC:*.cpp:*.CPP:*.cxx:*.CXX",
+			"Tool Names"               : "Edit:Set Writable:Set Read Only:Properties",
+			Tools                    : "SniffEdit:SniffSetWritable:SniffSetReadOnly:ls -l %f",
+			Type                     : "Implementation"
+		),
+		Make                      : File_Types_Info (
+			"Create Symbolic Link"     : true,
+			Icon                     : "$SNIFF_DIR/config/icons/FT_make.gif",
+			"Is Default File Type"     : 1,
+			Name                     : "Make",
+			"Retriever Priority"       : "6",
+			Signatures               : "Makefile:makefile:*.mk:*.MAK:MAKEFILE:*.cron",
+			"Tool Names"               : "Edit:Set Writable:Set Read Only:Properties",
+			Tools                    : "SniffEdit:SniffSetWritable:SniffSetReadOnly:ls -l %f",
+			Type                     : "Make"
+		),
+		"Project Description"       : File_Types_Info (
+			Icon                     : "$SNIFF_DIR/config/icons/FT_pdf.gif",
+			"Is Default File Type"     : 1,
+			Name                     : "Project Description",
+			"Retriever Priority"       : "8",
+			Signatures               : "*.proj:*.shared",
+			"Tool Names"               : "Open Project:Edit PDF:Set Writable:Set Read Only:Properties",
+			Tools                    : "SniffOpen:SniffEdit:SniffSetWritable:SniffSetReadOnly:ls -l %f",
+			Type                     : "Project"
+		),
+		"Windows Resource Template" : File_Types_Info (
+			"Derived From"             : "undefined",
+			Icon                     : "$SNIFF_DIR/config/icons/FT_source.gif",
+			Name                     : "Windows Resource Template",
+			"Retriever Priority"       : "0",
+			Signatures               : "*.rc:*.RC",
+			"Tool Names"               : "Edit:Set Writeable:Set Read Only:Properties",
+			Tools                    : "SniffEdit:SniffSetWritable:SniffSetReadOnly:ls -l %f",
+			Type                     : "Implementation"
+		)
+	),
+	GenerateDir                : ".sniffdir",
+	HelpTarget                 : "all:symbolic_links:clean:clean_targets:help",
+	IgnoreStringsFile          : "$SNIFF_DIR/config/IgnoreStrings",
+	IncludeFilesFile           : "include.incl",
+	IncludeMacro               : array (
+		"-I.",
+		"-I${ORACLEX_HOME}/oci/include"
+	),
+	LibTarget                  : "otl.lib",
+	LinkObjects                : 2,
+	MacrosFile                 : "macros.incl",
+	MakeCommand                : "gmake check_vpath;gmake",
+	MakefileSupport            : 1,
+	ObjectFilesFile            : "ofiles.incl",
+	OtherTarget                : "install",
+	PreprocessorSwitch         : array ( ),
+	ProjectDir                 : "otl",
+	ProjectType                : 2,
+	Release                    : "V3.0",
+	SharedProject              : 1,
+	StandardHeaderDependencies : 1,
+	SubDirs                    : array (
+		""
+	),
+	TabLength                  : 4,
+	UseParserComments          : 1,
+	VCSystem                   : "CVS",
+	VPathFile                  : "vpath.incl"
+)

@@ -1,0 +1,24 @@
+HKCR
+{
+	measpntuis.measpntuis.1 = s 'measpntuis Class'
+	{
+		CLSID = s '{43C48165-F2F3-11d1-9107-0000F80355F3}'
+	}
+	measpntuis.measpntuis = s 'measpntuis Class'
+	{
+		CLSID = s '{43C48165-F2F3-11d1-9107-0000F80355F3}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43C48165-F2F3-11d1-9107-0000F80355F3} = s 'measpntuis Class'
+		{
+			val AppID = s '{43C48265-F2F3-11d1-9107-0000F80355F3}'
+			ProgID = s 'measpntuis.measpntuis.1'
+			VersionIndependentProgID = s 'measpntuis.measpntuis'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

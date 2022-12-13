@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8' standalone='yes'?>
+<assembly xmlns='urn:schemas-microsoft-com:asm.v1' manifestVersion='1.0'>
+  <!--
+    Identify the application security requirements. 
+    Change to level=requireAdministrator if the application runs only for administrators 
+    and requires that the application be launched with the full access token of an administrator.
+  -->
+  <trustInfo xmlns='urn:schemas-microsoft-com:asm.v3'>
+    <security>
+      <requestedPrivileges>
+        <requestedExecutionLevel level='asInvoker' uiAccess='false' />
+      </requestedPrivileges>
+    </security>
+  </trustInfo> 
+</assembly>

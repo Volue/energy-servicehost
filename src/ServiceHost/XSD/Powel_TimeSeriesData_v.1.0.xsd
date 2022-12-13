@@ -1,0 +1,219 @@
+<?xml version="1.0"?>
+<!-- edited with XMLSpy v2005 rel. 3 U (http://www.altova.com) by Ken Robert Andersen (Powel ASA) -->
+<!-- edited with XMLSPY v2004 rel. 3 U (http://www.xmlspy.com) by Asmund Botnen (Powel) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.powel.no/icc/ws/tsws/data/1.0/" xmlns:enums="http://www.powel.no/icc/ws/tsws/enums/1.0/" targetNamespace="http://www.powel.no/icc/ws/tsws/data/1.0/" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" id="TimeSeriesData">
+	<xs:import namespace="http://www.powel.no/icc/ws/tsws/enums/1.0/" schemaLocation="Powel_TimeSeriesEnums_v.1.0.xsd" id="TimeSeriesEnums"/>
+	<xs:simpleType name="MessageIDType">
+		<xs:annotation>
+			<xs:documentation>Message ID</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="MessageStatusType">
+		<xs:annotation>
+			<xs:documentation>Import status for a message</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="enums:StatusType"/>
+	</xs:simpleType>
+	<xs:simpleType name="TsCustomQualityType">
+		<xs:annotation>
+			<xs:documentation>Quality setting. Customizable.</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:integer">
+			<xs:minInclusive value="0"/>
+			<xs:maxExclusive value="32"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TsTimeType">
+		<xs:annotation>
+			<xs:documentation>Time format to be used throughout schema. Format: YYYY-MM-DDThh:mm:ssTZD where TZD is time zone designator ("+01:00" for Norway (normal time), "Z" for UTC)</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:dateTime"/>
+	</xs:simpleType>
+	<xs:simpleType name="TsDurationType">
+		<xs:annotation>
+			<xs:documentation>Format of a time period. Format: PnYnMnDTnHnMnS where n denotes the number of, respectively: Years, Months, Days, Hours, Minutes and Seconds </xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:duration"/>
+	</xs:simpleType>
+	<xs:attributeGroup name="TsQualityAttrs">
+		<xs:annotation>
+			<xs:documentation>A set of individual quality/state attributes</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="N_OK" type="xs:boolean" use="optional" default="false"/>
+		<xs:attribute name="Suspect" type="xs:boolean" use="optional" default="false"/>
+		<xs:attribute name="Manual" type="xs:boolean" use="optional" default="false"/>
+		<xs:attribute name="Accepted" type="xs:boolean" use="optional" default="false"/>
+		<xs:attribute name="Locked" type="xs:boolean" use="optional" default="false"/>
+		<xs:attribute name="Validated" type="xs:boolean" use="optional" default="false"/>
+		<xs:attribute name="Corrected" type="xs:boolean" use="optional" default="false"/>
+		<xs:attribute name="ValMethod" type="enums:TsValMethodType" use="optional"/>
+		<xs:attribute name="CorMethod" type="enums:TsCorMethodType" use="optional"/>
+		<xs:attribute name="Missing" type="xs:boolean" use="optional" default="false"/>
+		<xs:attribute name="Custom" type="TsCustomQualityType" use="optional"/>
+	</xs:attributeGroup>
+	<xs:attributeGroup name="TsTimePeriodAttrs">
+		<xs:annotation>
+			<xs:documentation>Time period attributes</xs:documentation>
+		</xs:annotation>
+		<xs:attribute name="From" type="TsTimeType" use="required"/>
+		<xs:attribute name="To" type="TsTimeType" use="optional"/>
+		<xs:attribute name="Duration" type="TsDurationType" use="optional"/>
+	</xs:attributeGroup>
+	<xs:complexType name="TsTimePeriodType">
+		<xs:annotation>
+			<xs:documentation>Time period</xs:documentation>
+		</xs:annotation>
+		<xs:attributeGroup ref="TsTimePeriodAttrs"/>
+	</xs:complexType>
+	<xs:complexType name="TsPVQItemType">
+		<xs:annotation>
+			<xs:documentation>Time, value and quality of a time series value</xs:documentation>
+		</xs:annotation>
+		<xs:attributeGroup ref="TsTimePeriodAttrs"/>
+		<xs:attribute name="Value" type="xs:double" use="required"/>
+		<xs:attributeGroup ref="TsQualityAttrs"/>
+	</xs:complexType>
+	<xs:complexType name="TsValueMetaInfoType">
+		<xs:annotation>
+			<xs:documentation>Metainfo describing how to parse time series values</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="MeasurementUnit" type="enums:TsUnit" nillable="false" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Unit of measurement for time series values, e.g. kW, m/s</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Interval" type="enums:TsIntervalType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Interval of supplied time series values</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="ReplacePeriod" type="TsTimePeriodType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Specifies time period that shall be deleted and potentially replaced by submitted time series values. Replace period may be shorter than or longer than period of submitted time series values. Existing time series values in Replace Period will be deleted before storage of submitted values.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="TsExternalReferenceType">
+		<xs:annotation>
+			<xs:documentation>External (to ICC) reference for a given time series</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="64"/>
+			<xs:whiteSpace value="preserve"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="TsOriginType">
+		<xs:annotation>
+			<xs:documentation>Orginator of a given time series</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:maxLength value="40"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:complexType name="TsReferenceType">
+		<xs:annotation>
+			<xs:documentation>Properties necessary to identify a time series</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="ID" type="TsExternalReferenceType">
+				<xs:annotation>
+					<xs:documentation>External reference describing the time series</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="Originator" type="TsOriginType" minOccurs="0">
+				<xs:annotation>
+					<xs:documentation>Originator of time series</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+			<xs:element name="OriginatorSendingTime" type="TsTimeType">
+				<xs:annotation>
+					<xs:documentation>Time of sending from originator</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TsItemsType">
+		<xs:annotation>
+			<xs:documentation>Collection of time series items</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="PVQItem" type="TsPVQItemType" maxOccurs="unbounded">
+				<xs:annotation>
+					<xs:documentation>Time series items, including time period, value and quality.</xs:documentation>
+				</xs:annotation>
+			</xs:element>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TimeSeriesType">
+		<xs:annotation>
+			<xs:documentation>Standard time series</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Reference" type="TsReferenceType"/>
+			<xs:element name="ValueMetaInfo" type="TsValueMetaInfoType" minOccurs="0"/>
+			<xs:element name="Items" type="TsItemsType"/>
+		</xs:sequence>
+		<xs:attribute name="TsID" type="xs:string" use="required"/>
+		<xs:attribute name="ResponseLevel" type="enums:TsResponseLevelType" use="optional" default="NONE"/>
+	</xs:complexType>
+	<xs:complexType name="SetOfTimeSeriesType">
+		<xs:annotation>
+			<xs:documentation>Collection of time series</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TimeSeries" type="TimeSeriesType" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="TransactionType">
+		<xs:sequence>
+			<xs:element name="TransactionId" type="xs:string"/>
+			<xs:element name="AutoCommit" type="xs:boolean" minOccurs="0"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="SetOfTimeSeriesResponseType">
+		<xs:annotation>
+			<xs:documentation>Detailed import status for a collection of time series</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TimeSeriesResponse" type="TimeSeriesResponseType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:simpleType name="SetOfTimeSeriesStatusType">
+		<xs:annotation>
+			<xs:documentation>Import status for a collection of time series</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:complexType name="TimeSeriesResponseType">
+		<xs:annotation>
+			<xs:documentation>Detailed import status for a time series</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="Reference" type="TsReferenceType"/>
+			<xs:element name="Status" type="enums:StatusType" minOccurs="0"/>
+			<xs:element name="StatusMessage" type="StatusMessageType" minOccurs="0" maxOccurs="unbounded"/>
+			<xs:element name="ItemsResponse" type="TsItemsResponseType" minOccurs="0" maxOccurs="unbounded"/>
+		</xs:sequence>
+		<xs:attribute name="TsID" type="xs:string" use="required"/>
+		<xs:attribute name="ResponseLevel" type="enums:TsResponseLevelType" use="optional" default="NONE"/>
+	</xs:complexType>
+	<xs:complexType name="TsItemsResponseType">
+		<xs:annotation>
+			<xs:documentation>Detailed import status for a collection of time series values</xs:documentation>
+		</xs:annotation>
+		<xs:sequence>
+			<xs:element name="TsPVQItem" type="TsPVQItemType" minOccurs="0"/>
+		</xs:sequence>
+		<xs:attribute name="Status" type="enums:StatusType" use="optional"/>
+		<xs:attribute name="StatusMessage" type="StatusMessageType" use="optional"/>
+	</xs:complexType>
+	<xs:simpleType name="StatusMessageType">
+		<xs:annotation>
+			<xs:documentation>Import stauts for a time series value</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+</xs:schema>

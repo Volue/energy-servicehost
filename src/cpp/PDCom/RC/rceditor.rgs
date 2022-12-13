@@ -1,0 +1,24 @@
+HKCR
+{
+	rceditor.pdcom.1 = s 'rceditor Class'
+	{
+		CLSID = s '{43C48209-F2F3-11d1-9107-0000F80355F3}'
+	}
+	rceditor.pdcom = s 'rceditor Class'
+	{
+		CLSID = s '{43C48209-F2F3-11d1-9107-0000F80355F3}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43C48209-F2F3-11d1-9107-0000F80355F3} = s 'rceditor Class'
+		{
+			val AppID = s '{43C48309-F2F3-11d1-9107-0000F80355F3}'
+			ProgID = s 'rceditor.pdcom.1'
+			VersionIndependentProgID = s 'rceditor.pdcom'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

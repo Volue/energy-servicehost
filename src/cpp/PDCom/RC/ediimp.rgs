@@ -1,0 +1,24 @@
+HKCR
+{
+	ediimp.ediimp.1 = s 'ediimp Class'
+	{
+		CLSID = s '{43C48175-F2F3-11d1-9107-0000F80355F3}'
+	}
+	ediimp.ediimp = s 'ediimp Class'
+	{
+		CLSID = s '{43C48175-F2F3-11d1-9107-0000F80355F3}'
+	}
+	NoRemove CLSID
+	{
+		ForceRemove {43C48175-F2F3-11d1-9107-0000F80355F3} = s 'ediimp Class'
+		{
+			val AppID = s '{43C48275-F2F3-11d1-9107-0000F80355F3}'
+			ProgID = s 'ediimp.ediimp.1'
+			VersionIndependentProgID = s 'ediimp.ediimp'
+			LocalServer32 = s '%MODULE%'
+			{
+				val ThreadingModel = s 'both'
+			}
+		}
+	}
+}

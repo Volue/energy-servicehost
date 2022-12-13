@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- edited with XMLSpy v2007 (http://www.altova.com) by Gøran Henriksen (private) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://www.powel.no/icc/timeseries/TSCustomNamingData/1.0/" xmlns:enums="http://www.powel.no/icc/timeseries/TSCustomNamingEnums/1.0/" targetNamespace="http://www.powel.no/icc/timeseries/TSCustomNamingData/1.0/" elementFormDefault="qualified" attributeFormDefault="unqualified" version="1.0" id="TSCustomNamingData10">
+	<xs:complexType name="ProductCharacteristicsType">
+		<xs:sequence>
+			<xs:element name="production" type="xs:string"/>
+			<xs:element name="consumtion" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="ProductTypeType">
+		<xs:sequence>
+			<xs:element name="hydro" type="xs:string"/>
+			<xs:element name="nuclear" type="xs:string"/>
+			<xs:element name="coal" type="xs:string"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="PhasesType">
+		<xs:sequence>
+			<xs:element name="Planning"/>
+			<xs:element name="Metering"/>
+			<xs:element name="Settlement"/>
+			<xs:element name="Reconciliation"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MeasurementUnitType">
+		<xs:sequence>
+			<xs:element name="KWH"/>
+			<xs:element name="KWH_H"/>
+			<xs:element name="KVARH"/>
+			<xs:element name="KVARH_H"/>
+			<xs:element name="L"/>
+			<xs:element name="L_H"/>
+			<xs:element name="M3"/>
+			<xs:element name="M3_H"/>
+			<xs:element name="BAR_A"/>
+			<xs:element name="NM3"/>
+			<xs:element name="DEGREES_C"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="FlowDirectionType">
+		<xs:sequence>
+			<xs:element name="IN"/>
+			<xs:element name="OUT"/>
+			<xs:element name="IN_IN"/>
+			<xs:element name="IN_OUT"/>
+			<xs:element name="OUT_IN"/>
+			<xs:element name="OUT_OUT"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="RemoteMeteringType">
+		<xs:sequence>
+			<xs:element name="YES"/>
+			<xs:element name="NO"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="MeteringFunctionType">
+		<xs:sequence>
+			<xs:element name="UNDEFINED"/>
+			<xs:element name="LOW"/>
+			<xs:element name="HIGH"/>
+			<xs:element name="SINGLE"/>
+			<xs:element name="HOUR"/>
+			<xs:element name="WATERVOLUME"/>
+			<xs:element name="GASENERGY"/>
+			<xs:element name="GASMEASURED"/>
+			<xs:element name="GASSTANDARD"/>
+			<xs:element name="GASCONTROL"/>
+			<xs:element name="GASMINPRESS"/>
+			<xs:element name=" GASMAXPRESS"/>
+			<xs:element name="GASMINTEMP"/>
+			<xs:element name="GASMAXTEMP"/>
+			<xs:element name="HOTWATERTEMPTURN"/>
+			<xs:element name="HOTWATERTEMPRETURN"/>
+			<xs:element name="HOTWATERMAXENERGY"/>
+			<xs:element name="HOTWATERMAXVOLUME"/>
+			<xs:element name="HOTWATERENERGY"/>
+			<xs:element name="HOTWATERVOLUME"/>
+			<xs:element name="COOLWATERTEMPTURN"/>
+			<xs:element name="COOLWATERTEMPRETURN"/>
+			<xs:element name="COOLWATERMAXENERGY"/>
+			<xs:element name="COOLWATERMAXVOLUME"/>
+			<xs:element name="COOLWATERENERGY"/>
+			<xs:element name="COOLWATERVOLUME"/>
+			<xs:element name="BILLING"/>
+		</xs:sequence>
+	</xs:complexType>
+	<xs:complexType name="IndexElementType">
+		<xs:choice>
+			<xs:element name="MeasureUnit" type="MeasurementUnitType"/>
+			<xs:element name="FlowDirection" type="FlowDirectionType"/>
+			<xs:element name="MeteringFunction" type="MeteringFunctionType"/>
+			<xs:element name="RemoteMetering" type="RemoteMeteringType"/>
+			<xs:element name="ProductCharacteristics" type="ProductCharacteristicsType"/>
+			<xs:element name="ProductType" type="ProductTypeType"/>
+			<xs:element name="Phases" type="PhasesType"/>
+		</xs:choice>
+		<xs:attribute name="name" type="xs:ID" use="required"/>
+	</xs:complexType>
+	<xs:complexType name="NameElementType" mixed="0">
+		<xs:simpleContent>
+			<xs:extension base="xs:string">
+				<xs:attribute name="name" type="NameElementNameType" use="required"/>
+				<xs:attribute name="elementType" type="ElementType" use="required"/>
+				<xs:attribute name="delimiter" type="xs:string"/>
+			</xs:extension>
+		</xs:simpleContent>
+	</xs:complexType>
+	<xs:simpleType name="ElementType">
+		<xs:annotation>
+			<xs:documentation>Enum</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="Property"/>
+			<xs:enumeration value="Index"/>
+			<xs:enumeration value="Text"/>
+		</xs:restriction>
+	</xs:simpleType>
+	<xs:simpleType name="NameElementNameType">
+		<xs:annotation>
+			<xs:documentation>Enum</xs:documentation>
+		</xs:annotation>
+		<xs:restriction base="xs:string">
+			<xs:enumeration value="MeasurePointID"/>
+			<xs:enumeration value="MeasureUnit"/>
+			<xs:enumeration value="FlowDirection"/>
+			<xs:enumeration value="MeteringFunction"/>
+			<xs:enumeration value="RemoteMetering"/>
+			<xs:enumeration value="System"/>
+			<xs:enumeration value="Market"/>
+			<xs:enumeration value="Country"/>
+			<xs:enumeration value="OperatorKey"/>
+			<xs:enumeration value="OperatorShortname"/>
+			<xs:enumeration value="OperatorName"/>
+			<xs:enumeration value="TradeObjectTypeCode"/>
+			<xs:enumeration value="TradeObjectTypeName"/>
+			<xs:enumeration value="TradeDirectionCode"/>
+			<xs:enumeration value="TradeDirectionName"/>
+			<xs:enumeration value="TradeCode"/>
+			<xs:enumeration value="ValueUnitCode"/>
+			<xs:enumeration value="ValueUnitName"/>
+			<xs:enumeration value="TimestepCode"/>
+			<xs:enumeration value="TimestepName"/>
+			<xs:enumeration value="TsTypeCode"/>
+			<xs:enumeration value="TsTypeName"/>
+			<xs:enumeration value="ProducerCode"/>
+			<xs:enumeration value="ProducerName"/>
+			<xs:enumeration value="ElecName"/>
+			<xs:enumeration value="Voltage"/>
+			<xs:enumeration value="ElecTypeCode"/>
+			<xs:enumeration value="ElecTypeName"/>
+			<xs:enumeration value="MeterID"/>
+			<xs:enumeration value="RegisterNumber"/>
+			<xs:enumeration value="Text"/>
+			<xs:enumeration value="ORIGIN"/>
+			<xs:enumeration value="GLOBEREF"/>
+			<xs:enumeration value="TS_SUFFIX"/>
+		</xs:restriction>
+	</xs:simpleType>
+</xs:schema>

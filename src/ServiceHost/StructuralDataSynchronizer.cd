@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Font Name="Tahoma" Size="8.25" />
+  <Class Name="ServiceHost.ServiceHost">
+    <Position X="4" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <FileName>ServiceHost.cs</FileName>
+      <HashCode>AAAAAAAAACAgEEAgUACSAIACAAAAgAAEIEBABAgAAEw=</HashCode>
+    </TypeIdentifier>
+    <Compartments>
+      <Compartment Name="Fields" Collapsed="true" />
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+  </Class>
+  <Class Name="Powel.Icc.Messaging.StructuralDataSynchronizer">
+    <Position X="3.75" Y="2.25" Width="2" />
+    <TypeIdentifier>
+      <FileName>StructuralDataSynchronizer.cs</FileName>
+      <HashCode>AAAAAAAAAAAAAQAAAAAAAAAAAAAAAAACAAIAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Powel.Icc.Data.ObjectChangedData">
+    <Position X="3.75" Y="4.5" Width="2" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Powel.Icc.Data.Metering.ComponentData" Collapsed="true">
+    <Position X="1.5" Y="6" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Powel.Icc.Data.Metering.InstallationData" Collapsed="true">
+    <Position X="1.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Powel.Icc.Data.Metering.MeasurePointData" Collapsed="true">
+    <Position X="1.5" Y="5.25" Width="1.5" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Powel.Icc.Metering.InstallationXML.SubmitInstallation" Collapsed="true">
+    <Position X="6.25" Y="5.25" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Powel.Icc.Metering.InstallationXML.SubmitInstallationResponse" Collapsed="true">
+    <Position X="8.25" Y="5.25" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Powel.Icc.Metering.InstallationXML.SubmitComponents" Collapsed="true">
+    <Position X="6.25" Y="4.5" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+  <Class Name="Powel.Icc.Metering.InstallationXML.SubmitComponentsResponse" Collapsed="true">
+    <Position X="8.25" Y="4.5" Width="1.75" />
+    <TypeIdentifier />
+  </Class>
+</ClassDiagram>

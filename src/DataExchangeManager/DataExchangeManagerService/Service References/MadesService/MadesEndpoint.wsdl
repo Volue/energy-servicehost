@@ -1,0 +1,863 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:mades="http://mades.entsoe.eu/" name="MadesEndpoint" targetNamespace="http://mades.entsoe.eu/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://mades.entsoe.eu/">
+      <xsd:element name="SendMessageRequest">
+        <xsd:annotation>
+          <xsd:documentation>The definition of an input web service request message for a SendMessage method</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="message" type="mades:SentMessage">
+              <xsd:annotation>
+                <xsd:documentation>A representation of a sent message</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="conversationID" nillable="true" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Unique send message request identifier.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SendMessageResponse">
+        <xsd:annotation>
+          <xsd:documentation> A definition of a web service response message for the SendMessage method</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="messageID" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Unique message ID that is automatically assigned to sent message </xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="SendMessageError">
+        <xsd:annotation>
+          <xsd:documentation>A definition of an error output message for the SendMessage method</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="errorCode" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>The code representing the kind of the error (e.g. validation error, unexpected error etc)</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="errorID" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Unique identification of the failure. The errorID shall be always used to track the error in the application logs. </xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="errorMessage" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Error message usually describing the reason of failure</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="receiverCode" nillable="true" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>The receiver code of the original sent message</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="errorDetails" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Additional error details</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReceiveMessageRequest">
+        <xsd:annotation>
+          <xsd:documentation>The definition of an input web service request message for a ReceiveMessage method</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="businessType" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>The business type of messages to download. Only message of given business type will be downloaded. </xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="downloadMessage" type="xsd:boolean">
+              <xsd:annotation>
+                <xsd:documentation>Flag indicating whether to download also a payload (content) of the message. When set to "true" payload will be downloaded, otherwise it will be left in
+									messagebox.
+								</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReceiveMessageResponse">
+        <xsd:annotation>
+          <xsd:documentation>A definition of a web service response message for the ReceiveMessage method</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element minOccurs="0" name="receivedMessage" nillable="true" type="mades:ReceivedMessage">
+              <xsd:annotation>
+                <xsd:documentation>Received message</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="remainingMessagesCount" type="xsd:long">
+              <xsd:annotation>
+                <xsd:documentation>Count of remaining messages of the business type that was specified as input parameter of ReceiveMessage method. </xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ReceiveMessageError">
+        <xsd:annotation>
+          <xsd:documentation>A definition of an error output message for the ReceiveMessage method</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="errorCode" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>The code representing the kind of the error (e.g. validation error, unexpected error etc)</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="errorID" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Unique identification of the failure. The errorID shall be always used to track the error in the application logs. </xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="errorMessage" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Error message usually describing the reason of failure</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="businessType" nillable="true" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Business type that was given as input parameter in the failed of the ReceiveMessage</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="errorDetails" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Additional error details</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ConfirmReceiveMessageRequest">
+        <xsd:annotation>
+          <xsd:documentation>The definition of an input web service request message for the ConfirmReceiveMessage method</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="messageID" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Unique ID of the message. </xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ConfirmReceiveMessageResponse">
+        <xsd:annotation>
+          <xsd:documentation>A definition of a web service response message for the ConfirmReceiveMessage method</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="messageID" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>ID of the confirmed message. </xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ConfirmReceiveMessageError">
+        <xsd:annotation>
+          <xsd:documentation>A definition of an error output message for the ConfirmReceiveMessage method</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="errorCode" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>The code representing the kind of the error (e.g. validation error, unexpected error etc)</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="errorID" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Unique identification of the failure. The errorID shall be always used to track the error in the application logs. </xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="errorMessage" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Error message usually describing the reason of failure</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="messageID" nillable="true" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Unique ID of the message</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="errorDetails" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Additional error details</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:complexType name="SentMessage">
+        <xsd:annotation>
+          <xsd:documentation>A representation of a message sent via SendMessage method</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="receiverCode" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Endpoint code of receiver.
+								May contain alphanumerical characters 'A'-'Z', 'a'-'z', '0'-'9' and additional characters '-' and '@'.
+							</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="businessType" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Code of message's business type.
+								Only alphanumerical characters are allowed.
+							</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="content" type="xsd:base64Binary">
+            <xsd:annotation>
+              <xsd:documentation>A payload of the message.
+								Any text or binary data are allowed. Please refer to MADES documentation for the maximum message size limitation.
+							</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="senderApplication" nillable="true" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Optional identification of sending business application.
+								Only alphanumerical characters are allowed.
+							</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="baMessageID" nillable="true" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Optional ID of message assigned by business application.
+								Only alphanumerical characters are allowed.
+							</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="ReceivedMessage">
+        <xsd:annotation>
+          <xsd:documentation>Representation of message received by ReceiveMessage method</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="messageID" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Unique ID of the message</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="receiverCode" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Endpoint code of the message's receiver</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="senderCode" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Endpoint code of message's sender</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="businessType" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>The message's business type</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="content" type="xsd:base64Binary">
+            <xsd:annotation>
+              <xsd:documentation>The message's payload (content)</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="senderApplication" nillable="true" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Optional identification of a business application on the sender's side</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="baMessageID" nillable="true" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Optional ID of message assigned by business application.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="MessageStatus">
+        <xsd:sequence>
+          <xsd:element name="messageID" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Unique ID of the message</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="state" type="mades:MessageState">
+            <xsd:annotation>
+              <xsd:documentation>The current state of the message, represented by a value from MessageState enumeration</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="receiverCode" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Endpoint code of the receiver</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="senderCode" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Endpoint code of the sender</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="businessType" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>The message's business type</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="senderApplication" nillable="true" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Optional identification of a business application on the sender's side</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="baMessageID" nillable="true" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Optional ID of message assigned by business application</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="sendTimestamp" type="xsd:dateTime">
+            <xsd:annotation>
+              <xsd:documentation>Exact date and time when message was sent</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element minOccurs="0" name="receiveTimestamp" nillable="true" type="xsd:dateTime">
+            <xsd:annotation>
+              <xsd:documentation>Exact date and time when message was received</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="trace" nillable="true" type="mades:MessageTrace">
+            <xsd:annotation>
+              <xsd:documentation>Detailed information about message's traversal through MADES network</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="MessageTrace">
+        <xsd:annotation>
+          <xsd:documentation>Detailed information about message traversal through MADES network</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element maxOccurs="unbounded" name="trace" type="mades:MessageTraceItem" />
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:complexType name="MessageTraceItem">
+        <xsd:annotation>
+          <xsd:documentation>Represents an event during the message traversal across the MADES network</xsd:documentation>
+        </xsd:annotation>
+        <xsd:sequence>
+          <xsd:element name="timestamp" type="xsd:dateTime">
+            <xsd:annotation>
+              <xsd:documentation>Exact date and time of the event</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="state" type="mades:MessageTraceState" />
+          <xsd:element name="component" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>The code of MADES messaging component on which the event happened</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="componentDescription" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Human-understandable description of the messaging component</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+          <xsd:element name="details" nillable="true" type="xsd:string">
+            <xsd:annotation>
+              <xsd:documentation>Details about the event</xsd:documentation>
+            </xsd:annotation>
+          </xsd:element>
+        </xsd:sequence>
+      </xsd:complexType>
+      <xsd:element name="ConnectivityTestRequest">
+        <xsd:annotation>
+          <xsd:documentation> The definition of an input web service request message for the ConnectivityTest method</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="receiverCode" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Endpoint code of receiver</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="businessType" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>The business type of messages to test the connectivity. Business type is important in determining the message path.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ConnectivityTestResponse">
+        <xsd:annotation>
+          <xsd:documentation>A definition of a web service response message for the ConnectivityTest method</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="messageID" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Unique message ID assigned to message.</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="ConnectivityTestError">
+        <xsd:annotation>
+          <xsd:documentation>A definition of an error output message for the ConnectivityTest method</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="errorCode" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>The code representing the kind of the error (e.g. validation error, unexpected error etc)</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="errorID" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Unique identification of the failure. The errorID shall be always used to track the error in the application logs. </xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="errorMessage" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Error message usually describing the reason of failure</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="receiverCode" nillable="true" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Endpoint code of receiver given as input parameter of the ConnectivityTest method</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="errorDetails" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Additional error details</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CheckMessageStatusRequest">
+        <xsd:annotation>
+          <xsd:documentation>The definition of an input web service request message for the CheckMessageStatus method</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="messageID" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Unique ID of the message</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CheckMessageStatusResponse">
+        <xsd:annotation>
+          <xsd:documentation>A definition of a web service response message for the CheckMessageStatus method</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="messageStatus" type="mades:MessageStatus" />
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:element name="CheckMessageStatusError">
+        <xsd:annotation>
+          <xsd:documentation>A definition of an error output message for the CheckMessageStatus method</xsd:documentation>
+        </xsd:annotation>
+        <xsd:complexType>
+          <xsd:sequence>
+            <xsd:element name="errorCode" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>The code representing the kind of the error (e.g. validation error, unexpected error etc)</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="errorID" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Unique identification of the failure. The errorID shall be always used to track the error in the application logs. </xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element name="errorMessage" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Error message usually describing the reason of failure</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="messageID" nillable="true" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Unique ID of the message</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+            <xsd:element minOccurs="0" name="errorDetails" type="xsd:string">
+              <xsd:annotation>
+                <xsd:documentation>Additional error details</xsd:documentation>
+              </xsd:annotation>
+            </xsd:element>
+          </xsd:sequence>
+        </xsd:complexType>
+      </xsd:element>
+      <xsd:simpleType name="MessageState">
+        <xsd:annotation>
+          <xsd:documentation>Enumeration of possible message states</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="VERIFYING">
+            <xsd:annotation>
+              <xsd:documentation>The message is waiting for receiver verification due to connectivity problems between messaging component and Directory Service.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:enumeration>
+          <xsd:enumeration value="ACCEPTED">
+            <xsd:annotation>
+              <xsd:documentation>The message has been accepted by the MADES component and stored in the messagebox.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:enumeration>
+          <xsd:enumeration value="DELIVERING">
+            <xsd:annotation>
+              <xsd:documentation>The message has been successfully passed to another MADES component. At the moment, this MADES component has not yet obtained further information about message delivery into
+								endpoint of the recipient.
+							</xsd:documentation>
+            </xsd:annotation>
+          </xsd:enumeration>
+          <xsd:enumeration value="DELIVERED">
+            <xsd:annotation>
+              <xsd:documentation>The message has been delivered to the target endpoint.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:enumeration>
+          <xsd:enumeration value="RECEIVED">
+            <xsd:annotation>
+              <xsd:documentation>The message has been received by target business application or user.</xsd:documentation>
+            </xsd:annotation>
+          </xsd:enumeration>
+          <xsd:enumeration value="FAILED">
+            <xsd:annotation>
+              <xsd:documentation>The processing of the message failed. </xsd:documentation>
+            </xsd:annotation>
+          </xsd:enumeration>
+        </xsd:restriction>
+      </xsd:simpleType>
+      <xsd:simpleType name="MessageTraceState">
+        <xsd:annotation>
+          <xsd:documentation>Enumeration of possible message states for tracing purposes</xsd:documentation>
+        </xsd:annotation>
+        <xsd:restriction base="xsd:string">
+          <xsd:enumeration value="VERIFYING" />
+          <xsd:enumeration value="ACCEPTED" />
+          <xsd:enumeration value="TRANSPORTED" />
+          <xsd:enumeration value="DELIVERED" />
+          <xsd:enumeration value="RECEIVED" />
+          <xsd:enumeration value="FAILED" />
+        </xsd:restriction>
+      </xsd:simpleType>
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="ReceiveMessageResponse">
+    <wsdl:part name="parameters" element="mades:ReceiveMessageResponse">
+      <wsdl:documentation>
+				A definition of a web service response message for the ReceiveMessage method
+			</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConfirmReceiveMessageRequest">
+    <wsdl:part name="parameters" element="mades:ConfirmReceiveMessageRequest">
+      <wsdl:documentation>
+				The definition of an input web service request message for the ConfirmReceiveMessage method
+			</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CheckMessageStatusRequest">
+    <wsdl:part name="parameters" element="mades:CheckMessageStatusRequest">
+      <wsdl:documentation>
+				The definition of an input web service request message for the CheckMessageStatus method
+			</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ReceiveMessageFault">
+    <wsdl:part name="fault" element="mades:ReceiveMessageError">
+      <wsdl:documentation>
+				A definition of an error output message for the ReceiveMessage method
+			</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CheckMessageStatusFault">
+    <wsdl:part name="fault" element="mades:CheckMessageStatusError">
+      <wsdl:documentation>
+				A definition of an error output message for the CheckMessageStatus method
+			</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConfirmReceiveMessageFault">
+    <wsdl:part name="fault" element="mades:ConfirmReceiveMessageError">
+      <wsdl:documentation>
+				A definition of an error output message for the ConfirmReceiveMessage method
+			</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConfirmReceiveMessageResponse">
+    <wsdl:part name="parameters" element="mades:ConfirmReceiveMessageResponse">
+      <wsdl:documentation>
+				A definition of a web service response message for the ConfirmReceiveMessage method
+			</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConnectivityTestResponse">
+    <wsdl:part name="parameters" element="mades:ConnectivityTestResponse">
+      <wsdl:documentation>
+				A definition of a web service response message for the ConnectivityTest method
+			</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SendMessageResponse">
+    <wsdl:part name="parameters" element="mades:SendMessageResponse">
+      <wsdl:documentation>
+				A definition of a web service response message for the SendMessage method
+			</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SendMessageFault">
+    <wsdl:part name="fault" element="mades:SendMessageError">
+      <wsdl:documentation>
+				A definition of an error output message for the SendMessage method
+			</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="SendMessageRequest">
+    <wsdl:part name="parameters" element="mades:SendMessageRequest">
+      <wsdl:documentation>
+				The definition of an input web service request message for the SendMessage method
+			</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConnectivityTestFault">
+    <wsdl:part name="fault" element="mades:ConnectivityTestError">
+      <wsdl:documentation>
+				A definition of an error output message for the ConnectivityTest method
+			</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ConnectivityTestRequest">
+    <wsdl:part name="parameters" element="mades:ConnectivityTestRequest">
+      <wsdl:documentation>
+				The definition of an input web service request message for the ConnectivityTest method
+			</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="ReceiveMessageRequest">
+    <wsdl:part name="parameters" element="mades:ReceiveMessageRequest">
+      <wsdl:documentation>
+				The definition of an input web service request message for the ReceiveMessage method
+			</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:message name="CheckMessageStatusResponse">
+    <wsdl:part name="parameters" element="mades:CheckMessageStatusResponse">
+      <wsdl:documentation>
+				A definition of a web service response message for the CheckMessageStatus method
+			</wsdl:documentation>
+    </wsdl:part>
+  </wsdl:message>
+  <wsdl:portType name="MadesEndpoint">
+    <wsdl:operation name="SendMessage">
+      <wsdl:documentation>
+				Sends a message via MADES.
+				It is required to specify message recipient in the form of target endpoint code and the message business type.
+				Body of a message can be any data (text or
+				binary) up to 50MB in size.
+				The operation returns ID of the message or a SOAP fault (of type SendMessageError) in the case of error.
+			</wsdl:documentation>
+      <wsdl:input message="mades:SendMessageRequest" />
+      <wsdl:output message="mades:SendMessageResponse" />
+      <wsdl:fault name="SendMessageError" message="mades:SendMessageFault" />
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveMessage">
+      <wsdl:documentation>
+				Receives message from MADES.
+				The operation returns structure defined by "ReceivedMessage" type or SOAP fault (ReceiveMessageError) in the case of error.
+				The receiving of
+				the message needs to be completed with the calling of ConfirmReceiveMessage method.
+			</wsdl:documentation>
+      <wsdl:input message="mades:ReceiveMessageRequest" />
+      <wsdl:output message="mades:ReceiveMessageResponse" />
+      <wsdl:fault name="ReceiveMessageError" message="mades:ReceiveMessageFault" />
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmReceiveMessage">
+      <wsdl:documentation>
+				Confirms the receiving of message from MADES.
+				The operation accepts message ID as a parameter and has no return value.
+				In the case of error the error details are delivered in the
+				structure according to ConfirmReceiveMessageError.
+				This operation must be called by the business application after successful processing of the receiving message
+				to prevent possible message loss in
+				the case of HW or SW failure scenario.
+			</wsdl:documentation>
+      <wsdl:input message="mades:ConfirmReceiveMessageRequest" />
+      <wsdl:output message="mades:ConfirmReceiveMessageResponse" />
+      <wsdl:fault name="ConfirmReceiveMessageError" message="mades:ConfirmReceiveMessageFault" />
+    </wsdl:operation>
+    <wsdl:operation name="ConnectivityTest">
+      <wsdl:documentation>
+				Checks the connectivity to target endpoint.
+				The message accepts target endpoint code as an input parameter and returns message ID.
+				In the case of error the details are returned as
+				SOAP fault in a structure defined by ConnectivityTestError type.
+				The actual result of the connectivity test needs to be verified by the successive call of the CheckMessageStatus method.
+			</wsdl:documentation>
+      <wsdl:input message="mades:ConnectivityTestRequest" />
+      <wsdl:output message="mades:ConnectivityTestResponse" />
+      <wsdl:fault name="ConnectivityTestError" message="mades:ConnectivityTestFault" />
+    </wsdl:operation>
+    <wsdl:operation name="CheckMessageStatus">
+      <wsdl:documentation>
+				Checks the status of message based on its message ID.
+				The status of the message is returned as a structure defined by MessageInformation type.
+				In the case of error the details are
+				returned as SOAP fault in a structure defined by CheckMessageStatusError type.
+			</wsdl:documentation>
+      <wsdl:input message="mades:CheckMessageStatusRequest" />
+      <wsdl:output message="mades:CheckMessageStatusResponse" />
+      <wsdl:fault name="CheckMessageStatusError" message="mades:CheckMessageStatusFault" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MadesEndpointSOAP12" type="mades:MadesEndpoint">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendMessage">
+      <soap12:operation soapAction="http://mades.entsoe.eu/SendMessage" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SendMessageError">
+        <soap12:fault use="literal" name="SendMessageError" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveMessage">
+      <soap12:operation soapAction="http://mades.entsoe.eu/ReceiveMessage" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ReceiveMessageError">
+        <soap12:fault use="literal" name="ReceiveMessageError" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmReceiveMessage">
+      <soap12:operation soapAction="http://mades.entsoe.eu/ConfirmReceiveMessage" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ConfirmReceiveMessageError">
+        <soap12:fault use="literal" name="ConfirmReceiveMessageError" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConnectivityTest">
+      <soap12:operation soapAction="http://mades.entsoe.eu/ConnectivityTest" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ConnectivityTestError">
+        <soap12:fault use="literal" name="ConnectivityTestError" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckMessageStatus">
+      <soap12:operation soapAction="http://mades.entsoe.eu/CheckMessageStatus" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CheckMessageStatusError">
+        <soap12:fault use="literal" name="CheckMessageStatusError" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MadesEndpointSOAP11" type="mades:MadesEndpoint">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="SendMessage">
+      <soap:operation soapAction="http://mades.entsoe.eu/SendMessage" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="SendMessageError">
+        <soap:fault use="literal" name="SendMessageError" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ReceiveMessage">
+      <soap:operation soapAction="http://mades.entsoe.eu/ReceiveMessage" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ReceiveMessageError">
+        <soap:fault use="literal" name="ReceiveMessageError" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConfirmReceiveMessage">
+      <soap:operation soapAction="http://mades.entsoe.eu/ConfirmReceiveMessage" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ConfirmReceiveMessageError">
+        <soap:fault use="literal" name="ConfirmReceiveMessageError" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="ConnectivityTest">
+      <soap:operation soapAction="http://mades.entsoe.eu/ConnectivityTest" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="ConnectivityTestError">
+        <soap:fault use="literal" name="ConnectivityTestError" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+    <wsdl:operation name="CheckMessageStatus">
+      <soap:operation soapAction="http://mades.entsoe.eu/CheckMessageStatus" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+      <wsdl:fault name="CheckMessageStatusError">
+        <soap:fault use="literal" name="CheckMessageStatusError" namespace="" />
+      </wsdl:fault>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MadesEndpointService">
+    <wsdl:documentation>Web service interface for the MADES endpoint</wsdl:documentation>
+    <wsdl:port name="MadesEndpointSOAP11" binding="mades:MadesEndpointSOAP11">
+      <soap:address location="http://mades.entsoe.eu" />
+    </wsdl:port>
+    <wsdl:port name="MadesEndpointSOAP12" binding="mades:MadesEndpointSOAP12">
+      <soap12:address location="http://tdtrhsmgrel004:17000/ws/madesInWSInterface" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

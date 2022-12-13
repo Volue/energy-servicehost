@@ -1,0 +1,10 @@
+﻿{
+  "UseEdx": "false",
+  "EcpAmqpUrl": "amqp://<user>:[$SECRET:EcpAmqpUrlPassword:$]@<ip-address>:5672",
+  "Enable": "true",
+  "EcpAmqpOutboxQueue": "ecp.endpoint.outbox",
+  "EcpAmqpOutboxResponseQueue": "ecp.endpoint.outbox.reply",
+  "EcpAmqpSendTimeoutMs": "100",
+  "EcpAmqpPollTimeoutMs": "100",
+  "MessageExpiryDuration": "01:00:00"
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<xs:schema id="GS2Message" targetNamespace="http://tempuri.org/GS2Message.xsd" elementFormDefault="qualified"
+	xmlns="http://tempuri.org/GS2Message.xsd" xmlns:mstns="http://tempuri.org/GS2Message.xsd"
+	xmlns:xs="http://www.w3.org/2001/XMLSchema">
+	<xs:element name="sendEmbeddedTextMessage">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="id" type="xs:string" />
+				<xs:element name="messageType" type="xs:string" />
+				<xs:element name="text" type="xs:string" />
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
